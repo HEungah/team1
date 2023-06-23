@@ -52,13 +52,25 @@ for(let i = 0; i < 1000; i++){
 	}
 }
 
+console.log('결제가 승인되었습니다.')
 
+let select4 = Number(prompt('적립 및 할인을 하시겠습니까? (yes=1) (no=2)'))
 
+if(select4 == 1){
+	prompt('바코드를 입력해주세요.')
+}
+
+let select5 = Number(prompt('영수증을 출력하시겠습니까? (yes=1) (no=2)'))
+if(select5 == 1){
+	console.log('영수증이 출력되었습니다.')
+}
+
+console.log('주문이 완료되었습니다.')
+
+console.log('주문 내역')
 console.log(menu);
 console.log(option);
 console.log(number);
-
-console.log('반복문 끝')
 
 
 
