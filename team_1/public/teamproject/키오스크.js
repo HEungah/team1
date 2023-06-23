@@ -13,13 +13,13 @@ let select2 = 0;		// 결제 선택
 
 console.log('키오스크 시작합니다.');
 
-prompt('수령방법을 선택해주세요.');
+let takeout = prompt('수령방법을 선택해주세요.');		// 매장 or 포장 저장 변수
 
 for(let i = 0; i < 1000; i++){
 	for(let j = 0; j < 1000; j++){
-		menu[i] = prompt('메뉴를 선택해주세요')		// 메뉴 배열에 저장
-		option[i] = prompt('옵션을 선택해주세요')		// 옵션 배열에 저장
-		number[i] = prompt('수량을 선택해주세요')		// 수량 배열에 저장
+		menu[0] = prompt('메뉴를 선택해주세요')		// 메뉴 배열에 저장
+		option[0] = prompt('옵션을 선택해주세요')		// 옵션 배열에 저장
+		number[0] = prompt('수량을 선택해주세요')		// 수량 배열에 저장
 		select = Number(prompt('장바구니에 담으시겠습니까? (yes = 1) (no = 2)'))
 		if(select == 1){	// 장바구니에 담으면 for문을 빠져나감
 			break;
@@ -68,6 +68,7 @@ if(select5 == 1){
 console.log('주문이 완료되었습니다.')
 
 console.log('주문 내역')
+console.log(takeout)
 console.log(menu);
 console.log(option);
 console.log(number);
