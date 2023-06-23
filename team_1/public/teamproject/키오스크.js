@@ -1,0 +1,78 @@
+/*
+
+	키오스크 주문 프로그램
+
+*/
+let menu = [];			// 메뉴리스트
+let option = [];		// 옵션리스트
+let number = [];		// 수량리스트
+let select = 0;			// 장바구니 선택
+let select2 = 0;		// 결제 선택
+
+
+
+console.log('키오스크 시작합니다.');
+
+prompt('수령방법을 선택해주세요.');
+
+for(let i = 0; i < 1000; i++){
+	for(let j = 0; j < 1000; j++){
+		menu[i] = prompt('메뉴를 선택해주세요')		// 메뉴 배열에 저장
+		option[i] = prompt('옵션을 선택해주세요')		// 옵션 배열에 저장
+		number[i] = prompt('수량을 선택해주세요')		// 수량 배열에 저장
+		select = Number(prompt('장바구니에 담으시겠습니까? (yes = 1) (no = 2)'))
+		if(select == 1){	// 장바구니에 담으면 for문을 빠져나감
+			break;
+		}else{			// 장바구니에 담지 않으면 배열에있던 상품들 삭제
+			menu.pop(0);
+			option.pop(0);
+			number.pop(0);
+		}
+	}
+	
+	select2 = Number(prompt('결제하시겠습니까? (yes = 1) (no = 2)'));
+	if(select2 == 1){ // 결제 버튼 누르면 for문 빠져나감
+		break;
+	}
+}
+
+for(let i = 0; i < 1000; i++){
+	let select3 = Number(prompt('결제수단을 선택해주세요 (카드 = 1) (기프티콘은 = 2)'));
+	if(select3 == 1){		// 카드 선택시 if문
+		let second = Number(prompt('결제 경과 시간 (30이상 결제수단창으로) (30이하 다음단계)'));
+		if(second < 30){	// 결제시간 30초이하면 다음단계
+			break;
+		}
+	}else{		// 기프티콘 선택시 if문
+		prompt('바코드를 입력해주세요');
+		let second = Number(prompt('결제 경과 시간 (30이상 결제수단창으로) (30이하 다음단계)'));
+		if(second < 30){	// 결제시간 30초이하면 다음단계
+			break;
+		}
+	}
+}
+
+
+
+console.log(menu);
+console.log(option);
+console.log(number);
+
+console.log('반복문 끝')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
