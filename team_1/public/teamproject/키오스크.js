@@ -3,6 +3,11 @@
 	키오스크 주문 프로그램
 
 */
+let 커피 = 2000;
+let 에이드 = 3000;
+let 스무디 = 4000;
+let result = 0;			// 최종금액
+
 let menu = [];			// 메뉴리스트
 let option = [];		// 옵션리스트
 let number = [];		// 수량리스트
@@ -13,7 +18,7 @@ let select2 = 0;		// 결제 선택
 
 console.log('키오스크 시작합니다.');
 
-prompt('수령방법을 선택해주세요.');
+let takeout = prompt('수령방법을 선택해주세요.');		// 매장 or 포장 저장 변수
 
 for(let i = 0; i < 1000; i++){ // 메뉴선택 for s
 	for(let j = 0; j < 1000; j++){ // for2 s
@@ -24,9 +29,9 @@ for(let i = 0; i < 1000; i++){ // 메뉴선택 for s
 		if(select == 1){	// 장바구니에 담으면 for문을 빠져나감
 			break;
 		}else{			// 장바구니에 담지 않으면 배열에있던 상품들 삭제
-			menu.pop(0);
-			option.pop(0);
-			number.pop(0);
+			menu.pop();
+			option.pop();
+			number.pop();
 		}
 	} // 메뉴선택 for e
 	
@@ -54,6 +59,19 @@ for(let i = 0; i < 1000; i++){ 	// 결제수단 for s
 
 console.log('결제가 승인되었습니다.')
 
+for(let i = 0; i < menu.length; i++){ // 최종금액 합산 
+	if(menu[i] == 커피){
+		result += 2000;
+	}else if(menu[i] == 에이드){
+		result += 3000;
+	}else{
+		result += 4000;
+	}
+}
+console.log('최종금액은 ' + result + '입니다.')
+
+
+
 let select4 = Number(prompt('적립 및 할인을 하시겠습니까? (yes=1) (no=2)'))
 
 if(select4 == 1){
@@ -68,6 +86,7 @@ if(select5 == 1){
 console.log('주문이 완료되었습니다.')
 
 console.log('주문 내역')
+console.log(takeout)
 console.log(menu);
 console.log(option);
 console.log(number);
