@@ -29,9 +29,9 @@ for(let i = 0; i < 1000; i++){
 		if(select == 1){	// 장바구니에 담으면 for문을 빠져나감
 			break;
 		}else{			// 장바구니에 담지 않으면 배열에있던 상품들 삭제
-			menu.pop(0);
-			option.pop(0);
-			number.pop(0);
+			menu.pop();
+			option.pop();
+			number.pop();
 		}
 	}
 	
@@ -59,7 +59,7 @@ for(let i = 0; i < 1000; i++){
 
 console.log('결제가 승인되었습니다.')
 
-for(let i = 0; i < menu.length; i++){
+for(let i = 0; i < menu.length; i++){ // 최종금액 합산 
 	if(menu[i] == 커피){
 		result += 2000;
 	}else if(menu[i] == 에이드){
