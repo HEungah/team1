@@ -3,6 +3,11 @@
 	키오스크 주문 프로그램
 
 */
+let 커피 = 2000;
+let 에이드 = 3000;
+let 스무디 = 4000;
+let result = 0;			// 최종금액
+
 let menu = [];			// 메뉴리스트
 let option = [];		// 옵션리스트
 let number = [];		// 수량리스트
@@ -17,9 +22,9 @@ let takeout = prompt('수령방법을 선택해주세요.');		// 매장 or 포�
 
 for(let i = 0; i < 1000; i++){
 	for(let j = 0; j < 1000; j++){
-		menu[0] = prompt('메뉴를 선택해주세요')		// 메뉴 배열에 저장
-		option[0] = prompt('옵션을 선택해주세요')		// 옵션 배열에 저장
-		number[0] = prompt('수량을 선택해주세요')		// 수량 배열에 저장
+		menu[i] = prompt('메뉴를 선택해주세요')		// 메뉴 배열에 저장
+		option[i] = prompt('옵션을 선택해주세요')		// 옵션 배열에 저장
+		number[i] = prompt('수량을 선택해주세요')		// 수량 배열에 저장
 		select = Number(prompt('장바구니에 담으시겠습니까? (yes = 1) (no = 2)'))
 		if(select == 1){	// 장바구니에 담으면 for문을 빠져나감
 			break;
@@ -53,6 +58,19 @@ for(let i = 0; i < 1000; i++){
 }
 
 console.log('결제가 승인되었습니다.')
+
+for(let i = 0; i < menu.length; i++){
+	if(menu[i] == 커피){
+		result += 2000;
+	}else if(menu[i] == 에이드){
+		result += 3000;
+	}else{
+		result += 4000;
+	}
+}
+console.log('최종금액은 ' + result + '입니다.')
+
+
 
 let select4 = Number(prompt('적립 및 할인을 하시겠습니까? (yes=1) (no=2)'))
 
