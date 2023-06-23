@@ -22,8 +22,8 @@ let takeout = prompt('수령방법을 선택해주세요.');		// 매장 or 포�
 
 for(let i = 0; i < 1000; i++){ // 메뉴선택 for s
 	for(let j = 0; j < 1000; j++){ // for2 s
-		menu[i] = prompt('메뉴를 선택해주세요')		// 메뉴 배열에 저장
-		option[i] = prompt('옵션을 선택해주세요')		// 옵션 배열에 저장
+		menu[i] = prompt('메뉴를 선택해주세요 커피 or 에이드 or 스무디')		// 메뉴 배열에 저장
+		option[i] = prompt('옵션을 선택해주세요 아이스 or 핫')		// 옵션 배열에 저장
 		number[i] = prompt('수량을 선택해주세요')		// 수량 배열에 저장
 		select = Number(prompt('장바구니에 담으시겠습니까? (yes = 1) (no = 2)'))
 		if(select == 1){	// 장바구니에 담으면 for문을 빠져나감
