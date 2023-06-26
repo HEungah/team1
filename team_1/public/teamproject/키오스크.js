@@ -18,12 +18,12 @@ let select2 = 0;		// 결제 선택
 
 console.log('키오스크 시작합니다.');
 
-let takeout = prompt('수령방법을 선택해주세요.');		// 매장 or 포장 저장 변수
+let takeout = prompt('수령방법을 선택해주세요.');		// 매장 or 포장 저2장 변수
 
-for(let i = 0; i < 1000; i++){ // 메뉴선택 for s
-	for(let j = 0; j < 1000; j++){ // for2 s
-		menu[i] = prompt('메뉴를 선택해주세요 커피 or 에이드 or 스무디')		// 메뉴 배열에 저장
-		option[i] = prompt('옵션을 선택해주세요 아이스 or 핫')		// 옵션 배열에 저장
+for(let i = 0; i < 1000; i++){  //이 i와 [i]는 다름.
+	for(let j = 0; j < 1000; j++){
+		menu[i] = prompt('메뉴를 선택해주세요')		// 메뉴 배열에 저장  [i]는 index의 i
+		option[i] = prompt('옵션을 선택해주세요')		// 옵션 배열에 저장
 		number[i] = prompt('수량을 선택해주세요')		// 수량 배열에 저장
 		select = Number(prompt('장바구니에 담으시겠습니까? (yes = 1) (no = 2)'))
 		if(select == 1){	// 장바구니에 담으면 for문을 빠져나감
@@ -33,15 +33,15 @@ for(let i = 0; i < 1000; i++){ // 메뉴선택 for s
 			option.pop();
 			number.pop();
 		}
-	} // 메뉴선택 for e
+	}
 	
 	select2 = Number(prompt('결제하시겠습니까? (yes = 1) (no = 2)'));
 	if(select2 == 1){ // 결제 버튼 누르면 for문 빠져나감
 		break;
 	}
-} // for1 e
+}
 
-for(let i = 0; i < 1000; i++){ 	// 결제수단 for s
+for(let i = 0; i < 1000; i++){
 	let select3 = Number(prompt('결제수단을 선택해주세요 (카드 = 1) (기프티콘은 = 2)'));
 	if(select3 == 1){		// 카드 선택시 if문
 		let second = Number(prompt('결제 경과 시간 (30이상 결제수단창으로) (30이하 다음단계)'));
@@ -55,7 +55,7 @@ for(let i = 0; i < 1000; i++){ 	// 결제수단 for s
 			break;
 		}
 	}
-}	// 결제수단 for e
+}
 
 console.log('결제가 승인되었습니다.')
 
