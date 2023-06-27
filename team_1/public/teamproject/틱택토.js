@@ -67,7 +67,9 @@ true or false or null(){
 }
 */
 
-let 틱택토 = [];
+let 틱택토 = [null, null, null,
+			null, null, null,
+			null, null, null];
 
 let tictakbutton = document.querySelector('.main');
 let tictakHTML = ``;
@@ -85,9 +87,59 @@ tictakbutton.innerHTML = tictakHTML;
 
 function ticInput(index){
 	console.log(index + '번째 배열 버튼 클릭');
+	
+	truefalse(index);
+	
+	
 }
 
 
+//-------------------------------------------------------------------------------------------
+
+function truefalse(index){
+	//버튼을 누른 값을 가져와야되는데 그게 뭐냐~~~~~~~~~~~~~~~~~~
+	
+	//인덱스 값이 들어가 있는지 유효성 검사~~~~
+	if(틱택토[index] == null){
+		//문제 없다면 배열에 push
+		틱택토[index] = true;
+		      //인덱스 true만들고 그걸 html에서 O로 출력
+		      }
+	else {console.log('다시 눌러')}
+	
+	tictakHTML = ``;
+	
+	for(let i = 1; i <=9; i++){
+		
+		if(틱택토[i-1] == true){
+			tictakHTML +=   `
+							<button onclick="ticInput(${i-1})">o</button>					
+							`
+		}else{
+			tictakHTML +=   `
+							<button onclick="ticInput(${i-1})"></button>					
+							`
+		}					
+		if(i % 3 == 0){
+				tictakHTML += `<br/>`
+		}				
+				
+}
+	tictakbutton.innerHTML = tictakHTML;
+		
+	
+
+	// 인덱스 값에 들어 갈 수 있? 유효성
+	/*if([컴퓨터난수생성()]==null){
+		//틱택토.[컴퓨터난수생성()]=false
+		
+		//문제 없다면 배열에 push
+		틱택토.push
+		//??????? 배열에 x html로 출력
+		}
+	else {컴퓨터난수생성()}*/
+		
+}
 
 
 
