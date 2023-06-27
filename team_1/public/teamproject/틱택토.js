@@ -67,7 +67,8 @@ true or false or null(){
 }
 */
 
-let 틱택토 = [];
+let 틱택토 = [null, null, null, null, null, null, null, null, null];
+console.log(틱택토);
 
 let tictakbutton = document.querySelector('.main');
 let tictakHTML = ``;
@@ -85,6 +86,18 @@ tictakbutton.innerHTML = tictakHTML;
 
 function ticInput(index){
 	console.log(index + '번째 배열 버튼 클릭');
+	틱택토[5] = 1;
+		
+	if(틱택토[index] != null){
+		alert('이미 클릭한 구역입니다.')
+		return;
+	}
+	
+	//truefalse(index); 배열 판단 함수
+	
+	//컴퓨터 도형 출력 함수
+	
+	//최종 승리판단 함수
 }
 
 
