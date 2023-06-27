@@ -97,7 +97,7 @@ function ticInput(index){
 	
 	컴퓨터난수생성();
 	
-	//최종 승리판단 함수
+	승리판단();
 	
 }
 
@@ -105,80 +105,110 @@ function ticInput(index){
 function 승리판단(){
 	if(틱택토[0] == true && 틱택토[1] == true && 틱택토[2] == true ){
 		alert('사용자 승리입니다')
+		초기화();
 		return ;
 	} 
 	if(틱택토[3] == true && 틱택토[4] == true && 틱택토[5] == true){
 		alert('사용자 승리입니다')
+		초기화();
 		return ;
 	}
 	if(틱택토[6] == true && 틱택토[7] == true && 틱택토[8] == true){
 		alert('사용자 승리입니다')
+		초기화();
 		return ;
 	}
 	if(틱택토[0] == true && 틱택토[3] == true && 틱택토[6] == true){
 		alert('사용자 승리입니다')
+		초기화();
 		return ;
 	}
 	if(틱택토[1] == true && 틱택토[4] == true && 틱택토[7] == true){
 		alert('사용자 승리입니다')
+		초기화();
 		return ;
 	}
 	if(틱택토[2] == true && 틱택토[5] == true && 틱택토[8] == true){
 		alert('사용자 승리입니다')
+		초기화();
 		return ;
 	}
 	if(틱택토[0] == true && 틱택토[4] == true && 틱택토[8] == true){
 		alert('사용자 승리입니다')
+		초기화();
 		return ;
 	}
 	if(틱택토[2] == true && 틱택토[4] == true && 틱택토[6] == true){
 		alert('사용자 승리입니다')
+		초기화();
 		return ;
 	}
 	
 	if(틱택토[0] == false && 틱택토[1] == false && 틱택토[2] == false ){
 		alert('사용자 패배입니다')
+		초기화();
 		return ;
 	} 
 	if(틱택토[3] == false && 틱택토[4] == false && 틱택토[5] == false){
 		alert('사용자 패배입니다')
+		초기화();
 		return ;
 	}
 	if(틱택토[6] == false && 틱택토[7] == false && 틱택토[8] == false){
 		alert('사용자 패배입니다')
+		초기화();
 		return ;
 	}
 	if(틱택토[0] == false && 틱택토[3] == false && 틱택토[6] == false){
 		alert('사용자 패배입니다')
+		초기화();
 		return ;
 	}
 	if(틱택토[1] == false && 틱택토[4] == false && 틱택토[7] == false){
 		alert('사용자 패배입니다')
+		초기화();
 		return ;
 	}
 	if(틱택토[2] == false && 틱택토[5] == false && 틱택토[8] == false){
 		alert('사용자 패배입니다')
+		초기화();
 		return ;
 	}
 	if(틱택토[0] == false && 틱택토[4] == false && 틱택토[8] == false){
 		alert('사용자 패배입니다')
+		초기화();
 		return ;
 	}
 	if(틱택토[2] == false && 틱택토[4] == false && 틱택토[6] == false){
 		alert('사용자 패배입니다')
+		초기화();
 		return ;
 	}
-	alert('무승부 입니다')	
-	for(let i = 1; i <=9; i++){
-	tictakHTML +=   `
-					<button onclick="ticInput(${i-1})"></button>
-					`
-	if(i % 3 == 0){
-		tictakHTML += `<br/>`
-	}				
-}		
+	
+	if(틱택토.indexOf(null) == -1){
+		alert('무승부입니다.')
+		초기화();
+		return ;
+	}
+	
+			
 }
 
+function 초기화(){
+	틱택토 = [null, null, null, null, null, null, null, null, null];
+	
+	tictakHTML = ``;
+		
+	for(let i = 1; i <=9; i++){
+		tictakHTML +=   `
+						<button onclick="ticInput(${i-1})"></button>
+						`
+		if(i % 3 == 0){
+			tictakHTML += `<br/>`
+		}				
+	}
+	tictakbutton.innerHTML = tictakHTML;
+}
 
 
 
@@ -227,15 +257,18 @@ function 컴퓨터난수생성(){ //컴퓨터난수생성 함수 s
 	// console.log(Math.random()*9+1);
 	let 컴퓨터수 = parseInt(Math.random()*9); // 0부터 8사이의 난수생성
 	
-	while (틱택토[컴퓨터수] != null) {
-			console.log(컴퓨터수);
-			컴퓨터수 = parseInt(Math.random()*9);
-	}
+	if(틱택토.indexOf(null) != -1){
+		while (틱택토[컴퓨터수] != null) {
+				console.log(컴퓨터수);
+				컴퓨터수 = parseInt(Math.random()*9);
+		}
+		
 		// X 도형 화면에 찍히게 실행
 		// 난수로 뽑힌 [컴퓨터수]와 같은 인덱스를 가진 버튼에 X표시하기
 	틱택토[컴퓨터수] = false;
 	
 	도형찍기();
+	}
 	
 } // 컴퓨터난수생성 함수 e
 
