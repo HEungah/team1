@@ -86,7 +86,6 @@ tictakbutton.innerHTML = tictakHTML;
 
 function ticInput(index){
 	console.log(index + '번째 배열 버튼 클릭');
-	틱택토[5] = 1;
 		
 	if(틱택토[index] != null){
 		alert('이미 클릭한 구역입니다.')
