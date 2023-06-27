@@ -134,16 +134,6 @@ function truefalse(index){
 	tictakbutton.innerHTML = tictakHTML;
 		
 	
-
-	// 인덱스 값에 들어 갈 수 있? 유효성
-	/*if([컴퓨터난수생성()]==null){
-		//틱택토.[컴퓨터난수생성()]=false
-		
-		//문제 없다면 배열에 push
-		틱택토.push
-		//??????? 배열에 x html로 출력
-		}
-	else {컴퓨터난수생성()}*/
 		
 }
 
