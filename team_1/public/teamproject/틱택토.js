@@ -1,3 +1,4 @@
+
 /*
 	주제 : 틱택토 요구사항/작업순서 작성하기
 조건 : 
@@ -75,7 +76,7 @@ let tictakHTML = ``;
 
 for(let i = 1; i <=9; i++){
 	tictakHTML +=   `
-					<button onclick="ticInput(${i-1})"></button>
+					<button class="btn" onclick="ticInput(${i-1})"></button>
 					`
 	if(i % 3 == 0){
 		tictakHTML += `<br/>`
@@ -94,7 +95,7 @@ function ticInput(index){
 	
 	truefalse(index);
 	
-	//컴퓨터 도형 출력 함수
+	컴퓨터난수생성();
 	
 	//최종 승리판단 함수
 }
@@ -136,6 +137,27 @@ function truefalse(index){
 	
 		
 }
+
+//규리 컴퓨터 랜덤 함수
+
+
+function 컴퓨터난수생성(){ //컴퓨터난수생성 함수 s
+	// console.log(Math.random());
+	// console.log(Math.random()+1);
+	// console.log(Math.random()*9+1);
+	let 컴퓨터수 = parseInt(Math.random()*9); // 0부터 8사이의 난수생성
+	
+	while (틱택토[컴퓨터수] != null) {
+			console.log(컴퓨터수);
+			컴퓨터수 = parseInt(Math.random()*9);
+	}
+		// X 도형 화면에 찍히게 실행
+		// 난수로 뽑힌 [컴퓨터수]와 같은 인덱스를 가진 버튼에 X표시하기
+		document.querySelectorAll('.btn')[컴퓨터수].innerHTML = "X";
+} // 컴퓨터난수생성 함수 e
+
+console.log(틱택토);
+console.log(tictakbutton);
 
 
 
