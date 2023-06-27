@@ -68,9 +68,8 @@ true or false or null(){
 }
 */
 
-let 틱택토 = [ true, true, true,
-			 true, true, null,
-			 true, true, true ];
+let 틱택토 = [null, null, null, null, null, null, null, null, null];
+console.log(틱택토);
 
 let tictakbutton = document.querySelector('.main');
 let tictakHTML = ``;
@@ -88,10 +87,166 @@ tictakbutton.innerHTML = tictakHTML;
 
 function ticInput(index){
 	console.log(index + '번째 배열 버튼 클릭');
+		
+	if(틱택토[index] != null){
+		alert('이미 클릭한 구역입니다.')
+		return;
+	}
+	
+	truefalse(index);
+	
 	컴퓨터난수생성();
+	
+	승리판단();
+	
+}
+
+// 이길수있는 경우의 수 8개중 1개라도 나오지 않았고, 빈 배열이 없으면 무승부입니다 알림창생성
+function 승리판단(){
+	if(틱택토[0] == true && 틱택토[1] == true && 틱택토[2] == true ){
+		alert('사용자 승리입니다')
+		초기화();
+		return ;
+	} 
+	if(틱택토[3] == true && 틱택토[4] == true && 틱택토[5] == true){
+		alert('사용자 승리입니다')
+		초기화();
+		return ;
+	}
+	if(틱택토[6] == true && 틱택토[7] == true && 틱택토[8] == true){
+		alert('사용자 승리입니다')
+		초기화();
+		return ;
+	}
+	if(틱택토[0] == true && 틱택토[3] == true && 틱택토[6] == true){
+		alert('사용자 승리입니다')
+		초기화();
+		return ;
+	}
+	if(틱택토[1] == true && 틱택토[4] == true && 틱택토[7] == true){
+		alert('사용자 승리입니다')
+		초기화();
+		return ;
+	}
+	if(틱택토[2] == true && 틱택토[5] == true && 틱택토[8] == true){
+		alert('사용자 승리입니다')
+		초기화();
+		return ;
+	}
+	if(틱택토[0] == true && 틱택토[4] == true && 틱택토[8] == true){
+		alert('사용자 승리입니다')
+		초기화();
+		return ;
+	}
+	if(틱택토[2] == true && 틱택토[4] == true && 틱택토[6] == true){
+		alert('사용자 승리입니다')
+		초기화();
+		return ;
+	}
+	
+	if(틱택토[0] == false && 틱택토[1] == false && 틱택토[2] == false ){
+		alert('사용자 패배입니다')
+		초기화();
+		return ;
+	} 
+	if(틱택토[3] == false && 틱택토[4] == false && 틱택토[5] == false){
+		alert('사용자 패배입니다')
+		초기화();
+		return ;
+	}
+	if(틱택토[6] == false && 틱택토[7] == false && 틱택토[8] == false){
+		alert('사용자 패배입니다')
+		초기화();
+		return ;
+	}
+	if(틱택토[0] == false && 틱택토[3] == false && 틱택토[6] == false){
+		alert('사용자 패배입니다')
+		초기화();
+		return ;
+	}
+	if(틱택토[1] == false && 틱택토[4] == false && 틱택토[7] == false){
+		alert('사용자 패배입니다')
+		초기화();
+		return ;
+	}
+	if(틱택토[2] == false && 틱택토[5] == false && 틱택토[8] == false){
+		alert('사용자 패배입니다')
+		초기화();
+		return ;
+	}
+	if(틱택토[0] == false && 틱택토[4] == false && 틱택토[8] == false){
+		alert('사용자 패배입니다')
+		초기화();
+		return ;
+	}
+	if(틱택토[2] == false && 틱택토[4] == false && 틱택토[6] == false){
+		alert('사용자 패배입니다')
+		초기화();
+		return ;
+	}
+	
+	if(틱택토.indexOf(null) == -1){
+		alert('무승부입니다.')
+		초기화();
+		return ;
+	}
+	
+			
+}
+
+function 초기화(){
+	틱택토 = [null, null, null, null, null, null, null, null, null];
+	
+	tictakHTML = ``;
+		
+	for(let i = 1; i <=9; i++){
+		tictakHTML +=   `
+						<button onclick="ticInput(${i-1})"></button>
+						`
+		if(i % 3 == 0){
+			tictakHTML += `<br/>`
+		}				
+	}
+	tictakbutton.innerHTML = tictakHTML;
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//-------------------------------------------------------------------------------------------
+
+function truefalse(index){
+	//버튼을 누른 값을 가져와야되는데 그게 뭐냐~~~~~~~~~~~~~~~~~~
+	
+	//인덱스 값이 들어가 있는지 유효성 검사~~~~
+	if(틱택토[index] == null){
+		//문제 없다면 배열에 push
+		틱택토[index] = true;
+		      //인덱스 true만들고 그걸 html에서 O로 출력
+		      }
+	else {console.log('다시 눌러')}
+	
+	도형찍기();	
+	
+		
+}
 
 //규리 컴퓨터 랜덤 함수
 
@@ -102,14 +257,47 @@ function 컴퓨터난수생성(){ //컴퓨터난수생성 함수 s
 	// console.log(Math.random()*9+1);
 	let 컴퓨터수 = parseInt(Math.random()*9); // 0부터 8사이의 난수생성
 	
-	while (틱택토[컴퓨터수] != null) {
-			console.log(컴퓨터수);
-			컴퓨터수 = parseInt(Math.random()*9);
-	}
+	if(틱택토.indexOf(null) != -1){
+		while (틱택토[컴퓨터수] != null) {
+				console.log(컴퓨터수);
+				컴퓨터수 = parseInt(Math.random()*9);
+		}
+		
 		// X 도형 화면에 찍히게 실행
 		// 난수로 뽑힌 [컴퓨터수]와 같은 인덱스를 가진 버튼에 X표시하기
-		document.querySelectorAll('.btn')[컴퓨터수].innerHTML = "X";
+	틱택토[컴퓨터수] = false;
+	
+	도형찍기();
+	}
+	
 } // 컴퓨터난수생성 함수 e
+
+function 도형찍기(){
+	tictakHTML = ``;
+	
+	for(let i = 1; i <=9; i++){
+		
+		if(틱택토[i-1] == true){
+			tictakHTML +=   `
+							<button onclick="ticInput(${i-1})">o</button>					
+							`
+		}else if(틱택토[i-1] == false){
+			tictakHTML +=   `
+							<button onclick="ticInput(${i-1})">x</button>
+							`
+		}else{
+			tictakHTML +=   `
+							<button onclick="ticInput(${i-1})"></button>					
+							`
+		}					
+		if(i % 3 == 0){
+				tictakHTML += `<br/>`
+		}				
+				
+	}
+	
+	tictakbutton.innerHTML = tictakHTML;
+}
 
 console.log(틱택토);
 console.log(tictakbutton);
