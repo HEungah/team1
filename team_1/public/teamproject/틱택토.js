@@ -98,7 +98,106 @@ function ticInput(index){
 	컴퓨터난수생성();
 	
 	//최종 승리판단 함수
+	
 }
+
+// 이길수있는 경우의 수 8개중 1개라도 나오지 않았고, 빈 배열이 없으면 무승부입니다 알림창생성
+function 승리판단(){
+	if(틱택토[0] == true && 틱택토[1] == true && 틱택토[2] == true ){
+		alert('사용자 승리입니다')
+		return ;
+	} 
+	if(틱택토[3] == true && 틱택토[4] == true && 틱택토[5] == true){
+		alert('사용자 승리입니다')
+		return ;
+	}
+	if(틱택토[6] == true && 틱택토[7] == true && 틱택토[8] == true){
+		alert('사용자 승리입니다')
+		return ;
+	}
+	if(틱택토[0] == true && 틱택토[3] == true && 틱택토[6] == true){
+		alert('사용자 승리입니다')
+		return ;
+	}
+	if(틱택토[1] == true && 틱택토[4] == true && 틱택토[7] == true){
+		alert('사용자 승리입니다')
+		return ;
+	}
+	if(틱택토[2] == true && 틱택토[5] == true && 틱택토[8] == true){
+		alert('사용자 승리입니다')
+		return ;
+	}
+	if(틱택토[0] == true && 틱택토[4] == true && 틱택토[8] == true){
+		alert('사용자 승리입니다')
+		return ;
+	}
+	if(틱택토[2] == true && 틱택토[4] == true && 틱택토[6] == true){
+		alert('사용자 승리입니다')
+		return ;
+	}
+	
+	if(틱택토[0] == false && 틱택토[1] == false && 틱택토[2] == false ){
+		alert('사용자 패배입니다')
+		return ;
+	} 
+	if(틱택토[3] == false && 틱택토[4] == false && 틱택토[5] == false){
+		alert('사용자 패배입니다')
+		return ;
+	}
+	if(틱택토[6] == false && 틱택토[7] == false && 틱택토[8] == false){
+		alert('사용자 패배입니다')
+		return ;
+	}
+	if(틱택토[0] == false && 틱택토[3] == false && 틱택토[6] == false){
+		alert('사용자 패배입니다')
+		return ;
+	}
+	if(틱택토[1] == false && 틱택토[4] == false && 틱택토[7] == false){
+		alert('사용자 패배입니다')
+		return ;
+	}
+	if(틱택토[2] == false && 틱택토[5] == false && 틱택토[8] == false){
+		alert('사용자 패배입니다')
+		return ;
+	}
+	if(틱택토[0] == false && 틱택토[4] == false && 틱택토[8] == false){
+		alert('사용자 패배입니다')
+		return ;
+	}
+	if(틱택토[2] == false && 틱택토[4] == false && 틱택토[6] == false){
+		alert('사용자 패배입니다')
+		return ;
+	}
+	alert('무승부 입니다')	
+	for(let i = 1; i <=9; i++){
+	tictakHTML +=   `
+					<button onclick="ticInput(${i-1})"></button>
+					`
+	if(i % 3 == 0){
+		tictakHTML += `<br/>`
+	}				
+}		
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //-------------------------------------------------------------------------------------------
