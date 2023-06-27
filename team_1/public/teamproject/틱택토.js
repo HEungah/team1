@@ -114,26 +114,7 @@ function truefalse(index){
 		      }
 	else {console.log('다시 눌러')}
 	
-	tictakHTML = ``;
-	
-	for(let i = 1; i <=9; i++){
-		
-		if(틱택토[i-1] == true){
-			tictakHTML +=   `
-							<button onclick="ticInput(${i-1})">o</button>					
-							`
-		}else{
-			tictakHTML +=   `
-							<button onclick="ticInput(${i-1})"></button>					
-							`
-		}					
-		if(i % 3 == 0){
-				tictakHTML += `<br/>`
-		}				
-				
-}
-	tictakbutton.innerHTML = tictakHTML;
-		
+	도형찍기();	
 	
 		
 }
@@ -153,8 +134,38 @@ function 컴퓨터난수생성(){ //컴퓨터난수생성 함수 s
 	}
 		// X 도형 화면에 찍히게 실행
 		// 난수로 뽑힌 [컴퓨터수]와 같은 인덱스를 가진 버튼에 X표시하기
-		document.querySelectorAll('.btn')[컴퓨터수].innerHTML = "X";
+	틱택토[컴퓨터수] = false;
+	
+	도형찍기();
+	
 } // 컴퓨터난수생성 함수 e
+
+function 도형찍기(){
+	tictakHTML = ``;
+	
+	for(let i = 1; i <=9; i++){
+		
+		if(틱택토[i-1] == true){
+			tictakHTML +=   `
+							<button onclick="ticInput(${i-1})">o</button>					
+							`
+		}else if(틱택토[i-1] == false){
+			tictakHTML +=   `
+							<button onclick="ticInput(${i-1})">x</button>
+							`
+		}else{
+			tictakHTML +=   `
+							<button onclick="ticInput(${i-1})"></button>					
+							`
+		}					
+		if(i % 3 == 0){
+				tictakHTML += `<br/>`
+		}				
+				
+	}
+	
+	tictakbutton.innerHTML = tictakHTML;
+}
 
 console.log(틱택토);
 console.log(tictakbutton);
