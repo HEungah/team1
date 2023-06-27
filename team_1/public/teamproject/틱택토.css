@@ -1,1 +1,30 @@
 @charset "UTF-8";
+
+*{padding: 0px; margin: 0px;}
+li{list-style-type: none;}
+
+#tictak{
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.main{
+	padding-top: 200px;
+	text-align: center;
+}
+
+.main button{
+	width: 80px;
+	height: 80px;
+}
+
+
+
+
+
+
+
+
+
+
+
