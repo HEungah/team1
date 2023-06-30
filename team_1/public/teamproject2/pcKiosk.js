@@ -26,7 +26,7 @@ let seatposition = false;    //좌석 선택 // 목적 : 결제 하기전에 결
 let timeposition = false;    //시간금액 선택 상태
 
 
-onPrint();
+
 
 /*함수*/
 
@@ -40,7 +40,7 @@ function registerInput() { console.log('registerInput()실행')
   	let s_name_input=document.querySelector('.s_name_input').value
   
  	 //회원가입 회원정보 객체화
- 	 let user={id:s_id_input, pw:s_pw_input, name:s_name_input}
+ 	 let user={id:s_id_input, pw:s_pw_input, name:s_name_input, time : 0, seatNumber : false}
 
 		// 유효성검사: 회원가입 가능한 상태인지 확인
 		for(let i=0; i<userList.length;i++){
@@ -151,7 +151,7 @@ function onPrint(index) { // 좌석 출력 함수
 	// 결제하기 버튼을 출력				
 	contentHTML += 	`
 					<span>
-					<button class="payment" onclick="payment()">결제</button>
+					<button class="payment" onclick="payment(${index})">결제</button>
 					</span>
 					`								
 
@@ -241,18 +241,18 @@ function selectTm(index) { // 시간금액선택 함수
 
 
 //의선
-function payment() { // 결제 함수 
-	let userSelect1 = seatList.indexOf('select');
-	let userSelect2 = payListSelect('select');
+function payment(index) { // 결제 함수 
+	let userSelect = seatList.indexOf('select');
 
 	if(seatposition == 'true' && timeposition == 'true'){
-		/*userList[]*/
+		userList[index].time += sumTime;
+		userList[index].seatNumber = userSelect;
 	}else{
 		alert('좌석과 사용할 시간을 선택해주세요.');
 		return;
 	}
 	
-	
+	console.log(userList);
 	
 	resetU();
 
