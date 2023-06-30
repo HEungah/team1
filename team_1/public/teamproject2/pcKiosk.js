@@ -1,20 +1,28 @@
-
+console.log('js 파일 열림');
 
 
 /*전역변수*/
 
 let userList = []; // 회원정보리스트
 
-let seatList = []; // 좌석
+let seatList = ['empty', 'empty', 'empty', 'empty', 
+				'empty', 'used', 'used', 'empty', 
+				'empty', 'empty', 'empty', 'empty', 
+				'empty', 'empty','select' , 'empty', 
+				]; // 좌석
 
-let payList = [];  // 금액
+let payList = [1000, 3000, 5000, 10000];  // 금액
+
+let payListSelect = ['unselect', 'select', 'unselect', 'unselect'];
+
+let sumPay = 0;
 
 let seatposition = false;    //좌석 선택
 
 let timeposition = false;    //시간금액 선택
 
 
-
+onPrint();
 
 /*함수*/
 
@@ -33,7 +41,52 @@ function login() { // 로그인 함수
 
 
 //의선
-function onPrint() { // 좌석 출력 함수 
+function onPrint() { // 좌석 출력 함수
+	let contentInput = document.querySelector('.content_box');
+	let contentHTML = ``;
+	
+	for(let i = 0; i < seatList.length; i++){
+		
+		if(seatList[i] == 'empty'){
+			contentHTML += 	`
+							<button class="seatClick" onclick="selectSeat(${i})">${i+1}번 좌석</button>
+							`;
+		}else if(seatList[i] == 'used'){
+			contentHTML += 	`
+							<button class="seatClick2" onclick="selectSeat(${i})">${i+1}번 좌석(사용중)</button>
+							`;
+		}else if(seatList[i] == 'select'){
+			contentHTML += 	`
+							<button class="seatClick3" onclick="selectSeat(${i})">${i+1}번 좌석(사용중)</button>
+							`;
+		}
+		
+		if( (i+1) % 4 == 0){
+			contentHTML += `<br/>`
+		}
+	}
+	
+	for(let i = 0; i < payList.length; i++){
+		
+		if(payListSelect[i] == 'unselect'){
+			contentHTML += 	`
+							<button class="timeClick" onclick="selectTm(${i})">${payList[i]}원</button>
+							`
+		}else if(payListSelect[i] == 'select'){
+			contentHTML += 	`
+							<button class="timeClick2" onclick="selectTm(${i})">${payList[i]}원</button>
+							`
+		}
+	}
+	
+	
+	
+	
+	
+	contentInput.innerHTML = contentHTML;
+	
+	
+	
    
 }   // 좌석 출력 함수 e 
 
