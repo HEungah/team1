@@ -20,6 +20,7 @@
 			로그인 ->  아이디 비밀번호
 		
 		데이터구조
+			회원정보리스트 -> userInfoList()		전역변수
 			회원정보 -> userList{} 	전역변수
 			좌석 -> seatList[]		전역변수
 			금액 -> payList[]		전역변수
@@ -33,7 +34,6 @@
 			
 			사용자
 				
-		0. 초기 화면 출력 함수		->	resetU()	-> 희락
 		1. 회원가입 함수   	->		registerInput()	-> 연진
 		2. 로그인 함수		->		login()			-> 연진
 		3. 좌석 출력 함수(시간,금액 같이 출력)	->		onPrint()	-> 의선
@@ -41,16 +41,19 @@
 		5. 시간*금액 선택 함수		->	selectTm()	-> 규리
 		6. 결제 함수				->	payment()	-> 의선	
 		7. 로그아웃 함수			->	logout()	-> 규리
+		8. 초기화			->	resetU()	-> 희락
 		
 			관리자
 		0. 초기 화면 출력 함수		->	resetM()
 		1. 사용좌석정보 출력 함수		->	seatInfo()
-		2. 회원정보 출력 함수			->	userInfo()
-		3. 회원정보 삭제 함수			->	deleteUser()
+		2. 사용종료 함수			->	endPc()
+		3. 회원정보 출력 함수			->	userInfo()
+		4. 회원정보 삭제 함수			->	deleteUser()
 
 
 	작업 순서
-		
+		3. onPrint()
+				출력에 필요한 데이터 [seatList[], payList[]
 
 
 
