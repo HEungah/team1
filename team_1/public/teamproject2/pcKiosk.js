@@ -75,7 +75,7 @@ function login() {
 		if(userList[i].id==j_id_input&&userList[i].pw==j_pw_input){
 			alert('로그인성공')
 			console.log('로그인성공')
-				
+			onPrint(i);
 			}
 		else{alert('로그인실패')}
    }//for문 종료 함수
@@ -84,7 +84,7 @@ function login() {
 
 
 //의선
-function onPrint() { // 좌석 출력 함수
+function onPrint(index) { // 좌석 출력 함수
 	//content_box 의 속성값을 받아옴
 	let contentInput = document.querySelector('.content_box');
 	let contentHTML = ``;
