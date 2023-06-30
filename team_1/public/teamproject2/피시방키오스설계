@@ -33,7 +33,6 @@
 			
 			사용자
 				
-		0. 초기 화면 출력 함수		->	resetU()	-> 희락
 		1. 회원가입 함수   	->		registerInput()	-> 연진
 		2. 로그인 함수		->		login()			-> 연진
 		3. 좌석 출력 함수(시간,금액 같이 출력)	->		onPrint()	-> 의선
@@ -41,6 +40,7 @@
 		5. 시간*금액 선택 함수		->	selectTm()	-> 규리
 		6. 결제 함수				->	payment()	-> 의선	
 		7. 로그아웃 함수			->	logout()	-> 규리
+		8. 초기화		->	resetU()	-> 희락
 		
 			관리자
 		0. 초기 화면 출력 함수		->	resetM()
@@ -50,8 +50,16 @@
 
 
 	작업 순서
+		4. 좌석 선택 함수
+			- <button onclick="selectSeat()">선택</button>
+			- function selectSeat() {console.log('좌석선택되었습니다:')
+			-
+			}
+			
 		
-
+	
+			
+		
 
 
 
