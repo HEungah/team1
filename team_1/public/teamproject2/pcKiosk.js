@@ -171,8 +171,8 @@ function selectSeat(인덱스) {console.log('selectSeat() 함수 :'+인덱스) /
 	// 내가 선택한 좌석 상태 1개 확인 == 배열내 하나의 요소 출력 == 배열명[인덱스]
 	console.log(seatList[인덱스] ); 
 	
-	  // 사용중인자석(있는좌석=used)인지 사용가능한 자석(빈좌석=empty)인지 = if / 
- 		// 빈자석이면 seatposition true // 내가 선택한좌석에 색상변경   
+	  // 사용중인좌석(있는좌석=used)인지 사용가능한 좌석(빈좌석=empty)인지 = if / 
+ 		// 빈좌석이면 seatposition true // 내가 선택한좌석에 색상변경   
  		// 있는좌석이면 seatposition fales
  	
  	// 마냐게 내가 선택한 좌석이 있는좌석이면
@@ -268,7 +268,24 @@ function payment(index) { // 결제 함수
 
 
 //희락
-function resetU() { // 초기화 함수 
+function resetU(index) { console.log('resetU() 함수' +index) // 초기화 함수 
+   
+   let content_box = document.querySelector('.content_box') 
+   
+  
+   
+   
+   content_box.innerHTML = `
+   				<div class="sign_box"> 
+               회원가입창
+               <div class="s_id">
+                  아이디 <input class="s_id_input" type="text">
+                  비밀번호 <input class="s_pw_input" type="text">
+                  이름 <input class="s_name_input" type="text">
+                  <button onclick="registerInput()" class="btn_sign"> 가입하기 </button>
+               </div>
+            </div>
+   `;
    
 }   // 초기화 함수 e 
 
