@@ -20,10 +20,10 @@
 			로그인 ->  아이디 비밀번호
 		
 		데이터구조
-			회원정보 -> userList{} 	전역변수
+			회원정보리스트 -> userList[]		전역변수
+			회원정보 -> userInfoList{} 	전역변수
 			좌석 -> seatList[]		전역변수
 			금액 -> payList[]		전역변수
-			로그인상태	->	log		전역변수(true, false)
 			
 	
 	
@@ -39,17 +39,23 @@
 		4. 좌석 선택 함수			->	selectSeat()	-> 희락
 		5. 시간*금액 선택 함수		->	selectTm()	-> 규리
 		6. 결제 함수				->	payment()	-> 의선	
+<<<<<<< HEAD
 		7. 로그아웃 함수			->	logout()	-> 규리
 		8. 초기화		->	resetU()	-> 희락
+=======
+		7. 초기화			->	resetU()	-> 희락
+>>>>>>> branch 'main' of https://github.com/HEungah/team1
 		
 			관리자
 		0. 초기 화면 출력 함수		->	resetM()
 		1. 사용좌석정보 출력 함수		->	seatInfo()
-		2. 회원정보 출력 함수			->	userInfo()
-		3. 회원정보 삭제 함수			->	deleteUser()
+		2. 사용종료 함수			->	endPc()
+		3. 회원정보 출력 함수			->	userInfo()
+		4. 회원정보 삭제 함수			->	deleteUser()
 
 
 	작업 순서
+<<<<<<< HEAD
 		4. 좌석 선택 함수
 			- <button onclick="selectSeat()">선택</button>
 			- function selectSeat() {console.log('좌석선택되었습니다:')
@@ -60,6 +66,15 @@
 	
 			
 		
+=======
+		3. onPrint()
+				출력에 필요한 데이터 (seatList[], payList[])
+				로그인버튼을 눌렀을때 로그인에 성공을 했으면 실행
+					<button onclick="onPrint()">로그인</button>
+				좌석 1개당 버튼 하나 생성(true,false 값에 따라 다르게 표시)
+				시간*금액 버튼 4개 생성
+				
+>>>>>>> branch 'main' of https://github.com/HEungah/team1
 
 
 
