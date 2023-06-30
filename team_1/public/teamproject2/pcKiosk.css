@@ -1,5 +1,51 @@
 @charset "UTF-8";
 
+#wrap {
+   width: 1800px;
+   display: flex;
+   margin: 0 auto;
+}
+
+#u_view , #m_view {
+   width: 50%;
+   
+}
+
+.u_header {
+   text-align: center;
+   padding: 10px;
+}
+
+.content_box {
+   display: flex;
+   text-align: center;
+   margin-top: 30px;
+   width: 100%;
+   margin: 0 auto;
+}
+
+.join_box {
+   margin-left: 120px;
+}
+
+.s_id , .j_id {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/* 관리자화면 */
+
+.m_used_info > h3 , .alluser_list > h3 {
+   text-align: center
+}
+
+.table1 , .table2 {
+   margin: 0 auto;
+}
+
+
 
 
 
