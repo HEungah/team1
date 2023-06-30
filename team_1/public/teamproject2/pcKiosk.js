@@ -3,7 +3,7 @@
 
 /*전역변수*/
 
-let userList = []; // 회원정보리스트
+let userList = [ ]; // 회원정보리스트
 
 let seatList = []; // 좌석
 
@@ -20,9 +20,43 @@ let timeposition = false;    //시간금액 선택
 
 
 //연진
-function registerInput() { // 회원가입함수 
-   
-}   // 회원가입함수 e 
+// 회원가입함수 
+function registerInput() { console.log('registerInput()실행')
+  let s_id_input= document.querySelector('.s_id_input').value
+  console.log(s_id_input)
+  let s_pw_input= document.querySelector('.s_pw_input').value
+  let s_name_input=document.querySelector('.s_name_input').value
+  //회원가입 회원정보 객체화
+  let user={id:s_id_input, pw:s_pw_input, name:s_name_input}
+
+	for(let i=0; i<userList.length;i++){
+
+		if(userList[i].id==s_id_input){
+			alert('회원가입 실패')
+			console.log('회원가입실패')
+			document.querySelector('.s_id_input').value=``
+			document.querySelector('.s_pw_input').value=``
+ 			document.querySelector('.s_name_input').value=``
+ 			return;}
+ 		}	
+ 			
+ 	userList.push(user)
+ 	alert('회원가입성공')
+ 	
+ 	console.log(userList)
+	
+}	
+	/*else{userList.push(user)
+		console.log('가입성공'+userList)
+		alert('가입성공')
+		document.querySelector('.s_id_input').value=``
+		document.querySelector('.s_pw_input').value=``
+ 		document.querySelector('.s_name_input').value=``
+ 		}  
+ 	break
+ 
+ } */
+ // 회원가입함수 e 
 
 
 //연진
