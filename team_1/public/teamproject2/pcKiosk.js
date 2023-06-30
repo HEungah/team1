@@ -3,7 +3,7 @@ console.log('js 파일 열림');
 
 /*전역변수*/
 
-let userList = []; // 회원정보리스트
+let userList = [ ]; // 회원정보리스트
 
 let seatList = ['empty', 'empty', 'empty', 'empty', 
 				'empty', 'used', 'used', 'empty', 
@@ -32,9 +32,35 @@ onPrint();
 
 
 //연진
-function registerInput() { // 회원가입함수 
-   
-}   // 회원가입함수 e 
+// 회원가입함수 ----------------------------------------------------------
+
+function registerInput() { console.log('registerInput()실행')
+ 	 let s_id_input= document.querySelector('.s_id_input').value
+  	let s_pw_input= document.querySelector('.s_pw_input').value
+  	let s_name_input=document.querySelector('.s_name_input').value
+  
+ 	 //회원가입 회원정보 객체화
+ 	 let user={id:s_id_input, pw:s_pw_input, name:s_name_input}
+
+		// 유효성검사: 회원가입 가능한 상태인지 확인
+		for(let i=0; i<userList.length;i++){
+
+			if(userList[i].id==s_id_input){
+				alert('회원가입 실패')
+				console.log('회원가입실패')
+				document.querySelector('.s_id_input').value=``
+				document.querySelector('.s_pw_input').value=``
+ 				document.querySelector('.s_name_input').value=``
+ 				return;}
+ 				}	
+ 		 // 가입 가능하다면 userList 배열에 넣어서 회원가입 완료
+ 			userList.push(user)
+ 			alert('회원가입성공')
+ 		// 회원가입리스트 확인
+ 		console.log(userList)
+	
+}	
+
 
 
 //연진
