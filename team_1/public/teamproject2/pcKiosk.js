@@ -17,6 +17,8 @@ let payListSelect = ['unselect', 'select', 'unselect', 'unselect'];
 
 let sumPay = 0;
 
+let sumTime = 0;
+
 let seatposition = false;    //좌석 선택
 
 let timeposition = false;    //시간금액 선택
@@ -82,7 +84,6 @@ function onPrint() { // 좌석 출력 함수
 	
 	
 	
-	
 	contentInput.innerHTML = contentHTML;
 	
 	
@@ -98,8 +99,32 @@ function selectSeat() { // 좌석선택 함수
 
 
 //규리
-function selectTm() { // 시간금액선택 함수 
+function selectTm(index) { // 시간금액선택 함수 
    //인자 인덱스
+   // 인자 확인용 console.log('시간금액선택실행'+index);
+   
+   // 1. 버튼눌리면  payListSelect  에서 상태 바뀜
+   // 확인용 console.log(payListSelect[index]); 
+   payListSelect[index] = 'select';
+   // 2. 버튼 눌리면 timeposition 상태가 false -> true로 바뀜
+     //timeposition = true;
+   // 3. 다시 눌리면 취소가 되어야해서 true ->  false 로 바뀜
+   if (timeposition == true) { // if문 s
+	   timeposition = false;
+   } else if (timeposition == false){
+	   timeposition = true;
+   } // if문 e
+
+   console.log(timeposition);
+   
+   // 4. 받아온 인자와 payList 인덱스 위치를 매칭시킨후 값을 하단에 출력
+   //console.log(payList[index]);
+   sumPay = payList[index];
+   sumTime = 
+   
+   console.log(sumPay); // 하단화면 없어서 콘솔로 대신 출력 확인용
+   
+   
 }   //  시간금액선택 함수 e 
 
 
