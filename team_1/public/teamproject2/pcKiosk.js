@@ -52,8 +52,21 @@ function registerInput() { console.log('registerInput()실행')
 
 
 //연진
-function login() { // 로그인 함수 
-   
+//로그인함수----------------------------------------------
+function login() {
+	let j_id_input=document.querySelector('.j_id_input').value
+	let j_pw_input=document.querySelector('.j_pw_input').value
+	
+	// userList 안에 아이디와 입력 받은 아이디가 같고, 비밀번호가 모두 같으면 로그인 성공
+	
+	for(let i=0; i<userList.length;i++){
+		if(userList[i].id==j_id_input&&userList[i].pw==j_pw_input){
+			alert('로그인성공')
+			console.log('로그인성공')
+				
+			}
+		else{alert('로그인실패')}
+   }//for문 종료 함수
 }   // 로그인함수 e 
 
 
