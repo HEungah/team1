@@ -50,8 +50,13 @@
 
 
 	작업 순서
-		
-
+		3. onPrint()
+				출력에 필요한 데이터 (seatList[], payList[])
+				로그인버튼을 눌렀을때 로그인에 성공을 했으면 실행
+					<button onclick="onPrint()">로그인</button>
+				좌석 1개당 버튼 하나 생성(true,false 값에 따라 다르게 표시)
+				시간*금액 버튼 4개 생성
+				
 
 
 
