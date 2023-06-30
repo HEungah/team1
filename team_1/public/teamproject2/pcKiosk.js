@@ -249,6 +249,8 @@ function payment() { // 결제 함수
 //희락
 function resetU() { console.log('resetU() 함수') // 초기화 함수 
    
+   let content_box = document.querySelector(".content_box") 
+   
 }   // 초기화 함수 e 
 
 
