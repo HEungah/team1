@@ -18,7 +18,7 @@ let select2 = 0;		// 결제 선택
 
 console.log('키오스크 시작합니다.');
 
-let takeout = prompt('수령방법을 선택해주세요.');		// 매장 or 포장 저2장 변수
+let takeout = prompt('수령방법을 선택해주세요.');		// 매장 or 포장 저장 변수
 
 for(let i = 0; i < 1000; i++){  //이 i와 [i]는 다름.
 	for(let j = 0; j < 1000; j++){
