@@ -213,29 +213,37 @@ function selectSeat(인덱스) {console.log('selectSeat() 함수 :'+인덱스) /
 function selectTm(index) { // 시간금액선택 함수 
    //인자 인덱스
    // 인자 확인용 console.log('시간금액선택실행'+index);
+  // 버튼눌리면  payListSelect  에서 상태 바뀜
+  // payListSelect[index] = 'select';
    
-   // 1. 버튼눌리면  payListSelect  에서 상태 바뀜
-   // 확인용 console.log(payListSelect[index]); 
-   payListSelect[index] = 'select';
-   // 2. 버튼 눌리면 timeposition 상태가 false -> true로 바뀜
-     //timeposition = true;
-   // 3. 다시 눌리면 취소가 되어야해서 true ->  false 로 바뀜
-   if (timeposition == true) { // if문 s
-	   timeposition = false;
-   } else if (timeposition == false){
-	   timeposition = true;
-   } // if문 e
-
-   console.log(timeposition);
-   
+   // 1. 다시 눌리면 취소가 되어야해서 select ->  unselect 로 바뀜
+	if (payListSelect[index] == 'select') { //if문 시작
+	
+		// 이미 선택된거면 배열돌면서 찾아서 unselect로 바꿔 / false로 같이 바꿔
+		for( let i = 0 ; i<payListSelect.length; i++ ){ // for문 시작
+			if( payListSelect[index] == 'select' ) { 
+				payListSelect[index] = 'unselect';
+				timeposition = false;}
+		} // for문 end
+		
+		// 2. 버튼눌렀을때 unselect상태면 select으로 바꿔 / true로 같이 바꿔
+	} else if (payListSelect[index] == 'unselect'){
+			payListSelect[index] = 'select';
+			timeposition = true;
+	} // if문 끝
+	
+	console.log(payListSelect[index]); // 확인둉
+	console.log(timeposition); // 확인용
+     
    // 4. 받아온 인자와 payList 인덱스 위치를 매칭시킨후 값을 하단에 출력
    //console.log(payList[index]);
    sumPay = payList[index];
-   sumTime = 
+   sumTime = timeList[index];
    
    console.log(sumPay); // 하단화면 없어서 콘솔로 대신 출력 확인용
+   console.log(sumTime); // 하단화면 없어서 콘솔로 대신 출력 확인용
    
-   
+   onPrint();
 }   //  시간금액선택 함수 e 
 
 
