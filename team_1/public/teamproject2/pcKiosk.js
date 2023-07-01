@@ -114,76 +114,103 @@ function onPrint(index) { // 좌석 출력 함수
 		userList[index].usePc == false;
 	}
 	
+	let resetInput = document.querySelector('.u_header');
+	let resetHTML = ``;
+	
+	resetHTML = 	`
+					<span><button onclick="resetU()" class="resetbutton">처음으로</button></span>
+					<h1>이젠 pc</h1>
+					`;
+	resetInput.innerHTML = resetHTML;				
+	
+	
 	let contentInput = document.querySelector('.content_box');
 	let contentHTML = ``;
+	contentHTML +=  `
+					<div class="main_box"></div>
+					<div class="main_box2"></div>
+					<div class="main_box3"></div>
+					`;
+	
+	contentInput.innerHTML = contentHTML;
+	
+	let mainInput = document.querySelector('.main_box')
+	let mainHTML = ``;
 	
 	// 좌석 16개를 출력
 	for(let i = 0; i < seatList.length; i++){
 		
 		// 좌석이 empty 상태면 seatClick 클래스의 버튼을 출력
 		if(seatList[i] == 'empty'){
-			contentHTML += 	`
+			mainHTML += 	`
 							<button class="seatClick" onclick="selectSeat(${i})">${i+1}번 좌석</button>
 							`;
 		// 좌석이 used 상태면 seatClick2 클래스의 버튼을 출력
 		}else if(seatList[i] == 'used'){
-			contentHTML += 	`
+			mainHTML += 	`
 							<button class="seatClick2" onclick="selectSeat(${i})">${i+1}번 좌석(사용중)</button>
 							`;
 		// 좌석이 select 상태면 seatClick3 클래스의 버튼을 출력
 		}else if(seatList[i] == 'select'){
-			contentHTML += 	`
+			mainHTML += 	`
 							<button class="seatClick3" onclick="selectSeat(${i})">${i+1}번 좌석(사용중)</button>
 							`;
 		}
 		
 		// 4개 좌석을 찍을때마다 줄바꿈
 		if( (i+1) % 4 == 0){
-			contentHTML += `<br/>`
+			mainHTML += `<br/>`
 		}
 	}
+	
+	let mainInput2 = document.querySelector('.main_box2')
+	let mainHTML2 = ``;
 	
 	// 4개 금액 종류와 시간을 출력
 	for(let i = 0; i < payList.length; i++){
 		
 		// 금액이 선택되지 않은 상태면 timeClick 클래스의 버튼을 출력
 		if(payListSelect[i] == 'unselect'){
-			contentHTML += 	`
+			mainHTML2 += 	`
 							<button class="timeClick1" onclick="selectTm(${i})">${parseInt(Number(timeList[i])/60)}시간${Number(timeList[i])%60}분${payList[i]}원</button>
 							`
 		// 금액이 선택된 상태면 timeClick2 클래스의 버튼을 출력					
 		}else if(payListSelect[i] == 'select'){
-			contentHTML += 	`
+			mainHTML2 += 	`
 							<button class="timeClick2" onclick="selectTm(${i})">${parseInt(Number(timeList[i])/60)}시간${Number(timeList[i])%60}분${payList[i]}원</button>
 							`
 		}
 	}
 	
 	
+	let mainInput3 = document.querySelector('.main_box3')
+	let mainHTML3 = ``;
 	
 	
 	// 현재 선택된 좌석번호를 출력
-	contentHTML += 	`
+	mainHTML3 += 	`
 					<span>
 					선택한좌석번호<br/>
 					${seatList.indexOf('select') + 1}
 					</span>
 					`
 	// 현재 선택된 시간의 금액을 출력				
-	contentHTML += 	`
+	mainHTML3 += 	`
 					<span>
 					금액<br/>
 					${sumPay}
 					</span>
 					`
 	// 결제하기 버튼을 출력				
-	contentHTML += 	`
+	mainHTML3 += 	`
 					<span>
 					<button class="payment" onclick="payment(${index})">결제</button>
 					</span>
 					`								
 
-	contentInput.innerHTML = contentHTML;
+	mainInput.innerHTML = mainHTML;
+	mainInput2.innerHTML = mainHTML2;
+	mainInput3.innerHTML = mainHTML3;
 	
 	
 	
@@ -325,7 +352,7 @@ function payment(index) { // 결제 함수
 
 
 //희락
-function resetU(index) { console.log('resetU() 함수' +index) // 초기화 함수 
+function resetU() { 
    
    let content_box = document.querySelector('.content_box') 
    
@@ -351,6 +378,14 @@ function resetU(index) { console.log('resetU() 함수' +index) // 초기화 함�
                		</div>
             	</div>
    `;
+   
+   let resetInput = document.querySelector('.u_header');
+   let resetHTML = ``;
+   
+   resetHTML =  `
+   				<h1>이젠 pc</h1>
+   				`;
+   resetInput.innerHTML = resetHTML;				
    
 }   // 초기화 함수 e 
 
