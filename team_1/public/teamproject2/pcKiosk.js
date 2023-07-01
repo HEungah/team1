@@ -17,15 +17,15 @@ let payList = [1000, 3000, 5000, 10000];  // 금액
 
 let payListSelect = ['unselect', 'unselect', 'unselect', 'unselect'];
 
-let sumPay = 0;
+let sumPay = 0;			// 결제창의 금액 표시용 변수
 
-let sumTime = 0;
+let sumTime = 0;		// 선택된 시간 저장용 변수
 
 let seatposition = false;    //좌석 선택 // 목적 : 결제 하기전에 결제에 필요한 좌석선택 여부확인 필터 [ 미선택 :  false 선택 : 해당좌석인덱스]
 
 let timeposition = false;    //시간금액 선택 상태
 
-let logNumber = 0;
+let logNumber = 0;		// 키오스크 사용 회원 식별용 변수
 
 
 
@@ -37,12 +37,12 @@ let logNumber = 0;
 // 회원가입함수 ----------------------------------------------------------
 
 function registerInput() { console.log('registerInput()실행')
- 	 let s_id_input= document.querySelector('.s_id_input').value
+	let s_id_input= document.querySelector('.s_id_input').value
   	let s_pw_input= document.querySelector('.s_pw_input').value
   	let s_name_input=document.querySelector('.s_name_input').value
   
  	 //회원가입 회원정보 객체화
- 	 let user={id:s_id_input, pw:s_pw_input, name:s_name_input, time : 0, seatNumber : 0}
+ 	let user={id:s_id_input, pw:s_pw_input, name:s_name_input, time : 0, seatNumber : 0, usePc : false}
 
 		// 유효성검사: 회원가입 가능한 상태인지 확인
 		for(let i=0; i<userList.length;i++){
@@ -97,6 +97,15 @@ function login() {
 //의선
 function onPrint(index) { // 좌석 출력 함수
 	//content_box 의 속성값을 받아옴
+	
+	// 키오스크를 사용중인 회원이 이미 pc를 사용하고있을 경우를 판단하는 if문
+	if(userList[index].usePc == true){
+		seatList[Number(userList[index].seatNumber)-1] = 'select';
+		userList[index].usePc == false;
+	}
+	
+	
+	
 	let contentInput = document.querySelector('.content_box');
 	let contentHTML = ``;
 	
@@ -296,6 +305,7 @@ function payment(index) { // 결제 함수
 	
 	seatList[userSelect] = 'used';
 	payListSelect = ['unselect', 'unselect', 'unselect', 'unselect'];
+	userList[index].usePc = true;
 	
 	console.log(userList);
 	
