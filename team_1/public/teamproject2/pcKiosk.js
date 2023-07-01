@@ -285,7 +285,17 @@ function userInfo() { // 회원정보 출력함수
    
 }   // 회원정보 출력함수 e 
 
-function deleteUser() { // 회원정보 삭제함수
+
+
+
+//삭제함수: 고연진------------------------------------
+function deleteUser(index) { // 회원정보 삭제함수
+	//회원리스트 삭제할 객체 가져오기
+	let user=userList[index]
+	//회원리스트에서 삭제
+	userList.splice(index,1)
+	// ????????? 사용종료버튼 누르면 출력되는 함수 맞나여 ..??
+	endPc()
    
 }   // 회원정보 삭제함수 e 
 
