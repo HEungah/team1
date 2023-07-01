@@ -431,6 +431,7 @@ function seatInfo() { // 사용좌석정보 출력 함수
    */
 }   // 사용좌석정보 출력 함수 e 
 
+
 //규리
 function endPc(index) { // 사용종료함수
    if (confirm('정말 사용종료 시키겠습니까?')){ // if start
