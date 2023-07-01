@@ -27,6 +27,7 @@ let timeposition = false;    //시간금액 선택 상태
 
 let logNumber = 0;		// 키오스크 사용 회원 식별용 변수
 
+ 
 
 
 
