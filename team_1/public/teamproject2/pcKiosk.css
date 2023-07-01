@@ -44,7 +44,7 @@
     flex-direction: column;
     margin-top: 30px;
 }
-.s_pw1 , .j_pw2 , .s_name1{margin-top: 15px;}
+.s_pw1 , .j_pw2 , .s_name1{margin-top: 20px;}
 .btn_join , .btn_sign{
 	margin-top: 30px;
 	height: 45px;
