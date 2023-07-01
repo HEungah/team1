@@ -426,9 +426,9 @@ function seatInfo() { // 사용좌석정보 출력 함수
 	for (i=0;i<userList.length; i++) { // 유저리스트 배열 돌기
 	   if (userList[i].usePc == true) { // 유저리스트중 pc상태가 true인게 있으면
 		   		tableHTML += `<tr>
-                     <th>${userList[i].seatNumber}</th> 
+                     <th>${userList[i].seatNumber}번</th> 
                      <th>${userList[i].id}</th> 
-                     <th>${userList[i].time}</th> 
+                     <th>${userList[i].time}분</th> 
                      <th><button onclick="endPc(${i})">사용종료</button></th>
                   </tr>`;
 	   } //if 1 e
@@ -448,13 +448,22 @@ function seatInfo() { // 사용좌석정보 출력 함수
    */
 }   // 사용좌석정보 출력 함수 e 
 
+
 //규리
 function endPc(index) { // 사용종료함수
-   if (confirm('정말 사용종료 시키겠습니까?')){
-	   console.log('사용종료시켜벌릴거임');
-   }
+   if (confirm('정말 사용종료 시키겠습니까?')){ // if start
+	  // console.log('사용종료시켜벌릴거임');
+	  // 2. usePc 상태를 트루에서 변경
+	  // 3. userList[i].usePc == true
+		if(userList[index].usePc == true) {
+			userList[index].usePc = false;
+			//4. 선택한 seatList 상태를  used에서 'empty'로 변경
+			seatList[index] =='empty';
+			console.log('seatList'+seatList);
+		}
+   } //if end
    
-   seatInfo();
+   seatInfo(); // 3. 전체 회원 배열에서 유저피씨가 트루인 것만 재출력
 }   // 사용종료함수 e 
 //-----------------------------------------------
 
