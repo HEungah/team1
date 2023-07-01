@@ -58,17 +58,11 @@ function registerInput() { console.log('registerInput()실행')
  		 // 가입 가능하다면 userList 배열에 넣어서 회원가입 완료
  		userList.push(user)
  		alert('회원가입성공')
-<<<<<<< HEAD
  		
  		document.querySelector('.s_id_input').value=``
 		document.querySelector('.s_pw_input').value=``
  		document.querySelector('.s_name_input').value=``
  		
-=======
- 		document.querySelector('.s_id_input').value=``
-		document.querySelector('.s_pw_input').value=``
- 		document.querySelector('.s_name_input').value=``
->>>>>>> branch '고연진' of https://github.com/HEungah/team1
  		// 회원가입리스트 확인
  		console.log(userList)
 	
