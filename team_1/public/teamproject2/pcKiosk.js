@@ -114,8 +114,6 @@ function onPrint(index) { // 좌석 출력 함수
 		userList[index].usePc == false;
 	}
 	
-	
-	
 	let contentInput = document.querySelector('.content_box');
 	let contentHTML = ``;
 	
