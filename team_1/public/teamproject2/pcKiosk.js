@@ -56,6 +56,9 @@ function registerInput() { console.log('registerInput()실행')
  		 // 가입 가능하다면 userList 배열에 넣어서 회원가입 완료
  		userList.push(user)
  		alert('회원가입성공')
+ 		document.querySelector('.s_id_input').value=``
+		document.querySelector('.s_pw_input').value=``
+ 		document.querySelector('.s_name_input').value=``
  		// 회원가입리스트 확인
  		console.log(userList)
 	
@@ -69,6 +72,13 @@ function login() {
 	let j_id_input=document.querySelector('.j_id_input').value
 	let j_pw_input=document.querySelector('.j_pw_input').value
 	
+	 if(j_id_input==``||j_pw_input==``){
+		 alert('아이디/비밀번호를 입력해주세요')
+		document.querySelector('.j_id_input').value=``
+		document.querySelector('.j_pw_input').value=``
+		console.log('아이디/비밀번호를 입력해주세요')
+		 return
+	 		}
 	// userList 안에 아이디와 입력 받은 아이디가 같고, 비밀번호가 모두 같으면 로그인 성공
 	
 	for(let i=0; i<userList.length;i++){
@@ -82,7 +92,8 @@ function login() {
 			}
 		else{alert('로그인실패')}
    }//for문 종료 함수
-}   // 로그인함수 e 
+   if(j_id_input==``||j_pw_input==``){alert('아이디를 입력해주세요')}
+}  // 로그인함수 e 
 
 
 
@@ -349,12 +360,25 @@ function deleteUser(index) { // 회원정보 삭제함수
 }   // 회원정보 삭제함수 e 
 
 
-//사용종료함수: 고연진-------------------------------------
-function endPc(index){
-	loginList.splice(index,1)
-	
-}
-
+//회원정보 출력함수
+function userInfo(){
+	let html=
+  		`<tr>
+        	<th>사용중인 pc번호</th> <th>아이디</th> <th>남은시간</th> <th>사용종료버튼</th>
+        </tr>`
+        
+        for(let i=0; i<seatList.length;i++){
+			let seat=seatList[i]
+			html+=`<tr>
+						<td>${seatList.select}</td>
+						<td></td>
+						<td>${payList.></td>
+						<td></td>
+			
+			</tr>`
+			
+			
+		}
 
 
 
