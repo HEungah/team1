@@ -352,6 +352,7 @@ function payment(index) { // 결제 함수
 	
 	resetU();
 	seatInfo(); // 사용좌석정보 출력 함수 실행
+	userInfo();
 }   // 결제 함수 e 
 
 
@@ -480,7 +481,7 @@ function userInfo(){ console.log('userInfo()함수실행')
          `<tr>
                <td>${userList[i].name}</td>
                <td>${userList[i].id}</td>
-               <td>${userList[i].time}></td>
+               <td>${userList[i].time}</td>
                <td><button>회원삭제버튼</button></td>
          </tr>`
          
