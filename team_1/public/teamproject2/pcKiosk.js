@@ -40,7 +40,7 @@ function registerInput() { console.log('registerInput()실행')
   	let s_name_input=document.querySelector('.s_name_input').value
   
  	 //회원가입 회원정보 객체화
- 	 let user={id:s_id_input, pw:s_pw_input, name:s_name_input, time : 0, seatNumber : false}
+ 	 let user={id:s_id_input, pw:s_pw_input, name:s_name_input, time : 0, seatNumber : 0}
 
 		// 유효성검사: 회원가입 가능한 상태인지 확인
 		for(let i=0; i<userList.length;i++){
@@ -183,7 +183,7 @@ function selectSeat(인덱스) {console.log('selectSeat() 함수 :'+인덱스) /
 	// 마냐게 내가 선택한 좌석이 없는좌석이면 
 	}else if(seatList[인덱스] == 'empty'){
 		console.log('선택가능한좌석입니다.')
-		seatposition = 인덱스  // 선택한 좌석(인덱스 ) 저장 / 좌석석택 성공 
+		seatposition = true // 선택한 좌석(인덱스 ) 저장 / 좌석석택 성공 
 		
 		// 만약에 앞전에 선택(select)한 경우가 있으면 모두 선택안된 상태(empty)로 변경 
 		// 배열내 select가 존재하면
@@ -231,11 +231,11 @@ function selectTm(index) { // 시간금액선택 함수
    // 4. 받아온 인자와 payList 인덱스 위치를 매칭시킨후 값을 하단에 출력
    //console.log(payList[index]);
    sumPay = payList[index];
-   sumTime = 
+   sumTime = timeList[index];
    
    console.log(sumPay); // 하단화면 없어서 콘솔로 대신 출력 확인용
    
-   
+   onPrint();
 }   //  시간금액선택 함수 e 
 
 
@@ -244,7 +244,7 @@ function selectTm(index) { // 시간금액선택 함수
 function payment(index) { // 결제 함수 
 	let userSelect = seatList.indexOf('select');
 
-	if(seatposition == 'true' && timeposition == 'true'){
+	if(seatposition == true && timeposition == true){
 		userList[index].time += sumTime;
 		userList[index].seatNumber = userSelect;
 	}else{
