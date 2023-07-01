@@ -360,25 +360,6 @@ function deleteUser(index) { // 회원정보 삭제함수
 }   // 회원정보 삭제함수 e 
 
 
-//회원정보 출력함수
-function userInfo(){
-	let html=
-  		`<tr>
-        	<th>사용중인 pc번호</th> <th>아이디</th> <th>남은시간</th> <th>사용종료버튼</th>
-        </tr>`
-        
-        for(let i=0; i<seatList.length;i++){
-			let seat=seatList[i]
-			html+=`<tr>
-						<td>${seatList.select}</td>
-						<td></td>
-						<td>${payList.></td>
-						<td></td>
-			
-			</tr>`
-			
-			
-		}
 
 
 
