@@ -503,8 +503,8 @@ function userInfo(){ console.log('userInfo()함수실행')
                <td><button onclick="deleteUser(${i})">회원삭제버튼</button></td>
          </tr>`
          
-      table2.innerHTML=html   
       }
+      table2.innerHTML=html   
       
 }
 
