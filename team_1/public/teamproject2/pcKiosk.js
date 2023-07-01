@@ -351,6 +351,9 @@ function payment(index) { // 결제 함수
 	alert('결제가 완료되었습니다.');
 	
 	resetU();
+	
+	userInfo()
+	
 	seatInfo(); // 사용좌석정보 출력 함수 실행
 }   // 결제 함수 e 
 
