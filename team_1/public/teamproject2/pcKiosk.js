@@ -5,8 +5,6 @@ console.log('js 파일 열림');
 
 let userList = [ ]; // 회원정보리스트
 
-let loginList=[];  // 고연진. 로그인함수 과정에 필요할 것 같아 추가함.
-
 let seatList = ['empty', 'empty', 'empty', 'empty', 
 				'empty', 'used', 'used', 'empty', 
 				'empty', 'empty', 'empty', 'empty', 
@@ -56,8 +54,8 @@ function registerInput() { console.log('registerInput()실행')
  				return;}
  				}	
  		 // 가입 가능하다면 userList 배열에 넣어서 회원가입 완료
- 			userList.push(user)
- 			alert('회원가입성공')
+ 		userList.push(user)
+ 		alert('회원가입성공')
  		// 회원가입리스트 확인
  		console.log(userList)
 	
@@ -79,8 +77,7 @@ function login() {
 			console.log('로그인성공')
 			// 사용중인 회원내역에 로그인 상태인 사람이 들어가야 될 것 같아서 전역변수에 로그인상태 배열 만듦
 			//let login=[]
-			login.push(userList[i])
-			onPrint(); // .content_box 로 화면 출력
+			onPrint(i); // .content_box 로 화면 출력
 			
 			}
 		else{alert('로그인실패')}
@@ -220,7 +217,7 @@ function selectTm(index) { // 시간금액선택 함수
    //인자 인덱스
 
 	//셀렉트가 배열내에 존재하면 모두 언셀렉트 상태로 초기화
-	 // payListSelect = ['unselect', 'unselect', 'unselect', 'unselect'];
+	payListSelect = ['unselect', 'unselect', 'unselect', 'unselect'];
 	
 	if (payListSelect.indexOf('select') != -1) { //배열에 select가 있으면
 		
@@ -282,8 +279,8 @@ function payment(index) { // 결제 함수
 	let userSelect = seatList.indexOf('select');
 
 	if(seatposition == true && timeposition == true){
-		userList[index].time += sumTime;
-		userList[index].seatNumber = userSelect;
+		userList[index].time += Number(sumTime);
+		userList[index].seatNumber = Number(userSelect);
 	}else{
 		alert('좌석과 사용할 시간을 선택해주세요.');
 		return;
@@ -323,9 +320,6 @@ function resetU(index) { console.log('resetU() 함수' +index) // 초기화 함�
 
 
 
-function resetM() { // 초기화면 출력함수
-   
-}   // 초기화면 출력함수 e 
 
 function seatInfo() { // 사용좌석정보 출력 함수
    
@@ -361,20 +355,7 @@ function endPc(index){
 	
 }
 
-//초기화면출력함수:고연진---------------------------------
-function resetM() { // 초기화면 출력함수
-	let table1= document.querySelector('.table')
-	
-	let html=
-		 `<tr>
-            <th>실명</th> <th>아이디</th> <th>남은시간</th> <th>회원삭제버튼</th>
-          </tr>`
-          
-         /* for(let i=0)
-          
-          .............. 좀 더 생각해볼게여 ㅋ*/
-   
-}   // 초기화면 출력함수 e 
+
 
 
 

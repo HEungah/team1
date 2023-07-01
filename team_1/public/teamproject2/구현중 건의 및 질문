@@ -40,7 +40,7 @@ function login() {
 			// 사용중인 회원내역에 로그인 상태인 사람이 들어가야 될 것 같아서 전역변수에 로그인상태 배열 만듦
 			//let login=[]
 			login.push(userList[i])
-			onPrint();  <----------------이 부분을 잘 모르겠 .. 
+			onPrint(i);  <----------------이 부분을 잘 모르겠 .. 
 			}
 		else{alert('로그인실패')}
    }//for문 종료 함수
