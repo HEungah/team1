@@ -360,6 +360,31 @@ function deleteUser(index) { // 회원정보 삭제함수
 }   // 회원정보 삭제함수 e 
 
 
+//회원정보 출력함수
+function userInfo(){ console.log('userInfo()함수실행')
+   
+ let table2=document.querySelector('.table2')
+ let html=``
+ 
+ html=    `<tr>
+        <th>실명</th> <th>아이디</th> <th>남은시간</th> <th>회원삭제버튼</th>
+      </tr>`
+      
+ for(let i=0; i<userList.length;i++){
+
+                  
+          html+=
+         `<tr>
+               <td>${userList[i].name}</td>
+               <td>${userList[i].id}</td>
+               <td>${userList[i].time}></td>
+               <td><button>회원삭제버튼</button></td>
+         </tr>`
+         
+      table2.innerHTML=html   
+      }
+      
+}
 
 
 
