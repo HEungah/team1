@@ -444,18 +444,13 @@ function endPc(index) { // 사용종료함수
    
    seatInfo();
 }   // 사용종료함수 e 
-
-function userInfo() { // 회원정보 출력함수
-   
-}   // 회원정보 출력함수 e 
-
-function deleteUser() { // 회원정보 삭제함수
-}
+//-----------------------------------------------
 
 
 //회원정보 삭제함수: 고연진------------------------------------
 // 전체 회원내역 안에 있는 회원삭제버튼
 function deleteUser(index) { // 회원정보 삭제함수
+		console.log('deleteUser()함수실행')
 	//회원리스트에서 삭제
 	userList.splice(index,1)
 	console.log(userList)  // 전체 회원리스트에서 삭제 됏는지 확인
@@ -484,7 +479,7 @@ function userInfo(){ console.log('userInfo()함수실행')
                <td>${userList[i].name}</td>
                <td>${userList[i].id}</td>
                <td>${userList[i].time}></td>
-               <td><button>회원삭제버튼</button></td>
+               <td><button onclick="deleteUser(${i})">회원삭제버튼</button></td>
          </tr>`
          
       table2.innerHTML=html   
