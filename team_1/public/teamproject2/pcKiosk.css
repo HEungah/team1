@@ -25,12 +25,10 @@
    padding: 10px;
 }
 
-.content_box {
-   display: flex;
+.content_box { 
    text-align: center;
    margin-top: 30px;
-   width: 100%;
-   justify-content: center;
+   width: 100%; 
    margin-top: 70px;
 }
 
@@ -60,6 +58,7 @@
 .sign_box , .join_box{
 	border: solid 1px #E3EDEB;
 	padding: 25px;
+	display: inline-block;
 }
 
 /* 관리자화면 */
@@ -84,8 +83,8 @@
 	background-color: blue;
 }
 
-.seatClick{
-	background-size: 10px;
+.main_box{
+	display: block;
 }
 
 

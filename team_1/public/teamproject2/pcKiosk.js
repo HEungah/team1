@@ -365,22 +365,33 @@ function resetU() {
    
    content_box.innerHTML = `
    				<div class="sign_box"> 
-	            	회원가입창
-	               	<div class="s_id">
-	                  아이디 <input class="s_id_input" type="text">
-	                  비밀번호 <input class="s_pw_input" type="text">
-	                  이름 <input class="s_name_input" type="text">
-	                  <button onclick="registerInput()" class="btn_sign"> 가입하기 </button>
-	               </div>
-	            </div>
-	            <div class="join_box">
-               		로그인창
-               		<div class="j_id">
-                  		아이디 <input class="j_id_input" type="text">
-                  		비밀번호 <input class="j_pw_input" type="text">
-                  		<button onclick="login()" class="btn_join"> 로그인하기 </button>
-               		</div>
-            	</div>
+               <h3>회원가입창</h3>
+               <div class="s_id">
+                  아이디 <input class="s_id_input" type="text">
+                  <div class="s_pw1">
+                  	<p>비밀번호<p>
+                  	<input class="s_pw_input" type="text">
+                  </div>
+                  <div class="s_name1">
+                  	<p>이름<p> 
+                  	<input class="s_name_input" type="text">
+                  </div>
+                  <button onclick="registerInput()" class="btn_sign"> 가입하기 </button>
+               </div>
+            </div>  
+            
+            
+            <div class="join_box">  
+               <h3>로그인창</h3>
+               <div class="j_id">
+                  아이디 <input class="j_id_input" type="text">
+                  <div class="j_pw2">
+                  	<p>비밀번호</p>
+                  	<input class="j_pw_input" type="text">
+                  </div>
+                  <button onclick="login()" class="btn_join"> 로그인하기 </button>
+               </div>
+            </div>   
    `;
    
    let resetInput = document.querySelector('.u_header');
