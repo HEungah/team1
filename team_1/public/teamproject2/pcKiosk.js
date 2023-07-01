@@ -6,9 +6,9 @@ console.log('js 파일 열림');
 let userList = [ ]; // 회원정보리스트
 
 let seatList = ['empty', 'empty', 'empty', 'empty', 
-				'empty', 'used', 'used', 'empty', 
 				'empty', 'empty', 'empty', 'empty', 
-				'empty', 'empty','select' , 'empty', 
+				'empty', 'empty', 'empty', 'empty', 
+				'empty', 'empty', 'empty', 'empty', 
 				]; // 좌석들의상태 // mp: 비어있는좌석 use:사용중인자석 select:현재 클릭되있는 좌석
 
 let timeList =['60', '90', '180', '660'];
@@ -24,6 +24,8 @@ let sumTime = 0;
 let seatposition = false;    //좌석 선택 // 목적 : 결제 하기전에 결제에 필요한 좌석선택 여부확인 필터 [ 미선택 :  false 선택 : 해당좌석인덱스]
 
 let timeposition = false;    //시간금액 선택 상태
+
+let logNumber = 0;
 
 
 
@@ -52,10 +54,15 @@ function registerInput() { console.log('registerInput()실행')
 				document.querySelector('.s_pw_input').value=``
  				document.querySelector('.s_name_input').value=``
  				return;}
- 				}	
+ 		}	
  		 // 가입 가능하다면 userList 배열에 넣어서 회원가입 완료
  		userList.push(user)
  		alert('회원가입성공')
+ 		
+ 		document.querySelector('.s_id_input').value=``
+		document.querySelector('.s_pw_input').value=``
+ 		document.querySelector('.s_name_input').value=``
+ 		
  		// 회원가입리스트 확인
  		console.log(userList)
 	
@@ -77,11 +84,12 @@ function login() {
 			console.log('로그인성공')
 			// 사용중인 회원내역에 로그인 상태인 사람이 들어가야 될 것 같아서 전역변수에 로그인상태 배열 만듦
 			//let login=[]
-			onPrint(i); // .content_box 로 화면 출력
-			
+			logNumber = i;
+			onPrint(logNumber); // .content_box 로 화면 출력
+			return;
 			}
-		else{alert('로그인실패')}
    }//for문 종료 함수
+   alert('로그인실패');
 }   // 로그인함수 e 
 
 
@@ -200,7 +208,7 @@ function selectSeat(인덱스) {console.log('selectSeat() 함수 :'+인덱스) /
 		// 그래서 다시 JS의 좌석상태를 HTML에게 알려서 출력해야한다.
 		// JS에서 좌석상태를 출력하는 함수는 onPrint() 역할이었다.
 		// onPrint() 함수를 호출하자 .
-		onPrint()
+		onPrint(logNumber);
 		
 	// 마냐게 내가 선택한 좌석 이면
 	}else if(seatList[인덱스] == 'select'){
@@ -269,24 +277,29 @@ console.log(payListSelect.indexOf('select')+'인덱스입니다');
    console.log(sumPay + '원'); // 하단화면 없어서 콘솔로 대신 출력 확인용
    console.log(sumTime +'분'); // 하단화면 없어서 콘솔로 대신 출력 확인용
 
-   onPrint(); // 화면 출력함수
+   onPrint(logNumber); // 화면 출력함수
 }   //  시간금액선택 함수 e 
 
 
 
 //의선
 function payment(index) { // 결제 함수 
-	let userSelect = seatList.indexOf('select');
+	let userSelect = Number(seatList.indexOf('select'));
 
 	if(seatposition == true && timeposition == true){
 		userList[index].time += Number(sumTime);
-		userList[index].seatNumber = Number(userSelect);
+		userList[index].seatNumber = Number(userSelect + 1);
 	}else{
 		alert('좌석과 사용할 시간을 선택해주세요.');
 		return;
 	}
 	
+	seatList[userSelect] = 'used';
+	payListSelect = ['unselect', 'unselect', 'unselect', 'unselect'];
+	
 	console.log(userList);
+	
+	alert('결제가 완료되었습니다.');
 	
 	resetU();
 
@@ -303,14 +316,22 @@ function resetU(index) { console.log('resetU() 함수' +index) // 초기화 함�
    
    content_box.innerHTML = `
    				<div class="sign_box"> 
-               회원가입창
-               <div class="s_id">
-                  아이디 <input class="s_id_input" type="text">
-                  비밀번호 <input class="s_pw_input" type="text">
-                  이름 <input class="s_name_input" type="text">
-                  <button onclick="registerInput()" class="btn_sign"> 가입하기 </button>
-               </div>
-            </div>
+	            	회원가입창
+	               	<div class="s_id">
+	                  아이디 <input class="s_id_input" type="text">
+	                  비밀번호 <input class="s_pw_input" type="text">
+	                  이름 <input class="s_name_input" type="text">
+	                  <button onclick="registerInput()" class="btn_sign"> 가입하기 </button>
+	               </div>
+	            </div>
+	            <div class="join_box">
+               		로그인창
+               		<div class="j_id">
+                  		아이디 <input class="j_id_input" type="text">
+                  		비밀번호 <input class="j_pw_input" type="text">
+                  		<button onclick="login()" class="btn_join"> 로그인하기 </button>
+               		</div>
+            	</div>
    `;
    
 }   // 초기화 함수 e 
