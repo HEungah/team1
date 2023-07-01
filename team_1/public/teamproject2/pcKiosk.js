@@ -351,13 +351,26 @@ function resetU(index) { console.log('resetU() 함수' +index) // 초기화 함�
 
 
 
-
+//규리
 function seatInfo() { // 사용좌석정보 출력 함수
+   // seatList 
+   // 1. 배열돌면서 셀렉트상태인 좌석들을 찾음
+   // 2. 찾은 애들을 배열에 담음
+   // 3. 그리고 그 배열대로 출력?
+   for (i=0;i<seatList.length; i++) {
+	   if (seatList.indexOf('select')) {
+		   console.log('asdf');
+	   } //if e
+	   
+   } // for e
    
 }   // 사용좌석정보 출력 함수 e 
 
+//규리
 function endPc() { // 사용종료함수
    
+   
+   seatInfo();
 }   // 사용종료함수 e 
 
 function userInfo() { // 회원정보 출력함수
