@@ -212,11 +212,32 @@ function selectSeat(인덱스) {console.log('selectSeat() 함수 :'+인덱스) /
 //규리
 function selectTm(index) { // 시간금액선택 함수 
    //인자 인덱스
-   // 인자 확인용 console.log('시간금액선택실행'+index);
-  // 버튼눌리면  payListSelect  에서 상태 바뀜
-  // payListSelect[index] = 'select';
+
+	//셀렉트가 배열내에 존재하면 모두 언셀렉트 상태로 초기화
+	 // payListSelect = ['unselect', 'unselect', 'unselect', 'unselect'];
+	
+	if (payListSelect.indexOf('select') != -1) { //배열에 select가 있으면
+		
+		// 배열 순회하면서 배열에서 select인 인덱스를 찾아서 unselect로 바꿈
+		for (let j=0; j<payListSelect.length; j++ ){ // 0부터 배열을 돌면서 'unselect' 상태로 초기화
+			payListSelect[j] ='unselect';
+			timeposition = false;}
+			
+		if (payListSelect[index] == 'select') { //배열에 select가 있고 클릭한게 셀렉트면 
+			payListSelect[index] = 'unselect';
+			timeposition = false;
+		}
+		
+	} else if (payListSelect.indexOf('select') == -1) {//배열에 select가없다면 방금 클릭한게 펄스 상태면 트루,셀렉트로 바꾸기
+		payListSelect[index] = 'select';
+		timeposition = true;
+	} //if end
+	
+		
+console.log(payListSelect.indexOf('select')+'인덱스입니다');
+
    
-   // 1. 다시 눌리면 취소가 되어야해서 select ->  unselect 로 바뀜
+/*
 	if (payListSelect[index] == 'select') { //if문 시작
 	
 		// 이미 선택된거면 배열돌면서 찾아서 unselect로 바꿔 / false로 같이 바꿔
@@ -225,25 +246,26 @@ function selectTm(index) { // 시간금액선택 함수
 				payListSelect[index] = 'unselect';
 				timeposition = false;}
 		} // for문 end
-		
 		// 2. 버튼눌렀을때 unselect상태면 select으로 바꿔 / true로 같이 바꿔
 	} else if (payListSelect[index] == 'unselect'){
 			payListSelect[index] = 'select';
 			timeposition = true;
 	} // if문 끝
-	
-	console.log(payListSelect[index]); // 확인둉
-	console.log(timeposition); // 확인용
+*/		
+
+
+	// console.log(payListSelect[index]); // 확인둉
+	// console.log(timeposition); // 확인용
      
    // 4. 받아온 인자와 payList 인덱스 위치를 매칭시킨후 값을 하단에 출력
    //console.log(payList[index]);
    sumPay = payList[index];
    sumTime = timeList[index];
    
-   console.log(sumPay); // 하단화면 없어서 콘솔로 대신 출력 확인용
-   console.log(sumTime); // 하단화면 없어서 콘솔로 대신 출력 확인용
-   
-   onPrint();
+   console.log(sumPay + '원'); // 하단화면 없어서 콘솔로 대신 출력 확인용
+   console.log(sumTime +'분'); // 하단화면 없어서 콘솔로 대신 출력 확인용
+
+   onPrint(); // 화면 출력함수
 }   //  시간금액선택 함수 e 
 
 
