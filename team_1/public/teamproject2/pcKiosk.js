@@ -5,6 +5,8 @@ console.log('js 파일 열림');
 
 let userList = [ ]; // 회원정보리스트
 
+let loginList=[];  // 고연진. 로그인함수 과정에 필요할 것 같아 추가함.
+
 let seatList = ['empty', 'empty', 'empty', 'empty', 
 				'empty', 'used', 'used', 'empty', 
 				'empty', 'empty', 'empty', 'empty', 
@@ -40,7 +42,7 @@ function registerInput() { console.log('registerInput()실행')
   	let s_name_input=document.querySelector('.s_name_input').value
   
  	 //회원가입 회원정보 객체화
- 	 let user={id:s_id_input, pw:s_pw_input, name:s_name_input}
+ 	 let user={id:s_id_input, pw:s_pw_input, name:s_name_input, sumTime:0}
 
 		// 유효성검사: 회원가입 가능한 상태인지 확인
 		for(let i=0; i<userList.length;i++){
@@ -75,7 +77,11 @@ function login() {
 		if(userList[i].id==j_id_input&&userList[i].pw==j_pw_input){
 			alert('로그인성공')
 			console.log('로그인성공')
-			onPrint(i);
+			// 사용중인 회원내역에 로그인 상태인 사람이 들어가야 될 것 같아서 전역변수에 로그인상태 배열 만듦
+			//let login=[]
+			login.push(userList[i])
+			onPrint(); // .content_box 로 화면 출력
+			
 			}
 		else{alert('로그인실패')}
    }//for문 종료 함수
@@ -285,19 +291,42 @@ function userInfo() { // 회원정보 출력함수
    
 }   // 회원정보 출력함수 e 
 
+function deleteUser() { // 회원정보 삭제함수
+}
 
 
-
-//삭제함수: 고연진------------------------------------
+//회원정보 삭제함수: 고연진------------------------------------
+// 전체 회원내역 안에 있는 회원삭제버튼
 function deleteUser(index) { // 회원정보 삭제함수
-	//회원리스트 삭제할 객체 가져오기
-	let user=userList[index]
 	//회원리스트에서 삭제
 	userList.splice(index,1)
-	// ????????? 사용종료버튼 누르면 출력되는 함수 맞나여 ..??
-	endPc()
+	console.log(userList)  // 전체 회원리스트에서 삭제 됏는지 확인
+	//전체회원내역 출력함수?!
+	userInfo()
    
 }   // 회원정보 삭제함수 e 
+
+
+//사용종료함수: 고연진-------------------------------------
+function endPc(index){
+	loginList.splice(index,1)
+	
+}
+
+//초기화면출력함수:고연진---------------------------------
+function resetM() { // 초기화면 출력함수
+	let table1= document.querySelector('.table')
+	
+	let html=
+		 `<tr>
+            <th>실명</th> <th>아이디</th> <th>남은시간</th> <th>회원삭제버튼</th>
+          </tr>`
+          
+          for(let i=0)
+          
+          .............. 좀 더 생각해볼게여 ㅋ
+   
+}   // 초기화면 출력함수 e 
 
 
 
