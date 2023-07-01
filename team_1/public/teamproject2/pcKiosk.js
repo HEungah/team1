@@ -67,6 +67,8 @@ function registerInput() { console.log('registerInput()실행')
  		
  		// 회원가입리스트 확인
  		console.log(userList)
+ 		
+ 		userInfo()
 	
 }	
 
