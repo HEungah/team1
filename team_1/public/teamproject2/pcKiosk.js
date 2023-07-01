@@ -27,7 +27,7 @@ let timeposition = false;    //시간금액 선택 상태
 
 let logNumber = 0;		// 키오스크 사용 회원 식별용 변수
 
-
+seatInfo(); // 사용좌석정보 출력 함수 실행
 
 
 /*함수*/
@@ -322,7 +322,7 @@ function payment(index) { // 결제 함수
 	alert('결제가 완료되었습니다.');
 	
 	resetU();
-
+	seatInfo(); // 사용좌석정보 출력 함수 실행
 }   // 결제 함수 e 
 
 
@@ -363,22 +363,44 @@ function resetU(index) { console.log('resetU() 함수' +index) // 초기화 함�
 
 //규리
 function seatInfo() { // 사용좌석정보 출력 함수
-   // seatList 
-   // 1. 배열돌면서 셀렉트상태인 좌석들을 찾음
-   // 2. 찾은 애들을 배열에 담음
-   // 3. 그리고 그 배열대로 출력?
-   for (i=0;i<seatList.length; i++) {
-	   if (seatList.indexOf('select')) {
-		   console.log('asdf');
-	   } //if e
-	   
+   // seatList 좌석들의 상태리스트     userList 회원정보리스트
+  
+	let tableInput = document.querySelector('.table1');
+	let tableHTML = `<tr>
+                     <th>사용중인 pc번호</th> <th>아이디</th> <th>남은시간</th> <th>사용종료버튼</th>
+                  </tr>`;
+	
+	//전체 회원 배열에서 유저피씨가 트루인 것만 출력
+	for (i=0;i<userList.length; i++) { // 유저리스트 배열 돌기
+	   if (userList[i].usePc == true) { // 유저리스트중 pc상태가 true인게 있으면
+		   		tableHTML += `<tr>
+                     <th>${userList[i].seatNumber}</th> 
+                     <th>${userList[i].id}</th> 
+                     <th>${userList[i].time}</th> 
+                     <th><button onclick="endPc(${i})">사용종료</button></th>
+                  </tr>`;
+	   } //if 1 e
    } // for e
    
+   tableInput.innerHTML = tableHTML;
+   
+/*   if (seatList.indexOf('used') != -1) {  // 
+		   document.querySelector('.table1').innerHTML += 
+		   		`<tr>
+                     <th>${seatList.indexOf('used')}</th> 
+                     <th>${userList.id}</th> 
+                     <th>${userList.time}</th> 
+                     <th>사용종료버튼</th>
+                  </tr>`;
+   } //if 2 e
+   */
 }   // 사용좌석정보 출력 함수 e 
 
 //규리
-function endPc() { // 사용종료함수
-   
+function endPc(index) { // 사용종료함수
+   if (confirm('정말 사용종료 시키겠습니까?')){
+	   console.log('사용종료시켜벌릴거임');
+   }
    
    seatInfo();
 }   // 사용종료함수 e 
