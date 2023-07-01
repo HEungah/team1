@@ -419,37 +419,32 @@ function seatInfo() { // 사용좌석정보 출력 함수
                   </tr>`;
 	   } //if 1 e
    } // for e
-   
    tableInput.innerHTML = tableHTML;
-   
-/*   if (seatList.indexOf('used') != -1) {  // 
-		   document.querySelector('.table1').innerHTML += 
-		   		`<tr>
-                     <th>${seatList.indexOf('used')}</th> 
-                     <th>${userList.id}</th> 
-                     <th>${userList.time}</th> 
-                     <th>사용종료버튼</th>
-                  </tr>`;
-   } //if 2 e
-   */
 }   // 사용좌석정보 출력 함수 e 
 
 
 //규리
 function endPc(index) { // 사용종료함수
+	// 1. 정말 삭제할건지 확인 메세지
    if (confirm('정말 사용종료 시키겠습니까?')){ // if start
 	  // console.log('사용종료시켜벌릴거임');
-	  // 2. usePc 상태를 트루에서 변경
-	  // 3. userList[i].usePc == true
-		if(userList[index].usePc == true) {
+	
+		if(userList[index].usePc == true) { // if 2 s
+			  // 2. usePc 상태를 트루에서 변경
 			userList[index].usePc = false;
+			// 3. seatList
 			//4. 선택한 seatList 상태를  used에서 'empty'로 변경
-			seatList[index] =='empty';
-			console.log('seatList'+seatList);
-		}
-   } //if end
-   
-   seatInfo(); // 3. 전체 회원 배열에서 유저피씨가 트루인 것만 재출력
+			//4. 선택한 seatList 에서 used인것 찾기
+			for (j=0; j<seatList.length; j++) {//for s
+				console.log('v포문도나요?')
+				if(seatList[j] == 'used') { // if 3 s
+					seatList[j] = 'empty';
+				} //if 3 end
+			} //for
+		} //if 2 end
+   } //if 1 end
+   seatInfo(); // 사용중인 회원내역 테이블 재출력
+   onPrint(index); // 4. 좌석 재출력
 }   // 사용종료함수 e 
 
 function userInfo() { // 회원정보 출력함수
