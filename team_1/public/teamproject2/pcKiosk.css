@@ -45,11 +45,21 @@
     margin-top: 30px;
 }
 .s_pw1 , .j_pw2 , .s_name1{margin-top: 15px;}
-.btn_join , .btn_sign{margin-top: 30px;}
-.s_id_input{
+.btn_join , .btn_sign{
+	margin-top: 30px;
+	height: 45px;
+	border-radius: 5px;
+	border: none;
+	background-color: #C0EDE7;
+}
+.s_id_input , .s_pw_input , .s_name_input , .j_id_input , .j_pw_input{
 	outline: none;
 	border: none;
-	border-bottom: solid 1px red;
+	border-bottom: solid 1px #A8B3FF;
+}
+.sign_box , .join_box{
+	border: solid 1px #E3EDEB;
+	padding: 25px;
 }
 
 /* 관리자화면 */
@@ -73,6 +83,29 @@
 .timeClick2{
 	background-color: blue;
 }
+
+.seatClick{
+	background-size: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
