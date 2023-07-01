@@ -1,5 +1,14 @@
 @charset "UTF-8";
 
+@font-face {
+    font-family: 'GoryeongStrawberry';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/GoryeongStrawberry.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{padding:0; margin:0; list-style: none;}
+
 #wrap {
    width: 1800px;
    display: flex;
@@ -21,8 +30,10 @@
    text-align: center;
    margin-top: 30px;
    width: 100%;
-   margin: 0 auto;
+   justify-content: center;
+   margin-top: 70px;
 }
+
 
 .join_box {
    margin-left: 120px;
@@ -31,9 +42,15 @@
 .s_id , .j_id {
     display: flex;
     flex-direction: column;
+    margin-top: 30px;
 }
-
-
+.s_pw1 , .j_pw2 , .s_name1{margin-top: 15px;}
+.btn_join , .btn_sign{margin-top: 30px;}
+.s_id_input{
+	outline: none;
+	border: none;
+	border-bottom: solid 1px red;
+}
 
 /* 관리자화면 */
 
