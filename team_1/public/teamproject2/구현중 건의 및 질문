@@ -1,10 +1,60 @@
 구현중 건의 및 질문
 
 
+고연진----------------------------------------------------------------------
+ 
+ 회원가입함수 
+1.
+function registerInput() { console.log('registerInput()실행')
+ 	 let s_id_input= document.querySelector('.s_id_input').value
+  	let s_pw_input= document.querySelector('.s_pw_input').value
+  	let s_name_input=document.querySelector('.s_name_input').value
+  
+ 	 //회원가입 회원정보 객체화
+ 	 let user={id:s_id_input, pw:s_pw_input, name:s_name_input, sumTime:0}
+-> 객체화 할때 초기값 받는 속성명 sumTime로 하는게 맞을까여 / 일단 수정해서 커밋 했습니다.
+-> 사용중인 회원내역 출력을 위해서 좌석 속성도 추가하는 게 좋을지 궁금
 
 
+2. 
+function deleteUser(index) { // 회원정보 삭제함수
+	//회원리스트 삭제할 객체 가져오기
+	let user=userList[index]
+	//회원리스트에서 삭제
+	userList.splice(index,1)
+	userInfo()
+-> userImfo()가 삭제 후 회원내역에 출력되는 화면 맞는지
 
+3.
+//로그인함수----------------------------------------------
+function login() {
+	let j_id_input=document.querySelector('.j_id_input').value
+	let j_pw_input=document.querySelector('.j_pw_input').value
+	
+	// userList 안에 아이디와 입력 받은 아이디가 같고, 비밀번호가 모두 같으면 로그인 성공
+	
+	for(let i=0; i<userList.length;i++){
+		if(userList[i].id==j_id_input&&userList[i].pw==j_pw_input){
+			alert('로그인성공')
+			console.log('로그인성공')
+			// 사용중인 회원내역에 로그인 상태인 사람이 들어가야 될 것 같아서 전역변수에 로그인상태 배열 만듦
+			//let login=[]
+			login.push(userList[i])
+			onPrint();  <----------------이 부분을 잘 모르겠 .. 
+			}
+		else{alert('로그인실패')}
+   }//for문 종료 함수
+}   // 로그인함수 e 
+-> let loginList[] 전역변수에 추가
+-> 로그인 성공 시 자리선택, 결제금액, 결제 버튼 화면이 출력ㅇ돼야 할것 같은데 
 
+4.
+/*전역변수*/
+
+let userList = [ ]; // 회원정보리스트
+
+let loginList=[];  // 고연진.
+->  로그인함수 과정에 필요할 것 같아 추가함.
 
 
 
