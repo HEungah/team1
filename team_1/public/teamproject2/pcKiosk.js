@@ -159,7 +159,7 @@ function onPrint(index) { // 좌석 출력 함수
 		// 좌석이 select 상태면 seatClick3 클래스의 버튼을 출력
 		}else if(seatList[i] == 'select'){
 			mainHTML += 	`
-							<button class="seatClick3" onclick="selectSeat(${i})">${i+1}번 좌석(사용중)</button>
+							<button class="seatClick3" onclick="selectSeat(${i})">${i+1}번 좌석(선택)</button>
 							`;
 		}
 		
