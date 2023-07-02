@@ -64,7 +64,7 @@
 	border-bottom: solid 1px #A8B3FF;
 }
 .sign_box , .join_box{
-	border: solid 1px #E3EDEB;
+	border: solid 1px #6E7BD8;
 	padding: 25px;
 	display: inline-block;
 }
@@ -105,7 +105,7 @@
 }
 
 .main_box , .main_box2 , .main_box3{
-	border: solid 1px #EDEEEF;
+	border: solid 1px #6E7BD8;
 }
 .main_box{
 	padding: 30px;
@@ -139,7 +139,8 @@
 	width: 140px;
     padding: 16px;
     border-radius: 12px;
-    background-color: #F4F6FF;
+    background-color: red;
+    color: white;
 }
 
 .resetbutton{
@@ -156,16 +157,16 @@
 }
 
 .m_used_info{
-	border: solid 1px #E3EDEB;;
+	border: solid 1px #6E7BD8;
 	margin-top: 80px;
 }
 .alluser_list{
-	border: solid 1px #E3EDEB;;
+	border: solid 1px #6E7BD8;
 	margin-top: 80px;
 }
 .table1{
 	margin-top: 15px;
-	border: solid 1px #E3EDEB;;
+	border: solid 1px #E3EDEB;
 }
 .table2{
 	margin-top: 15px;
