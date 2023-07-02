@@ -38,7 +38,7 @@ seatInfo(); // 사용좌석정보 출력 함수 실행
 //연진
 // 회원가입함수 ----------------------------------------------------------
 
-function registerInput() { console.log('registerInput()실행')
+function registerInput() {
 	let s_id_input= document.querySelector('.s_id_input').value
   	let s_pw_input= document.querySelector('.s_pw_input').value
   	let s_name_input=document.querySelector('.s_name_input').value
@@ -71,8 +71,6 @@ function registerInput() { console.log('registerInput()실행')
 		document.querySelector('.s_pw_input').value=``
  		document.querySelector('.s_name_input').value=``
  		
- 		// 회원가입리스트 확인
- 		console.log(userList)
  		
  		userInfo()
 	
@@ -98,7 +96,6 @@ function login() {
 	for(let i=0; i<userList.length;i++){
 		if(userList[i].id==j_id_input&&userList[i].pw==j_pw_input){
 			alert('로그인성공')
-			console.log('로그인성공')
 			// 사용중인 회원내역에 로그인 상태인 사람이 들어가야 될 것 같아서 전역변수에 로그인상태 배열 만듦
 			//let login=[]
 			logNumber = i;
@@ -127,7 +124,7 @@ function onPrint(index) { // 좌석 출력 함수
 	let resetHTML = ``;
 	
 	resetHTML = 	`
-					<span><button onclick="resetU()" class="resetbutton">처음으로</button></span>
+					<span><button onclick="resetU()" class="resetbutton"></button></span>
 					<img src="img/mainlogo.png" class="logo1"/>
 					`;
 	resetInput.innerHTML = resetHTML;				
@@ -228,7 +225,7 @@ function onPrint(index) { // 좌석 출력 함수
 
 
 //희락
-function selectSeat(인덱스) {console.log('selectSeat() 함수 :'+인덱스) // 좌석선택 함수 
+function selectSeat(인덱스) {
 	if(userList[logNumber].usePc == true){
 		alert('사용중인 pc를 종료시키고 자리를 옮겨주세요.');
 		seatposition = true;
@@ -237,9 +234,9 @@ function selectSeat(인덱스) {console.log('selectSeat() 함수 :'+인덱스) /
 	
 	
 	// 모든좌석들의 상태 확인 == 좌석 배열 출력  == 배열내 모든 정보 출력 == 배열명 
-	console.log(seatList );
+
 	// 내가 선택한 좌석 상태 1개 확인 == 배열내 하나의 요소 출력 == 배열명[인덱스]
-	console.log(seatList[인덱스] ); 
+
 	
 	  // 사용중인좌석(있는좌석=used)인지 사용가능한 좌석(빈좌석=empty)인지 = if / 
  		// 빈좌석이면 seatposition true // 내가 선택한좌석에 색상변경   
@@ -252,7 +249,6 @@ function selectSeat(인덱스) {console.log('selectSeat() 함수 :'+인덱스) /
 		
 	// 마냐게 내가 선택한 좌석이 없는좌석이면 
 	}else if(seatList[인덱스] == 'empty'){
-		console.log('선택가능한좌석입니다.')
 		seatposition = true // 선택한 좌석(인덱스 ) 저장 / 좌석석택 성공 
 		
 		// 만약에 앞전에 선택(select)한 경우가 있으면 모두 선택안된 상태(empty)로 변경 
@@ -305,10 +301,6 @@ function selectTm(index) { // 시간금액선택 함수
    //console.log(payList[index]);
    sumPay = payList[index];
    sumTime = timeList[index];
-   
-
-   console.log(sumPay + '원'); // 하단화면 없어서 콘솔로 대신 출력 확인용
-   console.log(sumTime +'분'); // 하단화면 없어서 콘솔로 대신 출력 확인용
 
    onPrint(logNumber); // 화면 출력함수
 }   //  시간금액선택 함수 e 
@@ -331,8 +323,6 @@ function payment(index) { // 결제 함수
 	payListSelect = ['unselect', 'unselect', 'unselect', 'unselect'];
 	userList[index].usePc = true;
 	
-	console.log(userList);
-	
 	alert('결제가 완료되었습니다.');
 
 	seatposition = false;
@@ -343,7 +333,6 @@ function payment(index) { // 결제 함수
 	userInfo();
 	
 	seatInfo(); // 사용좌석정보 출력 함수 실행
-	userInfo();
 }   // 결제 함수 e 
 
 
@@ -354,6 +343,8 @@ function resetU() {
 			seatList[i] = 'empty';
 		}
 	}
+	
+	payListSelect = ['unselect', 'unselect', 'unselect', 'unselect'];
    
    let content_box = document.querySelector('.content_box') 
    
@@ -459,11 +450,9 @@ function endPc(index) { // 사용종료함수
 //회원정보 삭제함수: 고연진------------------------------------
 // 전체 회원내역 안에 있는 회원삭제버튼
 function deleteUser(index) { // 회원정보 삭제함수
-		console.log('deleteUser()함수실행')
 	//회원리스트에서 삭제
 	seatList[Number(userList[index].seatNumber) - 1] = 'empty';
 	userList.splice(index,1)
-	console.log(userList)  // 전체 회원리스트에서 삭제 됏는지 확인
 	//전체회원내역 출력함수?!
 
 	seatInfo();
@@ -474,7 +463,7 @@ function deleteUser(index) { // 회원정보 삭제함수
 
 
 //회원정보 출력함수
-function userInfo(){ console.log('userInfo()함수실행')
+function userInfo(){
    
  let table2=document.querySelector('.table2')
  let html=``

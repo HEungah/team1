@@ -1,6 +1,15 @@
 @charset "UTF-8";
 
-*{padding:0; margin:0; list-style: none;}
+*{padding:0; margin:0; list-style: none; font-family : 'TTWanjudaedunsancheB';}
+
+@font-face {
+    font-family: 'TTWanjudaedunsancheB';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/TTWanjudaedunsancheB.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
 
 
 
@@ -132,8 +141,14 @@
 
 .resetbutton{
 	padding: 10px;
+	width : 50px;
+	height : 50px;
 	background-color: #F4F6FF;
 	border-radius: 12px;
+	background-image: url("img/resetimg.png");
+	background-size : 50px;
+	background-position-x: 48px; 
+	background-position-y: 54px; 
 	
 }
 
