@@ -478,9 +478,10 @@ function deleteUser(index) { // 회원정보 삭제함수
 	userList.splice(index,1)
 	console.log(userList)  // 전체 회원리스트에서 삭제 됏는지 확인
 	//전체회원내역 출력함수?!
+
 	seatInfo();
 	userInfo();
-   
+
 }   // 회원정보 삭제함수 e 
 
 
@@ -508,6 +509,7 @@ function userInfo(){ console.log('userInfo()함수실행')
          
       }
       table2.innerHTML=html   
+
       
 }
 
