@@ -112,17 +112,10 @@ function login() {
 function onPrint(index) { // 좌석 출력 함수
 	//content_box 의 속성값을 받아옴
 	
-	// -------------------------------------------규리가 수정함------------------
-	if(userList[index].usePc == false){
-		seatList[Number(userList[index].seatNumber)-1] = 'empty';
-	}
-	// -------------------------------------------규리가 수정함------------------
-	
 	
 	// 키오스크를 사용중인 회원이 이미 pc를 사용하고있을 경우를 판단하는 if문
 	if(userList[index].usePc == true){
 		seatList[Number(userList[index].seatNumber)-1] = 'select';
-		userList[index].usePc == false;
 	}
 	
 	let resetInput = document.querySelector('.u_header');
@@ -231,6 +224,12 @@ function onPrint(index) { // 좌석 출력 함수
 
 //희락
 function selectSeat(인덱스) {console.log('selectSeat() 함수 :'+인덱스) // 좌석선택 함수 
+	if(userList[logNumber].usePc == true){
+		alert('사용중인 pc를 종료시키고 자리를 옮겨주세요.');
+		seatposition = true;
+		return;
+	}
+	
 	
 	// 모든좌석들의 상태 확인 == 좌석 배열 출력  == 배열내 모든 정보 출력 == 배열명 
 	console.log(seatList );
@@ -264,12 +263,9 @@ function selectSeat(인덱스) {console.log('selectSeat() 함수 :'+인덱스) /
 		// JS에서 좌석상태를 출력하는 함수는 onPrint() 역할이었다.
 		// onPrint() 함수를 호출하자 .
 		onPrint(logNumber);
+		}
 		
-	// 마냐게 내가 선택한 좌석 이면
-	}else if(seatList[인덱스] == 'select'){
-		
-	}
- 		
+
 
     
 }   //  좌석선택 함수 e 
@@ -356,10 +352,13 @@ function payment(index) { // 결제 함수
 	console.log(userList);
 	
 	alert('결제가 완료되었습니다.');
+
+	seatposition = false;
+	timeposition = false;
 	
 	resetU();
 	
-	userInfo()
+	userInfo();
 	
 	seatInfo(); // 사용좌석정보 출력 함수 실행
 	userInfo();
@@ -368,6 +367,11 @@ function payment(index) { // 결제 함수
 
 //희락
 function resetU() { 
+	for(let i = 0; i < seatList.length; i++){
+		if(seatList[i] == 'select'){
+			seatList[i] = 'empty';
+		}
+	}
    
    let content_box = document.querySelector('.content_box') 
    
@@ -449,22 +453,24 @@ function endPc(index) { // 사용종료함수
 	// 1. 정말 삭제할건지 확인 메세지
    if (confirm('정말 사용종료 시키겠습니까?')){ // if start
 	  // console.log('사용종료시켜벌릴거임');
-	console.log('seatList[index] = '+seatList[index]);
 		if(userList[index].usePc == true) { // if 2 s
 			  // 2. usePc 상태를 트루에서 변경
 			userList[index].usePc = false;
 			// 3. seatList
 			//4. 선택한 seatList 상태를  used에서 'empty'로 변경
 			//4. 선택한 seatList 에서 used인것 찾기
-			for (j=0; j<seatList.length; j++) {//for s)
-				if(seatList[index] == 'used') { // if 3 s
-					seatList[index] = 'empty';
+			for (let j=0; j<seatList.length; j++) {//for s)
+				if(seatList[Number(userList[index].seatNumber)-1] == 'used') { // if 3 s
+					seatList[Number(userList[index].seatNumber)-1] = 'empty';
+					userList[index].seatNumber = 0;
 				} //if 3 end
 			} //for
+	   onPrint(index);
 		} //if 2 end
    } //if 1 end
+   
    seatInfo(); // 사용중인 회원내역 테이블 재출력
-   onPrint(index); // 4. 좌석 재출력
+   resetU();
 }   // 사용종료함수 e 
 //-----------------------------------------------
 
