@@ -47,6 +47,12 @@ function registerInput() { console.log('registerInput()실행')
  	let user={id:s_id_input, pw:s_pw_input, name:s_name_input, time : 0, seatNumber : 0, usePc : false}
 
 		// 유효성검사: 회원가입 가능한 상태인지 확인
+		
+		if(s_id_input == '' || s_pw_input == '' || s_name_input == ''){
+			alert('공백없이 입력해주세요.')
+			return;
+		}
+		
 		for(let i=0; i<userList.length;i++){
 
 			if(userList[i].id==s_id_input){
