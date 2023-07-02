@@ -111,8 +111,7 @@ function login() {
 //의선
 function onPrint(index) { // 좌석 출력 함수
 	//content_box 의 속성값을 받아옴
-	
-	
+
 	// 키오스크를 사용중인 회원이 이미 pc를 사용하고있을 경우를 판단하는 if문
 	if(userList[index].usePc == true){
 		seatList[Number(userList[index].seatNumber)-1] = 'select';
@@ -276,7 +275,8 @@ function selectTm(index) { // 시간금액선택 함수
    //인자 인덱스
 
 	//셀렉트가 배열내에 존재하면 모두 언셀렉트 상태로 초기화
-	payListSelect = ['unselect', 'unselect', 'unselect', 'unselect'];
+	 payListSelect = ['unselect', 'unselect', 'unselect', 'unselect'];
+	
 	
 	if (payListSelect.indexOf('select') != -1) { //배열에 select가 있으면
 		
@@ -294,31 +294,7 @@ function selectTm(index) { // 시간금액선택 함수
 		payListSelect[index] = 'select';
 		timeposition = true;
 	} //if end
-	
-		
-console.log(payListSelect.indexOf('select')+'인덱스입니다');
 
-   
-/*
-	if (payListSelect[index] == 'select') { //if문 시작
-	
-		// 이미 선택된거면 배열돌면서 찾아서 unselect로 바꿔 / false로 같이 바꿔
-		for( let i = 0 ; i<payListSelect.length; i++ ){ // for문 시작
-			if( payListSelect[index] == 'select' ) { 
-				payListSelect[index] = 'unselect';
-				timeposition = false;}
-		} // for문 end
-		// 2. 버튼눌렀을때 unselect상태면 select으로 바꿔 / true로 같이 바꿔
-	} else if (payListSelect[index] == 'unselect'){
-			payListSelect[index] = 'select';
-			timeposition = true;
-	} // if문 끝
-*/		
-
-
-	// console.log(payListSelect[index]); // 확인둉
-	// console.log(timeposition); // 확인용
-     
    // 4. 받아온 인자와 payList 인덱스 위치를 매칭시킨후 값을 하단에 출력
    //console.log(payList[index]);
    sumPay = payList[index];
@@ -452,11 +428,10 @@ function seatInfo() { // 사용좌석정보 출력 함수
 function endPc(index) { // 사용종료함수
 	// 1. 정말 삭제할건지 확인 메세지
    if (confirm('정말 사용종료 시키겠습니까?')){ // if start
-	  // console.log('사용종료시켜벌릴거임');
 		if(userList[index].usePc == true) { // if 2 s
 			  // 2. usePc 상태를 트루에서 변경
 			userList[index].usePc = false;
-			// 3. seatList
+			//3. 선택한 seatList 에서 used인것 찾기
 			//4. 선택한 seatList 상태를  used에서 'empty'로 변경
 			//4. 선택한 seatList 에서 used인것 찾기
 			for (let j=0; j<seatList.length; j++) {//for s)
