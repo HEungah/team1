@@ -26,11 +26,11 @@
 
 .u_header {
    padding: 10px;
+   margin-top: 50px;
 }
 .logo1{
-	border: solid;
-    padding: 0px 300px;
-   
+    position: relative;
+    left: 300px;
 }
 
 .content_box { 
@@ -88,11 +88,12 @@
 }
 
 .seatClick3{
-	background-color: white;
+	background-color: blue;
 	padding: 12px;
     border: none;
     margin: 17px;
     width: 92px;
+    color: white;
 }
 
 .timeClick2{
@@ -100,6 +101,7 @@
 	border: none;
 	padding: 20px;
     border-radius: 40px;
+    color: white;
 }
 
 .main_box , .main_box2 , .main_box3{
@@ -124,6 +126,7 @@
     border: none;
     margin: 17px;
     background-color: #A8B3FF;
+    width: 100px;
 }
 
 .timeClick1{
@@ -149,24 +152,24 @@
 	background-size : 50px;
 	background-position-x: 48px; 
 	background-position-y: 54px; 
-	
+	position: absolute;
 }
 
 .m_used_info{
-	border: solid 1px red;
+	border: solid 1px #E3EDEB;;
 	margin-top: 80px;
 }
 .alluser_list{
-	border: solid 1px blue;
+	border: solid 1px #E3EDEB;;
 	margin-top: 80px;
 }
 .table1{
 	margin-top: 15px;
-	border: solid 1px orange;
+	border: solid 1px #E3EDEB;;
 }
 .table2{
 	margin-top: 15px;
-	border: solid 1px orange;
+	border: solid 1px #E3EDEB;;
 }
 
 
