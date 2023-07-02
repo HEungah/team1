@@ -474,10 +474,12 @@ function endPc(index) { // 사용종료함수
 function deleteUser(index) { // 회원정보 삭제함수
 		console.log('deleteUser()함수실행')
 	//회원리스트에서 삭제
+	seatList[Number(userList[index].seatNumber) - 1] = 'empty';
 	userList.splice(index,1)
 	console.log(userList)  // 전체 회원리스트에서 삭제 됏는지 확인
 	//전체회원내역 출력함수?!
-	userInfo()
+	seatInfo();
+	userInfo();
    
 }   // 회원정보 삭제함수 e 
 
