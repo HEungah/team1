@@ -130,7 +130,7 @@ function onPrint(index) { // 좌석 출력 함수
 	
 	resetHTML = 	`
 					<span><button onclick="resetU()" class="resetbutton">처음으로</button></span>
-					<img src="img/mainlogo.png"/>
+					<img src="img/mainlogo.png" class="logo1"/>
 					`;
 	resetInput.innerHTML = resetHTML;				
 	
@@ -409,7 +409,7 @@ function resetU() {
    let resetHTML = ``;
    
    resetHTML =  `
-   				<img src="img/mainlogo.png"/>
+   				<img src="img/mainlogo.png" class="logo1"/>
    				`;
    resetInput.innerHTML = resetHTML;				
    
