@@ -140,6 +140,7 @@
     padding: 16px;
     border-radius: 12px;
     background-color: red;
+    border: 1px solid red;
     color: white;
 }
 
