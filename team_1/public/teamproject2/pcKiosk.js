@@ -344,6 +344,15 @@ function resetU() {
 		}
 	}
 	
+	seatposition = false;
+	timeposition = false;
+	
+	sumPay = 0;	
+
+	sumTime = 0;
+	
+	
+	
 	payListSelect = ['unselect', 'unselect', 'unselect', 'unselect'];
    
    let content_box = document.querySelector('.content_box') 
