@@ -58,6 +58,10 @@
 	border: none;
 	background-color: #C0EDE7;
 }
+
+.btn_join:hover { border: 1px solid red; filter: drop-shadow(8px 3px 3px #c3c3c3); }
+.btn_sign:hover { border: 1px solid red; filter: drop-shadow(8px 3px 3px #c3c3c3); }
+
 .s_id_input , .s_pw_input , .s_name_input , .j_id_input , .j_pw_input{
 	outline: none;
 	border: none;
@@ -85,7 +89,9 @@
     border: none;
     margin: 17px;
     width: 92px;
+    color: white;
 }
+
 
 .seatClick3{
 	background-color: blue;
@@ -129,12 +135,16 @@
     width: 100px;
 }
 
+.seatClick:hover { border: 1px solid red; filter: drop-shadow(8px 3px 3px #c3c3c3); }
+
 .timeClick1{
 	border: none;
 	padding: 20px;
     border-radius: 40px;
     background-color: #C0EDE7;
 }
+.timeClick1:hover { border: 1px solid red; filter: drop-shadow(8px 3px 3px #c3c3c3); }
+
 .payment{
 	width: 140px;
     padding: 16px;
@@ -143,6 +153,8 @@
     border: 1px solid red;
     color: white;
 }
+
+.payment:hover { border: 1px solid black; filter: drop-shadow(8px 3px 3px #c3c3c3); }
 
 .resetbutton{
 	padding: 10px;
@@ -156,6 +168,8 @@
 	background-position-y: 54px; 
 	position: absolute;
 }
+
+.resetbutton:hover { border: 1px solid black; filter: drop-shadow(8px 3px 3px #c3c3c3); }
 
 .m_used_info{
 	border: solid 1px #6E7BD8;
@@ -174,6 +188,14 @@
 	border: solid 1px #E3EDEB;;
 }
 
+
+.m_content button{
+	background-color: red;
+	color: white;
+	border-radius: 5px;
+	border: 1px solid red;
+	padding: 2px 5px;
+}
 
 
 
