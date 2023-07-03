@@ -25,7 +25,7 @@ let seatposition = false;    //좌석 선택 // 목적 : 결제 하기전에 결
 
 let timeposition = false;    //시간금액 선택 상태
 
-let logNumber = 0;		// 키오스크 사용 회원 식별용 변수
+let logNumber = false;		// 키오스크 사용 회원 식별용 변수
 
  
 seatInfo(); // 사용좌석정보 출력 함수 실행
@@ -114,10 +114,19 @@ function login() {
 //의선
 function onPrint(index) { // 좌석 출력 함수
 	//content_box 의 속성값을 받아옴
+	
+	for(let i = 0; i <userList.length; i++){
+		if(userList[i].usePc == true){
+			if(i != logNumber){
+				seatList[Number(userList[i].seatNumber)-1] = 'used';
+			}
+		}
+	}
 
 	// 키오스크를 사용중인 회원이 이미 pc를 사용하고있을 경우를 판단하는 if문
 	if(userList[index].usePc == true){
 		seatList[Number(userList[index].seatNumber)-1] = 'select';
+		seatposition = true;
 	}
 	
 	let resetInput = document.querySelector('.u_header');
@@ -318,7 +327,7 @@ function payment(index) { // 결제 함수
 		alert('좌석과 사용할 시간을 선택해주세요.');
 		return;
 	}
-	
+	console.log(userSelect);
 	seatList[userSelect] = 'used';
 	payListSelect = ['unselect', 'unselect', 'unselect', 'unselect'];
 	userList[index].usePc = true;
@@ -339,7 +348,7 @@ function payment(index) { // 결제 함수
 //희락
 function resetU() { 
 	for(let i = 0; i < seatList.length; i++){
-		if(seatList[i] == 'select'){
+		if(seatList[i] == 'select' && userList[logNumber].usePc == false){
 			seatList[i] = 'empty';
 		}
 	}
@@ -350,6 +359,8 @@ function resetU() {
 	sumPay = 0;	
 
 	sumTime = 0;
+	
+	logNumber = false;
 	
 	
 	
@@ -443,10 +454,11 @@ function endPc(index) { // 사용종료함수
 			for (let j=0; j<seatList.length; j++) {//for s)
 				if(seatList[Number(userList[index].seatNumber)-1] == 'used') { // if 3 s
 					seatList[Number(userList[index].seatNumber)-1] = 'empty';
+					console.log(seatList[Number(userList[index].seatNumber)-1])
 					userList[index].seatNumber = 0;
 				} //if 3 end
 			} //for
-	   onPrint(index);
+	   /*onPrint(index);*/
 		} //if 2 end
    } //if 1 end
    
