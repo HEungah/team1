@@ -434,6 +434,7 @@ function seatInfo() { // 사용좌석정보 출력 함수
 function endPc(index) { // 사용종료함수
 	// 1. 정말 삭제할건지 확인 메세지
    if (confirm('정말 사용종료 시키겠습니까?')){ // if start
+   console.log('앞'+seatList[Number(userList[index].seatNumber)-1]);
 		if(userList[index].usePc == true) { // if 2 s
 			  // 2. usePc 상태를 트루에서 변경
 			userList[index].usePc = false;
@@ -443,10 +444,11 @@ function endPc(index) { // 사용종료함수
 			for (let j=0; j<seatList.length; j++) {//for s)
 				if(seatList[Number(userList[index].seatNumber)-1] == 'used') { // if 3 s
 					seatList[Number(userList[index].seatNumber)-1] = 'empty';
+			console.log(seatList[Number(userList[index].seatNumber)-1]);
 					userList[index].seatNumber = 0;
 				} //if 3 end
 			} //for
-	   onPrint(index);
+	   //onPrint(index);
 		} //if 2 end
    } //if 1 end
    
