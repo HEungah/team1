@@ -455,19 +455,15 @@ function endPc(index) { // 사용종료함수
 			for (let j=0; j<seatList.length; j++) {//for s)
 				if(seatList[Number(userList[index].seatNumber)-1] == 'used') { // if 3 s
 					seatList[Number(userList[index].seatNumber)-1] = 'empty';
-<<<<<<< HEAD
+
 			console.log(seatList[Number(userList[index].seatNumber)-1]);
-=======
+
 					console.log(seatList[Number(userList[index].seatNumber)-1])
->>>>>>> branch 'main' of https://github.com/HEungah/team1
+
 					userList[index].seatNumber = 0;
 				} //if 3 end
 			} //for
-<<<<<<< HEAD
 	   //onPrint(index);
-=======
-	   /*onPrint(index);*/
->>>>>>> branch 'main' of https://github.com/HEungah/team1
 		} //if 2 end
    } //if 1 end
    
