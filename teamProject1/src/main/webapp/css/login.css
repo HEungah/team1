@@ -6,26 +6,29 @@ li{list-style-type: none;}
 
 #wrap{
 	background-color: #eeecec;
-	width: 100%;
 }
 
 .mainwrap{
-	max-width: 1200px;
-	width: 100%;
+	width: 1200px;
 	margin: 0 auto;
 	border: 1px solid red;
 }
 
 .content{
-	height: auto;
+	display: flex;
+	justify-content: space-around;
 	border: 1px solid red;
 }
 
 .login{
+	background-color: #fff;
+	padding: 100px 0 60px 0;
 	border: 1px solid red;
 }
 
 .join{
+	background-color: #fff;
+	padding: 296px 0 60px 0;
 	border: 1px solid red;
 }
 
