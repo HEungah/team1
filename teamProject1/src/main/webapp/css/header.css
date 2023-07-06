@@ -3,11 +3,13 @@
 *{padding: 0px; margin: 0px;}
 li{list-style-type: none;}
 
-.headerbox{
-	width: 1200px; 
-	align-items: center;
-}
 
+.main_menu{
+	width: 1200px;
+	border: solid 1px black;
+	margin: -10px  auto; /*구역 가로가운데 정렬*/
+	padding: 30px;
+}
 
 
 
