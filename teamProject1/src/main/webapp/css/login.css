@@ -1,1 +1,57 @@
 @charset "UTF-8";
+
+*{padding: 0px; margin: 0px;}
+
+li{list-style-type: none;}
+
+#wrap{
+	background-color: #eeecec;
+	width: 100%;
+}
+
+.mainwrap{
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
+	border: 1px solid red;
+}
+
+.content{
+	height: auto;
+	border: 1px solid red;
+}
+
+.login{
+	border: 1px solid red;
+}
+
+.join{
+	border: 1px solid red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
