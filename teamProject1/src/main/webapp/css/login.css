@@ -1,1 +1,60 @@
 @charset "UTF-8";
+
+*{padding: 0px; margin: 0px;}
+
+li{list-style-type: none;}
+
+#wrap{
+	background-color: #eeecec;
+}
+
+.mainwrap{
+	width: 1200px;
+	margin: 0 auto;
+	border: 1px solid red;
+}
+
+.content{
+	display: flex;
+	justify-content: space-around;
+	border: 1px solid red;
+}
+
+.login{
+	background-color: #fff;
+	padding: 100px 0 60px 0;
+	border: 1px solid red;
+}
+
+.join{
+	background-color: #fff;
+	padding: 296px 0 60px 0;
+	border: 1px solid red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
