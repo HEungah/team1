@@ -17,6 +17,10 @@
 				<div class="loginbox">	<!-- 로그인 구역 -->
 					<div class="login">
 						<h2 class="logintext">로그인</h2>
+						<div class="inputbox">
+							<input class="loginInput" type="text" placeholder="아이디">
+							<input class="pwInput" type="text" placeholder="비밀번호">							
+						</div>
 					</div>
 				</div>
 				<div class="joinbox">	<!-- 회원가입 선택 구역 -->
