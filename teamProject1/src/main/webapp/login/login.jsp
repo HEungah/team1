@@ -12,11 +12,14 @@
 	<%@include file="../header.jsp" %>
 
 	<div id="wrap">	<!-- 본문 전체 구역 -->
-		<div clsas="mainwrap">	<!-- 로그인 전체 구역 -->
+		<div class="mainwrap">	<!-- 로그인 전체 구역 -->
 			<div class="content">
-				<div class="login">	<!-- 로그인 구역 -->
+				<div class="loginbox">	<!-- 로그인 구역 -->
+					<div class="login">
+						<h2 class="logintext">로그인</h2>
+					</div>
 				</div>
-				<div class="join">	<!-- 회원가입 선택 구역 -->
+				<div class="joinbox">	<!-- 회원가입 선택 구역 -->
 				</div>
 			</div>
 		</div>

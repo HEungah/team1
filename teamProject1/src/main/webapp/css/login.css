@@ -4,29 +4,44 @@
 
 li{list-style-type: none;}
 
+/* 본문 전체 구역 */
 #wrap{
 	background-color: #eeecec;
 }
 
+/* 본문 구역 box */
 .mainwrap{
 	width: 1200px;
+	padding: 0px 43px;
 	margin: 0 auto;
 	border: 1px solid red;
 }
 
+/* 로그인구역과 회원가입버튼구역을 묶어주는 box */
 .content{
+	width: 100%;
+	height: 560px;
 	display: flex;
 	justify-content: space-around;
-	border: 1px solid red;
 }
 
-.login{
+/* 로그인 구역 box */
+.loginbox{
+	width: 57.5%;
 	background-color: #fff;
 	padding: 100px 0 60px 0;
 	border: 1px solid red;
 }
 
-.join{
+.login{
+	width: 473px;
+	margin: 0 auto;
+	border: 1px solid red;
+}
+
+/* 회원가입 버튼 구역 box */
+.joinbox{
+	width: 40%;
 	background-color: #fff;
 	padding: 296px 0 60px 0;
 	border: 1px solid red;
