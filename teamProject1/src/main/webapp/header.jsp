@@ -5,9 +5,12 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+
+	<link href="/frontendProject/css/header.css" rel="stylesheet">
+
 </head>
 <body>
-	<div class="header">	<!-- 헤더 -->
+	<div class="headerbox">	<!-- 헤더 -->
 	
 		<div class="hd_content1">
 		
