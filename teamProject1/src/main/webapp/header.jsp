@@ -7,6 +7,16 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+	<div class="header">	<!-- 헤더 -->
+	
+		<div class="hd_content1">
+		
+		</div>
+		
+		<div class="hd_content2">
+			
+		</div>
+		
+	</div>	<!-- 헤더 end -->
 </body>
 </html>
