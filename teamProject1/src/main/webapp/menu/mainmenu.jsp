@@ -13,8 +13,8 @@
 			<div class="menubar_top">
 				<h2>한솥 메뉴</h2>
 				<div class="tab_menu">
-					<span>전체메뉴</span>
-					<span>추천키워드</span>
+					<span class="keyword1">전체메뉴</span>
+					<span class="keyword2">추천키워드</span>
 				</div>
 			</div> <!-- menubar_top end -->
 		</div> <!-- layout end -->

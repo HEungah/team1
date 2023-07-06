@@ -3,6 +3,7 @@
 #wrap {
 	background-color: #EEECEC;
 	height: 1000px;
+	letter-spacing: -0.7px;
 }
 
 .layout {
@@ -20,6 +21,7 @@
 .menubar_top > h2 {
 	font-size: 36px;
 	padding: 53px 0 0 30px;
+	font-weight: 600;
 }
 
 .tab_menu {
@@ -28,3 +30,15 @@
 	top: 68px;
 	right: 50px;
 }
+
+
+.keyword1 {
+	color: #f2c000;
+}
+
+.keyword2 {
+	color: #cfc6bc;
+	padding-left: 30px;
+}
+
+
