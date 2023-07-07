@@ -1,12 +1,15 @@
 @charset "UTF-8";
-*{padding:0; margin:0;}
+*{padding:0; margin:0; box-sizing: border-box; letter-spacing: -0.7px;}
+li { list-style-type: none; }
+a {color: black; text-decoration: none;}
+/*------------------------------------*/
 #wrap {
 	background-color: #EEECEC;
-	height: 1000px;
 }
 
 .layout {
 	width: 1200px;
+	margin: 0 auto;
 }
 
 .menubar_top {
@@ -20,6 +23,7 @@
 .menubar_top > h2 {
 	font-size: 36px;
 	padding: 53px 0 0 30px;
+	font-weight: 600;
 }
 
 .tab_menu {
@@ -28,3 +32,182 @@
 	top: 68px;
 	right: 50px;
 }
+
+
+.keyword1 {
+	color: #f2c000;
+}
+
+.keyword2 {
+	color: #cfc6bc;
+	padding-left: 30px;
+}
+
+.contentarea {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 70px;
+}
+
+.sidebar {
+	border-top : 6px solid #5c5953;
+	width: 270px;
+	background-color: white;
+	padding: 15px 30px;
+	height: 463px;
+}
+
+.menubar {
+	border-bottom: 1px solid #e8e8e8;
+}
+
+.menubar > a {
+	padding: 20px 0;
+	display: inline-block;
+	width: 210px;
+	font-weight: 600;
+}
+.menubar:hover >a{
+	color: #f2c000;
+}
+
+
+/*-------------------컨텐츠---------------------*/
+.content {
+	border: 1px solid blue;
+	width: 870px;
+}
+
+.ctext1 {
+    color: #909090;
+    padding-bottom: 5px;
+    font-size: 15px;
+}
+
+
+.ctext2 {
+    color: #373737;
+    padding-bottom: 5px;
+    font-size: 24px;
+}
+
+.ctext2:after {
+	content: '';
+    width: 40px;
+    height: 4px;
+    background-color: #373737;
+    display: block;
+    margin-top: 15px;
+}
+
+.menu {
+	display: flex;
+	flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.menu_item {
+	margin-top: 30px;
+	border: 1px solid red;
+	width: 270px;
+	height: 335px;
+}
+
+.menuimg_area {
+	width: 270px;
+	height:230px;
+	overflow: hidden;
+	position: relative;
+}
+
+.newicon {
+	width: 50px;
+	height: 50px;
+	background-color: #f2c000;
+	color: white;
+	font-size: 15px;
+	font-weight: 700;
+	text-align: center;
+	line-height: 50px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index : 10;
+}
+
+.menu_item:hover .menuimg {
+	transform: scale(1.03);
+
+}
+
+.menuimg {
+	width: 270px;
+	transition: all 0.2s linear;
+}
+
+
+
+.m_info{
+	margin-top: 24px;
+}
+
+.mtitle {
+	font-weight: 600;
+	color: #373737;
+	font-size: 18px;
+	text-align: center;
+}
+
+.mprice {
+	color: #909090;
+	font-size: 15px;
+	font-weight: 600;
+	margin-top: 10px;
+	text-align: center;
+}
+
+.line {
+	width: 100%;
+	border-bottom: 1px solid #dad8d8;
+	margin-top: 80px;
+}
+
+.caution_text {
+    color: #909090;
+    font-weight: bold;
+    padding-top: 20px;
+    font-size : 18px;
+}
+
+
+/* ---------------------아래텍스트------------------ */
+.bottom_text {
+	width: 100%;
+	display : flex;
+	position: relative;
+}
+
+.bottom_text >h2 {
+	font-weight: 700;
+	font-size : 24px;
+}
+
+.line2 {
+	width: 1020px;
+	border-bottom: 10px solid #373737;
+	position: absolute;
+	top: 10px;
+	left: 180px;
+}
+
+
+
+
+
+
+
+
+
+
+	
+	
