@@ -15,8 +15,10 @@
 		<ul class="top_menu">
 		
 			<li> <a href="#"> 로그인 </a> <span class="line1">|</span> </li>
-			<li> <a href="#"> 회원가입 </a> <span class="line2">|</span> </li>
-			<li><a></a></li>
+			<li> <a href="#"> 회원가입 </a> <span class="line2">
+			<a class="asdf" href="https://www.facebook.com/hansotofficial/?ref=ts&fref=ts"></a>
+			|</span> </li>
+			
 		
 		</ul>
 			
