@@ -151,6 +151,8 @@ li{list-style-type: none;}
 	color: #f2c000;
 	background: url(../img/img_choi/icon_search_hover.png) left 5px no-repeat;
 	background-size: 14px 14px;
+	text-decoration : underline #f2c000;
+	text-underline-offset : 5px;
 }
 
 /* 로그인버튼 box */
