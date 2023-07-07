@@ -16,21 +16,29 @@ let selectbtn = false;	// 아이디저장선택 상태변수
 button.disabled = true;
 button.classList.add("dloginbtn");
 
+// 아이디창에 키보드 입력시 validate 함수 실행
 loginInput.addEventListener("keyup", validate);
+// 비밀번호창에 키보드 입력시 validate 함수 실행
 pwInput.addEventListener("keyup", validate);
+// 초기화면 로그인버튼 커서 비활성화
 button.style.cursor = "default";
+// 회원가입 버튼 커서 활성화
 saveId.style.cursor = "pointer";
 
+// 아이디입력창 또는 비밀번호 입력창에 키보드입력시 실행되는 함수
 function validate(){
 	console.log('validate함수 실행');
 	
+	// 아이디입력창과 비밀번호입력창 모두 입력값이 없으면 로그인창 비활성화
 	if (!(loginInput.value && pwInput.value)) {
 	    button.disabled = true;
 	    button.classList.add("dloginbtn");
 	    button.style.cursor = "default";
+	// 아이디입력창과 비밀번호입력창 모두 입력값이 있으면 로그인창 활성화
 	  } else {
 	    button.disabled = false;
 	    button.classList.remove("dloginbtn");
+	    // 로그인창이 활성화되면 커서도 활성화시킴
 	    button.style.cursor = "pointer";
 	  }
 	
@@ -60,6 +68,7 @@ function login(){
 	document.querySelector('.loginInput').value = ``;
 	document.querySelector('.pwInput').value = ``;
 	
+	// 로그인에 실패했으면 로그인버튼을 비활성화 상태로 초기화시켜준다. 
 	button.disabled = true;
 	button.classList.add("dloginbtn");
 	button.style.cursor = "default";

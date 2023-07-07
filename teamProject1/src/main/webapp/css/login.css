@@ -34,6 +34,7 @@ li{list-style-type: none;}
 	padding: 100px 0 60px 0;
 }
 
+/* 로그인박스 위쪽 띠 */
 .loginbox:before{
 	content: '';
     width: 100%;
@@ -51,10 +52,12 @@ li{list-style-type: none;}
 	margin: 0 auto;
 }
 
+/* 로그인창 타이틀 텍스트 */
 .logintext{
 	font-size: 36px
 }
 
+/* 로그인 타이틀 텍스트 왼쪽 자물쇠 이미지 */
 .logintext:before{
 	content: '';
     width: 27px;
@@ -65,10 +68,12 @@ li{list-style-type: none;}
     display: inline-block;
 }
 
+/* 입력창 전체 box */
 .inputbox{
 	margin-top: 50px;
 }
 
+/* 아이디 입력창 */
 .loginInput{
 	width: 100%;
 	height: 50px;
@@ -78,6 +83,7 @@ li{list-style-type: none;}
 	text-indent: 20px;
 }
 
+/* 비밀번호 입력창 */
 .pwInput{
 	width: 100%;
 	height: 50px;
@@ -87,15 +93,18 @@ li{list-style-type: none;}
 	text-indent: 20px;
 }
 
+/* 아이디저장 텍스트 box */
 .loginbottom{
 	display: flex;
 	justify-content: space-between;
 }
 
+/* 아이디저장 텍스트(비활성화) */
 .saveId{
 	margin-top: 20px;
 }
 
+/* 아이디저장 옆 텍스트 체크box 이미지(비활성화) */
 .saveId:before{
 	content: '';
     background: url(../img/img_choi/icon_chb.png) no-repeat;
@@ -108,10 +117,12 @@ li{list-style-type: none;}
     margin: -1px 0px 0 0;
 }
 
+/* 아이디저장 텍스트(활성화) */
 .csaveId{
 	margin-top: 20px;
 }
 
+/* 아이디저장 옆 텍스트 체크box 이미지(활성화) */
 .csaveId:before{
 	content: '';
     background: url(../img/img_choi/icon_chb.png) no-repeat;
@@ -124,6 +135,7 @@ li{list-style-type: none;}
     margin: -1px 0px 0 0;
 }
 
+/* 아이디/비밀번호찾기 텍스트 box */
 .findId{
 	color: #5c5953;
     background: url(../img/img_choi/icon_search.png) left 5px no-repeat;
@@ -134,12 +146,14 @@ li{list-style-type: none;}
     margin-top: 20px;
 }
 
+/* 아이디/비밀번호 찾기 커서 올렸을시 이미지, 텍스트 색상 변환 */
 .findId:hover{
 	color: #f2c000;
 	background: url(../img/img_choi/icon_search_hover.png) left 5px no-repeat;
 	background-size: 14px 14px;
 }
 
+/* 로그인버튼 box */
 .buttonbox{
 	margin-top: 83px;
 	position: relative;
@@ -147,6 +161,7 @@ li{list-style-type: none;}
     text-align: center;
 }
 
+/* 로그인버튼 활성화 */
 .aloginbtn{
 	width: 100%;
 	padding: 20px 0px;
@@ -156,6 +171,7 @@ li{list-style-type: none;}
 	background-color: #f2c000;
 }
 
+/* 로그인버튼 비활성화 */
 .dloginbtn{
 	width: 100%;
 	padding: 20px 0px;
