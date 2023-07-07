@@ -2,17 +2,55 @@
 
 *{padding: 0px; margin: 0px;}
 li{list-style-type: none;}
+a{ color: black; text-decoration: none;}
 
 
+.line1 , .line2{padding: 0 5px;}
+.h_warp{
+	width: 100%;
+	border: solid 1px red; 
+	height: 200px;
+	
+}
+.top_menu{
+	display: flex; 
+	justify-content: flex-end;
+	width: 1322px; 
+	margin: 0 auto;
+	background-color: burlywood;
+	position: relative;
+}
 .main_menu{
 	width: 1200px;
-	border: solid 1px black;
-	margin: -10px  auto; /*구역 가로가운데 정렬*/
-	padding: 30px;
+	border: solid 1px blue;
+	margin: 0 auto;
+	height: 90px;
+	position: relative;
+    background-color: #fff;
+    box-sizing: border-box;
+    z-index: 9;
+    padding: 9px 7px 9px 14px;
 }
-
-
-
+.line2:after{
+	content: '';
+    display: inline-block;
+    background: url(../img/img_jung/sns_logo.png) left top no-repeat;
+    width: 14px;
+    height: 14px;
+    background-size: 56px 14px;
+}
+.line2:before{
+	content: '';
+    display: inline-block;
+    background: url(../img/img_jung/sns_logo.png) left top no-repeat;
+    background-position: -14px 0;
+    width: 14px;
+    height: 14px;
+    background-size: 56px 14px;
+    position: absolute;
+    right: -10px;
+    top: 3px;
+}
 
 
 
