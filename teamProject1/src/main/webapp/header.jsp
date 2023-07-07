@@ -14,17 +14,51 @@
 	
 		<ul class="top_menu">
 		
-			<li> <a> 로그인 </a> <span>|</span> </li>
-			<li> <a> 회원가입 </a> <span>|</span> </li>
-			
-			
-		</ul>
+			<li> <a href="#"> 로그인 </a> <span class="line1">|</span> </li>
+			<li> <a href="#"> 회원가입 </a> <span class="line2">|</span> </li>
+			<li><a></a></li>
 		
+		</ul>
+			
 		<div class="main_menu">
-			<img src="../img/main_logo.png" />
+		
+			<ul>
+			
+				<li> <a href="#"><img src="img/img_jung/main_logo.png" /></a></li>
+				<li> <a href="#">BRAND</a> </li>
+				<li> <a href="#">ESG</a> </li>
+				<li> <a href="#">MENU</a> </li>
+				<li> <a href="#">STORE</a> </li>
+				<li> <a href="#">EVENT</a> </li>
+				<li> <a href="#">FRANCHISE</a> </li>
+				<li> <a href="#">HANSOT</a> </li>
+			
+			</ul>
 			헤더입니다
 		</div>
+			
 		
 	</div>	<!-- 전체 end -->
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
