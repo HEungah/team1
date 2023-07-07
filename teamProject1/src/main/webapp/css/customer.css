@@ -1,9 +1,39 @@
 @charset "UTF-8";
 
-div{border: 1px}
-
-table{border:1px}
-
+/*고객의 소리 있는 큰 박스*/
 #box1{
+	display: flex; flex-direction: column; 
+	width: 1200px; height: 150px; border: 0.5px solid red;
+	
+	
+}
+/*고객센터*/
+.top{display:flex; direction: row; justify-content: space-between;
+	border: 0.5px solid red;
+		
+}
+/*자주하는 질문/ 고객소리 나누기*/
+.top li{display: inline-block; border: 0.5px solid red;}
+
+/*검색창과 검색 건수 나눔*/
+.bottom{display:flex; flex-direction:row ; justify-content: space-between;
+		border: 0.5px solid red;
+}
+
+/*본문테이블*/
+#box2{
+	width:1200px; height: 200px;
+	border: 0.5px solid red;
+}
+
+/*페이지넘버*/
+#box3{
+	width:1200px; height:50px;
+	border: 0.5px solid red;
+}
+
+/*고객상담/창업설명회/단체추문*/
+#box4{ width:1200px; height: 100px;
 	display: flex; flex-direction: row; justify-content: space-around;
+	border: 0.5px solid red;
 }
