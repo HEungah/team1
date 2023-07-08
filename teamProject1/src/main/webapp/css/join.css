@@ -1,1 +1,116 @@
 @charset "UTF-8";
+
+*{padding: 0px; margin: 0px;}
+
+#wrap{
+	background-color: #eeecec;
+}
+
+.joinwrap{
+	width: 1200px;
+	margin: 0 auto;
+	background-color: #fff;
+}
+
+.joinmain{
+	width: 100%;
+}
+
+.jointitle{
+	padding: 53px 0 0 30px;
+	height: 140px;
+	box-sizing: border-box;
+	font-size: 36px;
+}
+
+.joincontent{
+	border-top: 1px solid #eeecec;
+	width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    display: table;
+    padding: 70px 30px 30px 30px;
+}
+
+.joincontent:before{
+	content: '';
+    height: 2px;
+    width: 100%;
+    background-color: #f2c000;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: -1px 0 0 0;
+}
+
+.joinsub{
+	width: 370px;
+	display: table-cell;
+    vertical-align: top;
+    position: relative;
+}
+
+.joinsub h3{
+	font-size: 24px;
+    position: relative;
+    padding: 55px 0 0 0;
+}
+
+.joinsub h3:before{
+	content: '01';
+    position: absolute;
+    left: 0;
+    top: -20px;
+    font-size: 50px;
+    color: #cfc6bc;
+    font-family: Roboto;
+    letter-spacing: -0.1px;
+    font-weight: 100;
+}
+
+.joinsub p{
+	line-height: 140%;
+	margin-top: 35px;
+}
+
+.blocktext{
+	display: block;
+}
+
+.emphasis{
+	font-weight: bold;
+	color: #f2c000;
+	font-style: normal;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
