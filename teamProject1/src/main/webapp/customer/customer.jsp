@@ -37,8 +37,14 @@
 		
 		
 		<div class="bottom"><!-- flex, 가로배치, 양끝 , 검색창,31건-->
-			<div class="search">검색창</div><!-- 부트쓸 예정 -->
-			<div class="totalN">31건</div>		
+			<div class="search"><select><<!-- 전체, 이용방법 등 반복문-->
+									<option>전체</option>
+								</select>
+								<input style="text" placeholder="검색어 입력">
+								<button class="glasses">>검색</button><!-- 돋보기 이미지 필요 -->
+								
+								</div><!-- 전체,이용방법 등 끝. 부트쓸 예정 -->
+			<div class="totalN" onclick="totalN()">31건</div>		
 		</div><!-- bottom 클래스 끝 -->
 	
 	</div><!-- 1번 끝 -->
@@ -46,13 +52,15 @@
 
 <!-- 2번 -->
 	<div id="box2"><!-- js 반복문 -->
-		<table class="t_content">
-			<tr>
-				<td>글수(31)</td><td>글제목</td><td>쿠폰</td><td>날짜</td>
-			</tr>
-			<tr>
-				<td>글수(31)</td><td>글제목</td><td>쿠폰</td><td>날짜</td>
-			</tr>
+		<table class="t_content table table table-striped table table-hover"> <!-- 부트:"table" table-striped -->
+			<tbody>
+				<tr>
+					<td>글수(31)</td><td>글제목</td><td>쿠폰</td><td>날짜</td>
+				</tr>
+				<tr>
+					<td>글수(31)</td><td>글제목</td><td>쿠폰</td><td>날짜</td>
+				</tr>
+			</tbody>
 		</table>	
 	</div><!-- 2.본문테이블 -->
 	
