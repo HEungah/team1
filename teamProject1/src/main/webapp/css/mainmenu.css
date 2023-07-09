@@ -180,6 +180,7 @@ a {color: black; text-decoration: none;}
 }
 
 
+
 /* ---------------------더 많은 이야기------------------ */
 
 .content_bottom {
@@ -224,6 +225,13 @@ a {color: black; text-decoration: none;}
 
 .moreimg_a {
 	position: relative;
+	width: 370px;
+	height: 266px;
+	display: inline-block;
+}
+
+.moreimg_a > img {
+	cursor: pointer;
 }
 
 .moreimg_a:hover .moreimg_text {
@@ -235,6 +243,7 @@ a {color: black; text-decoration: none;}
     background-color: #373737;
     position: absolute;
     bottom: 0;
+    left: 0;
     padding: 22px 22px 20px 22px;
 }
 

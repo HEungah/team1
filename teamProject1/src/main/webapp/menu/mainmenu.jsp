@@ -93,7 +93,8 @@
 				</div> <!-- content end -->
 			</div> <!-- contentarea end -->
 			
-			<div class="content_bottom">
+
+ 			<div class="content_bottom">
 				<div class="bottom_text">
 					<h2>더 많은 이야기</h2>
 					<div class="line2"></div>
@@ -101,38 +102,38 @@
 				<div class="more_area"> <!-- 더많은이야기 이미지 -->
 				
 					<div class="moreimg"> <!-- 더보기 이미지1개 -->
-						<a class="moreimg_a href="#">
+						<a class="moreimg_a" href="#">
 							<img class="moreimg_img" src="../img/img_kim/more_store.jpg">
-							<div class="moreimg_text_area">
-								<div class="moreimg_text">
-									<p>한솥 STORE</p>
+							<span class="moreimg_text_area">
+								<span class="moreimg_text">
+									<span>한솥 STORE</span>
 									<span>></span>
-								</div>
-							</div>
+								</span>
+							</span>
 						</a>
 					</div> <!-- 더보기 이미지1개 end-->
 					
 					<div class="moreimg"> <!-- 더보기 이미지1개 -->
-						<a class="moreimg_a href="#">
+						<a class="moreimg_a" href="#">
 							<img class="moreimg_img" src="../img/img_kim/more_event.jpg">
-							<div class="moreimg_text_area">
-								<div class="moreimg_text">
-									<p>이 달의 이벤트</p>
+							<span class="moreimg_text_area">
+								<span class="moreimg_text">
+									<span>이 달의 이벤트</span>
 									<span>></span>
-								</div>
-							</div>
+								</span>
+							</span>
 						</a>
 					</div> <!-- 더보기 이미지1개 end-->
 					
 					<div class="moreimg"> <!-- 더보기 이미지1개 -->
-						<a class="moreimg_a href="#">
+						<a class="moreimg_a" href="#">
 							<img class="moreimg_img" src="../img/img_kim/more_event_store.jpg">
-							<div class="moreimg_text_area">
-								<div class="moreimg_text">
-									<p>신규점 오픈 이벤트</p>
+							<span class="moreimg_text_area">
+								<span class="moreimg_text">
+									<span>신규점 오픈 이벤트</span>
 									<span>></span>
-								</div>
-							</div>
+								</span>
+							</span>
 						</a>
 					</div> <!-- 더보기 이미지1개 end-->
 					
