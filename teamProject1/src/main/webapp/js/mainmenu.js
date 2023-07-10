@@ -15,18 +15,18 @@ function menuPrint(){
 	let html ='';
 	// console.log(menuItem[0].name);
 	for (let i=0; i<menuItem.length; i++) {
-	html += `<li class="menu_item"> 
-				<div>
-					<div class="menuimg_area">
-						<div class="newicon">new</div>
-						<img class="menuimg" src="../img/img_kim/${menuItem[i].img}">
-					</div>
-					<div class="m_info">
-						<div class="mtitle">${menuItem[i].name}</div>
-						<div class="mprice">${menuItem[i].price.toLocaleString()}원</div>
-					</div>
-				</div>
-			</li>`;
+		html += `<li class="menu_item"> 
+					<a href="/teamProject1/menu/menuinfo.jsp">
+						<div class="menuimg_area">
+							<div class="newicon">new</div>
+							<img class="menuimg" src="../img/img_kim/${menuItem[i].img}">
+						</div>
+						<div class="m_info">
+							<div class="mtitle">${menuItem[i].name}</div>
+							<div class="mprice">${menuItem[i].price.toLocaleString()}원</div>
+						</div>
+					</a>
+				</li>`;
 	} // for end
 	document.querySelector('.menu').innerHTML= html;
 }	//function end

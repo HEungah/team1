@@ -36,30 +36,19 @@
 					<div class="menulist">
 						<ul class="menu">
 						
-							<li class="menu_item"> 		<!-- 제품1개 -->
-								<div>
-									<div class="menuimg_area">
-										<div class="newicon">new</div>
+							<!-- <li class="menu_item"> 		제품1개
+								<a href="#">
+									<span class="menuimg_area">
+										<span class="newicon">new</span>
 										<img class="menuimg" src="../img/img_kim/newmenu1.jpg">
-									</div>
-									<div class="m_info">
-										<div class="mtitle">오리영양도시락</div>
-										<div class="mprice">6,900원</div>
-									</div>
-								</div>
+									</span>
+									<span class="m_info">
+										<span class="mtitle">오리영양도시락</span>
+										<span class="mprice">6,900원</span>
+									</span>
+								</a>
 							</li>
-							<li class="menu_item"> 		<!-- 제품1개 -->
-								<div>
-									<div class="menuimg_area">
-										<img class="menuimg" src="../img/img_kim/newmenu1.jpg">
-									</div>
-									<div class="m_info">
-										<div class="mtitle">오리영양도시락</div>
-										<div class="mprice">6,900원</div>
-									</div>
-								</div>
-							</li>
-							<li class="menu_item"> 		<!-- 제품1개 -->
+							<li class="menu_item"> 		제품1개
 								<div>
 									<div class="menuimg_area">
 										<img class="menuimg" src="../img/img_kim/newmenu1.jpg">
@@ -70,7 +59,7 @@
 									</div>
 								</div>
 							</li>
-							<li class="menu_item"> 		<!-- 제품1개 -->
+							<li class="menu_item"> 		제품1개
 								<div>
 									<div class="menuimg_area">
 										<img class="menuimg" src="../img/img_kim/newmenu1.jpg">
@@ -81,7 +70,18 @@
 									</div>
 								</div>
 							</li>
-
+							<li class="menu_item"> 		제품1개
+								<div>
+									<div class="menuimg_area">
+										<img class="menuimg" src="../img/img_kim/newmenu1.jpg">
+									</div>
+									<div class="m_info">
+										<div class="mtitle">오리영양도시락</div>
+										<div class="mprice">6,900원</div>
+									</div>
+								</div>
+							</li>
+ -->
 						</ul>
 						
 						
