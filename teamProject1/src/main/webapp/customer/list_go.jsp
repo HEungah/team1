@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 
-<link href="../css/customer.css" rel="stylesheet">
+<link href="../css/list_go.css" rel="stylesheet">
 
 
 <!-- 뷰포트 : 반응형 동작 코드  -->
@@ -26,66 +26,36 @@
 		<!-- 부트스트랩에서 가져옴 -->
 
 		<!-- 1번 시작 -->
-		<div class="box1">
-			<!--flex, 세로정렬 -->
-
-
-
-			<div class="top">
-				<!-- flex 가로 양 끝으로 붙임 , 고객센터 -->
-				<div>고객센터</div>
-				<div>
+		<div class="top"> <!--  고객센터/자주하는질문/고객의소리 -->
+	
+			<!-- flex 가로 양 끝으로 붙임 , 고객센터 -->
+				<div class="left">고객센터</div>
+				<div class="right">
 					<ol>
 						<li>자주하는 질문</li>
 						<li>고객의 소리</li>
 					</ol>
 				</div>
-				<!--li inline, css -->
+				
 			</div>
-			<!-- class top끝 -->
 
-
-
-			<div class="bottom">
-				<!-- flex, 가로배치, 양끝 , 검색창,31건-->
-				<div class="search">
-					
-
-				</div>
-				<!-- 전체,이용방법 등 끝. 부트쓸 예정 -->
-				<div class="totalN" onclick="totalN()">31건</div>
-			</div>
-			<!-- bottom 클래스 끝 -->
-
-		</div>
 		<!-- 1번 끝 -->
 
 
-		<!-- 2번 -->
-		<div class="box2">
+	
 			<div  class="row justify-content-md-center"><!-- 그리드,커터 알아보기 -->
-				<div class="col-2">
-					<select class="form-select">
-<!-- 전체, 이용방법 등 반복문-->
-						<option>전체</option>
-						<option>이용방법</option>
-						<option>계정</option>
-						<option>결제</option>
-						<option>점포</option>
-						<option>쿠폰</option>
-					</select>
+				<div class="col-2"><select class="form-select"></select> <!-- js작성 --></div>
+
+				<div class="col-5"><input style="" placeholder="검색어 입력" class="form-control"></div>
+				
+				<div class="col-1">
+					<button class="search form-control" onclick="search()" type="button">검색</button>
 				</div>
 
-				<div class="col-5">
-					<input style="" placeholder="검색어 입력" class="form-control">
-				</div>
-				<div class="col-1">
-					<button class="glasses form-control" onclick="glasses()">검색</button>
-				</div>
-					<!-- 돋보기 이미지 필요 -->
-				<div class="col-1">31건</div>
-			</div><!--  검색창 .row  가로배치 -->
-			<!-- js 반복문 -->
+			
+			
+			
+			
 			<table
 				class="t_content table table table-striped table table-hover table-bordered text-center">
 				<!-- 부트:"table" table-striped -->
@@ -147,6 +117,6 @@
 	<script
 		src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/summernote-lite.min.js"></script>
 	<!-- cumtomer.js 파일 사용 -->
-	<script type="text/javascript" src="../js/customer.js"></script>
+	<script type="text/javascript" src="../js/list_go.js"></script>
 </body>
 </html>
