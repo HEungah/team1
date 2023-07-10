@@ -1,1 +1,154 @@
 @charset "UTF-8";
+
+*{padding: 0px; margin: 0px;}
+
+/* 메인 전체구역 */
+#wrap{
+	background-color: #eeecec;
+}
+
+/* 메인 전체구역 */
+.wrapbox{
+	width: 1200px;
+	margin: 0 auto;
+	background-color: #fff;
+}
+
+/* 메인 전체구역 */
+.admin_main{
+	width: 100%;
+	position: relative;
+}
+
+/* 메인 구역 타이틀 */
+.admin_title{
+	padding: 53px 0 0 30px;
+	height: 140px;
+	box-sizing: border-box;
+	font-size: 36px;
+}
+
+/* 콘텐츠 구역 박스 */
+.contentbox{
+	display: flex;
+	position: relative;
+	justify-content: space-between;
+	width: 100%;
+}
+
+/* 타이틀 밑 노란띠 */
+.userbox:before{
+	content: '';
+    width: 100%;
+    height: 6px;
+    background-color: #f2c000;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* 회원리스트 전체 구역 */
+.userbox{
+	width: 35%;
+	padding: 30px 0 0 20px;
+}
+
+/* 회원리스트 구역 타이틀 */
+.user_title{
+	font-size: 20px;
+}
+
+/* 회원리스트 타이틀 옆 초록색띠 */
+.user_title:before{
+	content: '';
+    width: 4px;
+    height: 20px;
+    background-color: #373737;
+    margin: 0 10px -2px 0;
+    display: inline-block;
+}
+
+/* 그래프 구역 */
+.grafbox{
+	width: 55%;
+	padding: 30px 0 0 20px;
+}
+
+/* 그래프 구역 타이틀 */
+.grafbox span{
+	font-size: 20px;
+}
+
+
+.age{
+	display:inline-block;
+	width: 30%;
+	text-align: center;
+}
+
+.area{
+	display:inline-block;
+	width: 30%;
+	text-align: center;
+}
+
+.sex{
+	display:inline-block;
+	width: 30%;
+	text-align: center;
+}
+
+.userList{
+	margin-top: 20px;
+	width: 100%;
+}
+
+.u_name{
+	width: 20%;
+}
+
+.u_age{
+	width: 20%;
+}
+
+.u_pnum{
+	width: 60%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

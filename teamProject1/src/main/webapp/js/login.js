@@ -2,7 +2,8 @@ console.log('login.js 실행');
 
 // 유저 정보를 저장하는 배열
 let userList = [
-	{id : 'qqqq', pw : 1234}, {id : 'wwww', pw : 1234}
+	{id : 'qqqq', pw : '1234'}, {id : 'wwww', pw : '1234'},
+	{id : 'admin', pw : '1234'}
 ];
 
 // -------------------------------------------
@@ -55,6 +56,10 @@ function login(){
 	// userList 안에 아이디와 입력 받은 아이디가 같고, 비밀번호가 모두 같으면 로그인 성공
 	for (let i = 0; i < userList.length; i++) {
 		if (userList[i].id == loginInput && userList[i].pw == pwInput) {
+			if(loginInput == 'admin'){
+				location.href="/teamProject1/admin/admin.jsp"
+				return;
+			}
 			alert('로그인성공')
 			// 로그인에 성공했으면 메인페이지로 이동
 			location.href="../mainpage/mainpage.jsp";
