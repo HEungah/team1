@@ -1,1 +1,268 @@
 @charset "UTF-8";
+*{padding:0; margin:0; box-sizing: border-box; letter-spacing: -0.7px;}
+li { list-style-type: none; }
+a {color: black; text-decoration: none;}
+/*------------------------------------*/
+#wrap {
+	background-color: #EEECEC;
+}
+
+
+.layout {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.menubar_top {
+	background-color: white;
+	width: 100%;
+	height: 140px;
+	display: flex;
+	position: relative;
+}
+
+.menubar_top > h2 {
+	font-size: 36px;
+	padding: 53px 0 0 30px;
+	font-weight: 600;
+}
+
+.toptitle {
+	position: relative;
+	padding-left: 40px;
+}
+
+.toptitle::before {
+	content: '';
+	background-image: url("../img/img_kim/icon_back.png");
+	background-repeat: no-repeat;
+    background-size: 23px 20px;
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    width: 23px;
+    height: 20px;
+}
+
+
+/*-------------------- 컨텐츠영역 --------------------*/
+.contentarea{
+	display: flex;
+/*	justify-content: space-between;*/
+	width: 1200px;
+	background-color: white;
+}
+
+.mainimg {
+	width : 500px;
+	height: 600px;
+}
+
+.mainimg > img {
+	width : 500px;
+	height: 600px;
+}
+
+.menuarea {
+	width: 600px;
+    padding: 70px 0 0 70px;
+    border-top: 1px solid #eeecec;
+}
+
+.menucate {
+    color: #cfc6bc;
+    font-size: 15px;
+    display: block;
+}
+
+.menutitle {
+	font-size: 24px;
+    padding-top: 10px;
+    color: #373737;
+    display: block; 
+}
+
+.menuinfo_text {
+    line-height: 160%;
+    word-break: keep-all;
+    color: #373737;
+    position: relative;
+    font-size: 15px;
+}
+
+.menuinfo_text::before {
+	content: "";
+    width: 40px;
+    height: 4px;
+    background-color: #373737;
+    display: block;
+    margin: 40px 0 14px 0;
+}
+
+
+/*-------------------- 메뉴옵션 --------------------*/
+
+.optionarea {
+	margin-top : 53px;
+	height: 136px;
+    overflow: hidden;
+}
+
+.option {
+    font-size: 15px;
+    color: #373737;
+    font-weight: bold;
+    height: 12px;
+    margin-bottom: 15px;
+}
+
+.total {
+	position: relative;
+    padding-top: 30px;
+    margin-top: 40px;
+    border-top: 1px solid #eeecec;
+    text-align: right;
+}
+
+
+/*-------------------- 메뉴 세부인포 --------------------*/
+
+.menu_info_area1 {
+	margin-top: 80px;
+}
+
+.subtitle {
+	font-size: 24px;
+	position: relative;
+    color: #373737;
+}
+
+.subtitle::before {
+    content: '';
+    width: 4px;
+    height: 24px;
+    background-color: #373737;
+    margin: 0 15px -3px 0;
+    display: inline-block;
+}
+
+.menu_info_area1 >p {
+    margin-top: 30px;
+    font-family: Roboto;
+    color: #5c5953;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.menu_info_area1 >p >span {
+    font-size: 32px;
+}
+
+.menu_info_area2 , .menu_info_area3 {
+	margin-top: 50px;
+}
+
+.table1 , .table2 {
+	margin-top: 30px;
+	width: 100%;
+}
+
+
+
+
+
+
+.list_btn {
+    color: #373737;
+    background-color: #f6ca00;
+    width: 170px;
+    height: 60px;
+    display: inline-block;
+    text-align: center;
+    line-height: 62px;
+    font-weight: 700;
+}
+
+
+
+
+
+
+/* ---------------------더 많은 이야기------------------ */
+
+.content_bottom {
+	margin-top: 100px;
+	padding-bottom: 100px;
+}
+	
+
+.bottom_text {
+	width: 100%;
+	display : flex;
+	position: relative;
+	margin-bottom: 60px;
+}
+
+.bottom_text >h2 {
+	font-weight: 700;
+	font-size : 24px;
+}
+
+.line2 {
+	width: 1020px;
+	border-bottom: 10px solid #373737;
+	position: absolute;
+	top: 10px;
+	left: 180px;
+}
+
+.more_area {
+	display: flex;
+	justify-content: space-between;
+}
+
+.moreimg {
+	width: 370px;
+	height: 266px;
+}
+
+.moreimg_img {
+	width: 370px;
+}
+
+.moreimg_a {
+	position: relative;
+	width: 370px;
+	height: 266px;
+	display: inline-block;
+}
+
+.moreimg_a > img {
+	cursor: pointer;
+}
+
+.moreimg_a:hover .moreimg_text {
+	color:#f2c000;
+}
+.moreimg_text_area {
+	width: 370px;
+	height: 61px;
+    background-color: #373737;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 22px 22px 20px 22px;
+}
+
+.moreimg_text {
+	font-size: 15px;
+	color: white;
+	display: flex;
+	justify-content: space-between;
+}
+
+
+
+
+
+
