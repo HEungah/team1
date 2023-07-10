@@ -23,15 +23,13 @@
 </head>
 <body>
 	<div class="container">
-	<select>
-		<option>전체</option>
-		<option>쿠폰</option>
-	</select>
+		<select class="form-select" aria-label="Default select example"></select>
+	
 	<input type="text" placeholder="제목" class="form-control"><br>
 	<textarea id="summernote" class="form-control" rows="10" placeholder="내용"></textarea><br>
 	<div class="row"><!-- 수정,등록,삭제 가로배치 -->
 		<div class="col"><input type="button" value="수정"></div>
-		<div class="col"><input class="col-2" type="button" value="등록"></div>
+		<div class="col"><input onclick="onWrite()"class="col-2" type="button" value="등록"></div>
 		<div class="col"><input  type="button" value="삭제"></div>
 	</div><!-- 수정 등록 삭제 가로배치 -->
 	</div><!-- .container -->
