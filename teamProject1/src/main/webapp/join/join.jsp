@@ -94,7 +94,7 @@
 							</div>	<!-- 휴대번호 입력창 박스 end -->
 							<div class="btnwrap">	<!-- 가입하기 버튼 전체구역 -->
 								<span class="btnbox">	<!-- 가입하기 버튼 박스 -->
-									<button class="joinbtn">가입하기</button>
+									<button onclick="join()" class="joinbtn">가입하기</button>
 								</span>
 							</div>	<!-- 가입하기 버튼 전체구역 end -->
 						</div>
@@ -110,10 +110,9 @@
 
 
 
-
-
-
 	<%@include file="../footer.jsp" %>
+	
+	<script src="../js/join.js"></script>
 	
 </body>
 </html>
