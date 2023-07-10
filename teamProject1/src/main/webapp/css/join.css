@@ -143,6 +143,48 @@
     color: #f2c000;
     font-size: 13px;
     font-weight: bold;
+    cursor: pointer;
+}
+
+
+.idresult_t{
+	display: none;
+	color: #8dc63f;
+	position: absolute;
+    left: 490px;
+    top: 55px;
+    font-size: 13px;
+}
+
+.idresult_t:before{
+	content: '';
+    background-position: 0 0;
+    height: 10px;
+    padding: 0 7px 0 0;
+    background: url(../img/img_choi/icon_comment.png) left top no-repeat;
+    display: inline-block;
+    width: 10px;
+    background-size: 10px 20px;
+}
+
+.idresult_f{
+	display: none;
+	color: #f26c4f;
+	position: absolute;
+    left: 490px;
+    top: 55px;
+    font-size: 13px;
+}
+
+.idresult_f:before{
+	content: '';
+    background-position: 0 -10px !important;
+    padding: 0 7px 0 0;
+    background: url(../img/img_choi/icon_comment.png) left top no-repeat;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-size: 10px 20px;
 }
 
 .idtextbox span:before{
@@ -156,7 +198,7 @@
     font-size: 13px;
 }
 
-.idboxth p{
+.idsub{
 	width: 470px;
 	position: absolute;
     top: -4px;
@@ -223,6 +265,50 @@
     margin-top: 5px;
 }
 
+.pwresult_t{
+	display: none;
+    bottom: 20px;
+    color: #8dc63f;
+    position: absolute;
+    left: 490px;
+    top: 110px;
+    font-size: 13px;
+}
+
+.pwresult_t:before{
+	content: '';
+    background-position: 0 0;
+    height: 10px;
+    padding: 0 7px 0 0;
+    background: url(../img/img_choi/icon_comment.png) left top no-repeat;
+    display: inline-block;
+    width: 10px;
+    background-size: 10px 20px;
+}
+
+.pwresult_f{
+	display: none;
+	bottom: 20px;
+    color: #f26c4f;
+    position: absolute;
+    left: 490px;
+    top: 110px;
+    font-size: 13px;
+}
+
+.pwresult_f:before{
+	content: '';
+    background-position: 0 -10px !important;
+    height: 10px;
+    padding: 0 7px 0 0;
+    background: url(../img/img_choi/icon_comment.png) left top no-repeat;
+    display: inline-block;
+    width: 10px;
+    background-size: 10px 20px;
+}
+
+
+
 .pwboxth p{
 	width: 470px;
 	position: absolute;
@@ -233,6 +319,7 @@
     color: #c3c1c1;
     font-size: 13px;
 }
+
 
 .emailbox, .phonebox{
 	margin-top: 30px;

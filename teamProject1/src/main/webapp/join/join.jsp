@@ -39,13 +39,15 @@
 									<dt>아이디</dt>
 									<dd>
 										<span class="idtextbox">
-											<input type="text" maxlength="20"
+											<input class="idInput" type="text" maxlength="20"
 											placeholder="아이디를 입력해 주세요"
 											onfocus="this.placeholder=''" onblur="this.placeholder='아이디를 입력해 주세요'">
-											<span>중복확인</span>
+											<span onclick="idcheck()">중복확인</span>
 										</span>
 									</dd>
-									<p>영문, 숫자로만 6~20자</p>
+									<div class="idresult_t">사용가능한 아이디입니다.</div>
+									<div class="idresult_f">이미등록된 아이디입니다.</div>
+									<p class="idsub">영문, 숫자로만 6~20자</p>
 								</div>
 							</div>
 							<div class="pwbox">	<!-- pw 입력창 박스 -->
@@ -63,6 +65,8 @@
 											onfocus="this.placeholder=''" onblur="this.placeholder='비밀번호를 한번 더 입력해주세요'">
 										</span>
 									</dd>
+									<div class="pwresult_t">비밀번호가 일치합니다</div>
+									<div class="pwresult_f">비밀번호가 일치하지 않습니다.</div>
 									<p>영문(대소문자구별),숫자,특수문자 8자 이상</p>
 								</div>
 							</div>	<!-- pw 입력창 박스 end -->
