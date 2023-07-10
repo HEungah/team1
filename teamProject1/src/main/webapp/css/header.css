@@ -5,33 +5,22 @@ li{list-style-type: none;}
 a{ color: black; text-decoration: none;}
 
 
+
 .line1 , .line2{padding: 0 5px;}
 .h_warp{
 	width: 100%;
 	border: solid 1px red; 
 	height: 200px;
-	
 }
 .top_menu{
 	display: flex; 
 	justify-content: flex-end;
 	width: 1200px; 
 	margin: 0 auto;
-	background-color: burlywood;
 	position: relative;
 }
-.main_menu{
-	width: 1200px;
-	border: solid 1px blue;
-	margin: 0 auto;
-	height: 90px;
-	position: relative;
-    background-color: #fff;
-    box-sizing: border-box;
-    z-index: 9;
-    padding: 9px 7px 9px 14px;
-}
-.line2:after{
+
+.i_logo{
 	content: '';
     display: inline-block;
     background: url(../img/img_jung/sns_logo.png) left top no-repeat;
@@ -40,23 +29,126 @@ a{ color: black; text-decoration: none;}
     background-size: 56px 14px;
 }
 
-
-
-
-
-
-.asdf {
+.f_logo{
 	content: '';
     display: inline-block;
-    background-image: url(../img/img_jung/sns_logo.png) left top no-repeat;
-    background-position: -30px 0;
+    background-image: url(../img/img_jung/sns_logo.png);
+    background-position: 42px ;
     width: 14px;
     height: 14px;
     background-size: 56px 14px;
-    position: absolute;
-    right: -10px;
-    top: 3px; 
 }
+.main_menu{
+	width: 1200px;
+	border: solid 1px blue;
+	margin: 0 auto;
+	height: 95px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+#menu_box{
+	position: relative;
+    left: 300px;
+    display: flex;
+    justify-content: space-around;
+    margin-right: 400px;
+    margin-top: -34px
+}
+.m_logo{
+	display: inline-block;
+    margin-left: 33px;
+    margin-top: 20px;
+}
+/* 메뉴 */
+.drop_menu{	position: relative;} /* 상대위치 */ 
+/* 헤당 메뉴의 서브메뉴 */
+.drop_menu .sub_menu{
+	position: absolute;/* 절대위치 */
+	left: -40px; top: 15px; /* drop_menu 요소 기준으로 왼쪽으로 40px 이동*/
+	display: none; /*숨김*/
+	width: 200px; /* 드랍메뉴 사이즈*/
+	background-color: white; /* 드랍메뉴 배경색*/
+	padding: 10px 0px; /* 여백 */
+	text-align: center; /* 텍스트 정렬 */
+}
+.sub_menu a{ margin: 5px;}
+/*메뉴에 마우스를 올렸을때 서브메뉴를 보이기*/
+.drop_menu:hover .sub_menu{
+	display: block; /* 보이기 */
+}
+.sub_menu{
+	margin-top: 50px;
+	background: linear-grad;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
