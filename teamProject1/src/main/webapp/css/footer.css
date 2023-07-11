@@ -1,26 +1,103 @@
 @charset "UTF-8";
 
 *{padding: 0px; margin: 0px;}
-li{list-style-type: none;}
+li , ul{list-style-type: none;}
 a {
     text-decoration: none;
     color: #333;
 }
 
-#footerbox{
+#warp{
 	position: relative;
     width: 100%;
     background-color: #f2c000;
     height: 310px;
     box-sizing: border-box;
 }
+#footerbox{
+	width: 1170px;
+    padding: 0 0 40px 0;
+    text-align: center;
+    margin: 0 auto;
+    font-weight: bold;
+    max-width: 100%;
+    
+    transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
 .ft_menu{padding-top: 45px;}
+.ft_menu > ul > li{
+	float: left;
+    padding: 0 13px;
+    position: relative;
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: 100%;
+}
+.ft_menu > ul{
+	width: 670px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+/*f_li_02:before f_li_02태그 앞에 | 생성 */
+.f_li_02:before , .f_li_03:before, .f_li_04:before, .f_li_05:before, .f_li_06:before{
+	content: '';
+    display: inline-block;
+    width: 2px;
+    height: 14px;
+    background-color: #373737;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 2px 0 0 0;
+}
+/*p:before p태그 앞에 img 생성 */
+.ft_logo > p:before{
+	content: '';
+    display: inline-block;
+    box-sizing: border-box;
+    width: 174px;
+    height: 60px;
+    background: url(../img/img_jung/f_logo.png) left top no-repeat;
+    background-position: 0 0;
+    background-size: 100% auto;
+}
+.ft_logo > p{
+	position: absolute;
+   	top: 15px;
+    right: 390px;
+}
+.ft_info_wrap{
+	padding-top: 16px;
+    margin-top: 25px;
+    border-top: 1px solid #dfb206;
+}
+.ft_infobox{
+	width: 1000px;
+    margin: 0 auto;
+    font-size: 13px;
+}
+.ft_infobox > span{
+	padding: 0 8px;
+    margin-top: 10px;
+    position: relative;
+    display: inline-block;
+    line-height: 100%;
+}
+.ft_info2:before , .ft_info3:before , .ft_info4:before , .ft_info5:before , 
+ .ft_info7:before , .ft_info8:before , .ft_info9:before{
+	content: '';
+    display: inline-block;
+    width: 1px;
+    height: 9px;
+    background-color: #bc970a;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 2px 0 0 0;
+}
 
-
-
-
-
-
+/*.ft_info6 태그부터 밑에 줄에 생성*/
+.ft_info6{display: none ;} 
 
 
 
