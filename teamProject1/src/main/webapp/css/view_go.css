@@ -1,0 +1,25 @@
+@charset "UTF-8";
+/* css 기본값 제거 */
+*{ margin: 0px; padding: 0px; } /* 여백 제거 */
+
+li{ list-style-type: none; } /* 글머리 제거 */
+
+.container{width: 1200px; margin: 0 auto;
+}
+
+
+/*컨텐트 전체 박스
+ 제목, 내용 / 날짜,목록버튼, 앞뒤버튼*/
+.contentBox{
+	display: flex; flex-direction: column;
+}
+
+.top{
+	display: flex; justify-content: flex-start;
+}
+
+.bottom{
+	display: flex; flex-direction: row; justify-content: space-around;
+}
+
+.bottom li{display: inline;}

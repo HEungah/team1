@@ -29,10 +29,10 @@
 		<div class="top"> <!--  고객센터/자주하는질문/고객의소리 -->
 	
 			<!-- flex 가로 양 끝으로 붙임 , 고객센터 -->
-				<div class="left">고객센터</div>
+				<div class="left"><h2>고객센터</h2></div>
 				<div class="right">
 					<ol>
-						<li>자주하는 질문</li>
+						<li >자주하는 질문</li>
 						<li>고객의 소리</li>
 					</ol>
 				</div>
