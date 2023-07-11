@@ -18,9 +18,9 @@ boardPrint();
 let mselect= document.querySelector('.form-select');
 let s_html='';
 	
-		for(let i=0; i<select.length; i++){
+		for(let i=0; i<selectInput.length; i++){
 		s_html+= 
-			`<option>${select[i]}</option>`;
+			`<option>${selectInput[i]}</option>`;
 				}		
 mselect.innerHTML=s_html;
 console.log(mselect +'옵션 제대로 작동')
@@ -45,7 +45,7 @@ function boardPrint(){console.log('boardPrint() 작동')
 						`<tr>
 						<td width="5%">${board.no}</td>
 						<td width="60%" onclick="onView(board.title)">${board.title}</td>
-						<td width="15%">${board.select}</td>
+						<td width="15%">${board.selectInput}</td>
 						<td width="15%">${board.date}</td>
 						<td width=5%>${board.view}</td> 
 						</tr>`

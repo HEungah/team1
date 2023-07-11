@@ -22,13 +22,13 @@ let qList=[]
 //등록함수--------------------------------------------------------------------------
 
 function onWrite(){ console.log('onWrite 함수 실행')
-	let selectInput= document.querySelector('.form-select');   console.log('select선택받음');
-	let title = document.querySelector('.form-control');   console.log('제목 입력 받음');
+	let selectInput= document.querySelector('.form-select').value;   console.log('select선택받음');
+	let title = document.querySelector('.form-control').value;   console.log('제목 입력 받음');
 	let content= document.querySelector('#summernote').value; console.log('summernote작성')
 	let qList=JSON.parse(localStorage.getItem('qList'));
 		if(qList==null){qList=[]}; console.log('쿠키에서 qList 가져옴')
 	
-	let no= qList==0? 1: ([qList.length-1].no+1); console.log('no 부여: '+no)//??????????여기 ,,
+	let no= (qList.length==0? 1: (qList[qList.length-1].no+1)); console.log('no 부여: '+no)//??????????여기 ,,
 	let date= new Date() ; console.log('작성일: '+date)
 	
 	// qList 인덱스를 객체화. view는 조회수
@@ -48,7 +48,7 @@ function onWrite(){ console.log('onWrite 함수 실행')
 	
 	// 고객센터 맨 앞 페이지 호출
 	alert('글쓰기 성공'); console.log('글쓰기성공')
-	//location.href = 'list_go.jsp';             이거 주석 처리 풀어야됨!!
+	location.href = 'list_go.jsp';             
 	
 	
 }

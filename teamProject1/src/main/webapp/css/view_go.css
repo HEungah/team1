@@ -4,9 +4,13 @@
 
 li{ list-style-type: none; } /* 글머리 제거 */
 
+div{border:solid 0.5px red;}
+
 .container{width: 1200px; margin: 0 auto;
 }
 
+/*자주하는 질문 사이즈*/
+.q{height: 300px}
 
 /*컨텐트 전체 박스
  제목, 내용 / 날짜,목록버튼, 앞뒤버튼*/
@@ -16,10 +20,13 @@ li{ list-style-type: none; } /* 글머리 제거 */
 
 .top{
 	display: flex; justify-content: flex-start;
+	height: 500px; width: 1200px;
 }
 
 .bottom{
 	display: flex; flex-direction: row; justify-content: space-around;
 }
-
+.date_s{
+	display: flex; flex-direction: row; justify-content: flex-start;
+}
 .bottom li{display: inline;}
