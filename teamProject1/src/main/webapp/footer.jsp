@@ -16,12 +16,12 @@
 		
 			<div class="ft_menu"> <!-- 푸터 상단메뉴 -->
 				<ul>
-					<li class="f_li_01"><a herf="#">인재채용</a></li>
-					<li class="f_li_02"><a herf="#">협력업체등록</a></li>
-					<li class="f_li_03"><a herf="#">공지사항</a></li>
-					<li class="f_li_04"><a herf="#">고객 센터</a></li>
-					<li class="f_li_05"><a herf="#">개인정보처리방침</a></li>
-					<li class="f_li_06"><a herf="#">이용약관</a></li>
+					<li class="f_li_01"><a href="#">인재채용</a></li>
+					<li class="f_li_02"><a href="#">협력업체등록</a></li>
+					<li class="f_li_03"><a href="#">공지사항</a></li>
+					<li class="f_li_04"><a href="#">고객 센터</a></li>
+					<li class="f_li_05"><a href="#">개인정보처리방침</a></li>
+					<li class="f_li_06"><a href="#">이용약관</a></li>
 				</ul>
 			</div> <!-- 푸터 상단메뉴 end-->
 			

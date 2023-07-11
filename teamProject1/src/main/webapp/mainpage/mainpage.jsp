@@ -61,9 +61,13 @@
 			</div> <!-- 검색구역 end -->
 
 		</div> <!-- 첫번째 컨텐츠 구역 end -->
-
-		<div id="content2"> <!-- 두번째 컨텐츠 -->
 		
+		<div class="list_btn">
+		<a href="main2.jsp"><button type="button" class="btn btn-outline-info"> 글쓰기</button></a> 
+		</div>
+		
+		<div id="content2"> <!-- 두번째 컨텐츠 -->
+				
 			<table class="table table-striped">
 				<tfoot class="table-light">
 					<tr height="60px">
