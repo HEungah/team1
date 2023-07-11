@@ -39,62 +39,60 @@
 				
 			</div>
 
-		<!-- 1번 끝 -->
+<!-- 1번 끝 --------------------------------------------------------->
 
 
 	
-			<div  class="row justify-content-md-center"><!-- 그리드,커터 알아보기 -->
-				<div class="col-2"><select class="form-select"></select> <!-- js작성 --></div>
-
+			<div  class="row justify-content-md-center"><!-- 그리드,커터 사이즈 조절 필요 -->
+				 <!-- select option- js작성 -->
+				<div class="col-2"><select class="form-select"></select></div>
 				<div class="col-5"><input style="" placeholder="검색어 입력" class="form-control"></div>
-				
 				<div class="col-1">
 					<button class="search form-control" onclick="search()" type="button">검색</button>
 				</div>
-
-			
-			
-			
-			
+			</div>
+<!-- 2번 끝-------------------------------------------------------- -->			
 			<table
-				class="t_content table table table-striped table table-hover table-bordered text-center">
-				<!-- 부트:"table" table-striped -->
-				<tbody>
-					<tr>
-						<td width="5%">글수(31)</td>
-						<td width="60%">글제목</td>
-						<td width="15%">쿠폰</td>
-						<td width="15%">날짜</td>
-						<td width=5%>조회수</td>
-					</tr>
-					<tr>
-						<td width="5%">글수(31)</td>
-						<td width="60%">글제목</td>
-						<td width="15%">쿠폰</td>
-						<td width="15%">날짜</td>
-						<td width=5%></td>
-					</tr>
+				class="t_table table table table-striped table table-hover table-bordered text-center">
+				<!-- 내 class: t_table-->
+				<thead >
+						<tr>
+							<th width="5%">no</th>
+							<th width="60%">제목</th>
+							<th width="10%">분류</th>
+							<th width="15%">작성일</th>
+							<th width=15%>조회수</th> 
+						</tr>
+				</thead>
+				<tbody class="tcontent">
+					<!-- 글 목록 테이블 출력. boardPrint() js -->
 				</tbody>
 			</table>
+<!-- 3번 끝------------------------------------------------ -->		
+			
+		<div class="add">	
+			<a href="write_go.jsp">
+				<button type="button" class="btn btn-secondary btn-sm"
+				 onclick="onView()">글등록</button>
+				 <!-- onView() 상세 페이지 이동 함수 -->
+			</a>
 		</div>
-			<a href="write_go.jsp"><button type="button" class="btn btn-secondary btn-sm">관리자페이지<</button></a>
-		<!-- 2.본문테이블 -->
 
-
+<!-- 4번 끝-------------------------------------------------------- -->
 		<div class="box3">
 			<nav aria-label="Page navigation example">
 				<ul class="pagination justify-content-center">
-					<li class="page-item disabled"><a class="page-link">Previous</a>
+					<li class="page-item disabled"><a class="page-link">◀</a>
 					</li>
 					<li class="page-item"><a class="page-link" href="#">1</a></li>
 					<li class="page-item"><a class="page-link" href="#">2</a></li>
 					<li class="page-item"><a class="page-link" href="#">3</a></li>
-					<li class="page-item"><a class="page-link" href="#">Next</a></li>
+					<li class="page-item"><a class="page-link" href="#">▶</a></li>
 				</ul>
 			</nav>
 			
 		</div>
-		<!-- 3.페이지넘버 -->
+<!-- 5번 끝------------------------------------------------------- -->
 
 
 		<div class="box4">
@@ -105,18 +103,14 @@
 
 		</div>
 		<!-- 4박스 끝 -->
-	</div>
-	<!-- 전체 구역, 반응형으로 만들려고 부트스트랩에서 가져옴 -->
+<!--  6번 끝---------------------------------------------------- -->	
+	
+	</div> <!-- 전체 구역 끝 -->
 
 
-	<!-- js관련 태그들 -->
-
-	<!-- 부트스트랩 사용을 위한 제이쿼리 -->
-	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-	<!-- 섬머노트 사용 -->
-	<script
-		src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/summernote-lite.min.js"></script>
-	<!-- cumtomer.js 파일 사용 -->
+	<!-- 부트스트랩에서 만든 JS 적용 -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+	<!-- 내가 사용할 script -->
 	<script type="text/javascript" src="../js/list_go.js"></script>
 </body>
 </html>
