@@ -104,7 +104,6 @@ a {color: black; text-decoration: none;}
 
 .optionarea {
 	margin-top : 53px;
-	height: 136px;
     overflow: hidden;
 }
 
@@ -112,8 +111,62 @@ a {color: black; text-decoration: none;}
     font-size: 15px;
     color: #373737;
     font-weight: bold;
-    height: 12px;
     margin-bottom: 15px;
+    height: 136px;
+    overflow-y: scroll;
+}
+/*스크롤바디자인*/
+/* 아래의 모든 코드는 영역::코드로 사용 */
+.option::-webkit-scrollbar {
+    width: 3px;  /* 스크롤바의 너비 */
+}
+
+.option::-webkit-scrollbar-thumb {
+    height: 10%; /* 스크롤바의 길이 */
+    background-color: rgba(0,0,0,.75);;  /* 스크롤바의 색상 */
+    border-radius: 10px;
+}
+
+.option::-webkit-scrollbar-track {
+    background: rgba(33, 122, 244, .1);  /*스크롤바 뒷 배경 색상*/
+}
+
+.option >li {
+    font-weight: bold;
+    height: 12px;
+    margin-bottom: 25px;
+}
+
+/*체크박스 라벨로 연결시켜 꾸미기*/
+input[type="checkbox"] + label{
+	content: '';
+    background-image: url("../img/img_kim/icon_chb.png");
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    width: 25px;
+    height: 25px;
+    background-size: 25px 50px;
+    background-position: 0 0;
+    margin: -1px 10px 0 0;
+    cursor: pointer;
+}
+
+input[type=checkbox]:checked + label { /*선택됐을때 이미지*/
+	background-image: url("../img/img_kim/icon_chb.png");
+    background-position: 0 -25px;
+}
+
+input[type=checkbox] { /*기존 input태그 가려주기*/
+	display: none;
+}
+
+
+
+.p_price {
+    color: #909090;
+    margin-left: 10px;	
+    font-weight: 600;
 }
 
 .total {
@@ -121,7 +174,29 @@ a {color: black; text-decoration: none;}
     padding-top: 30px;
     margin-top: 40px;
     border-top: 1px solid #eeecec;
-    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+   /*  align-items: center; */
+   
+}
+
+.nomal_price , .plus_price{
+    font-size: 18px;
+}
+.plus_price {
+    color: #c3c1c1;
+}
+.sum_price {
+	margin-left: 20px;
+	font-size: 36px;
+    color: #f2c000;
+    font-weight: 600;
+    line-height: 14px;
+}
+.won {
+	font-size: 18px;
+	font-weight: 600;
+    color: #f2c000;
 }
 
 

@@ -12,12 +12,12 @@
 		<div class="layout">
 		
 			<div class="menubar_top">
-				<h2><a class="toptitle" href="#">전체 메뉴</a></h2>
+				<h2><a class="toptitle" href="/teamProject1/menu/mainmenu.jsp">전체 메뉴</a></h2>
 			</div> <!-- menubar_top end -->
 			
 			<div class="contentarea">
 			 <div class="mainimg">
-			 	<img src="../img/img_kim/newmenu5_info1.jpg">
+			 	<img class="menuimg" src="../img/img_kim/newmenu5_info1.jpg">
 			 </div>
 			 
 			 <div class="menuarea">
@@ -29,24 +29,25 @@
 				 <!-- 메뉴옵션 -->
 				 <div class="optionarea">
 				 	<ul class="option">
-				 		<li>밥</li>
-				 		<li>한솥밥 밥 양 적게</li>
-				 		<li>한솥밥 곱빼기</li>
-				 		<li>현미밥 교체</li>
+				 	<!-- 	<li>밥</li>
+				 		<li><input onclick="plusPrint(0)" id="rice1" type="checkbox" name="rice" value="rice"><label for="rice1"></label>한솥밥 밥 양 적게<span class="p_price">+0원</span></li>
+				 		<li><input onclick="plusPrint(1)" id="rice2" type="checkbox" name="rice" value="rice"><label for="rice2"></label>한솥밥 곱빼기<span class="p_price">+400원</span></li>
+				 		<li><input onclick="plusPrint(2)" id="rice3" type="checkbox" name="rice" value="rice"><label for="rice3"></label>현미밥 교체<span class="p_price">+1,000원</span></li>
 				 		<li>토핑</li>
-				 		<li>계란후라이</li>
-				 		<li>청양고추</li>
-				 		<li>3종믹스치즈</li>
-				 	</ul> <!-- rice end -->
+				 		<li><input id="toping1" type="checkbox" name="toping" value="toping1"><label for="toping1"></label>계란후라이<span class="p_price">+1,000원</span></li>
+				 		<li><input id="toping2" type="checkbox" name="toping" value="toping2"><label for="toping2"></label>청양고추<span class="p_price">+300원</span></li>
+				 		<li><input id="toping3" type="checkbox" name="toping" value="toping3"><label for="toping3"></label>3종믹스치즈<span class="p_price">+1,500원</span></li>
+				  -->	</ul> <!-- option end -->
 				 	<div class="total">
-				 		<div>4,500</div>
-				 		<div>(+0)</div>
-				 		<div>4,500</div>
-				 		<div>원</div>
+				 		<div class="nomal_price">4,500</div>
+				 		<div class="plus_price">(+0)</div>
+				 		<div class="sum_price">4,500</div>
+				 		<div class="won">원</div>
 				 	</div><!-- total end -->
-				 </div> <!-- option end -->
+				 </div> <!-- optionarea end -->
 			 </div> <!-- menuarea end -->
 			</div> <!-- contentarea end -->
+			
 			<div class="menu_info_area1">
 				 <h4 class="subtitle">열량</h4>
 				 <p><span>485.03</span>Kcal</p>
