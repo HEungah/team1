@@ -12,14 +12,14 @@ let addoption = [ { name : '한솥밥 밥 양 적게' , price : 0 , category: 'r
 				 
 let menuimginfo = [ 'newmenu5_info1.jpg' , 'newmenu5_info2.jpg'];
 
-let checkList = [];
+let checkList = []; // 체크된 인덱스들을 다시 배열로 모아둠 나중에 한번에 total 출력위해
 
 let option = document.querySelector('.option');
 	
 	
 let imgcount = 0;
 
-let riceCount =[0, 0 , 0];
+let ricecheck = [false, false , false]; // 밥 옵션의 상태 체크
 
 let sum = 4500;
 
@@ -66,34 +66,35 @@ function plusPrint (select){
 	let html = ``;
 	let plusPrice = document.querySelector('.plus_price');
 	let checkbox = document.getElementsByName("rice");
-	  console.log(checkbox[select].checked);
-	
-	if ( addoption[select].category == 'rice' ) {
-	/*	if (checkbox[select].checked == true) {
-			checkbox[select].checked = false;
-			console.log('if');
-		} else if (checkbox[select].checked == false){
-			console.log('elseif');*/
-		checkbox[select].checked = true; // 선택한것만 다시 체크된상태로 만듬
-		//}// if 2 end 
+	  //console.log(checkbox[select].checked);
 		
-		for(let i=0; i< riceCount.length; i++){ // 밥클릭하면 일단 다 체크해제상태로 만듬
-			checkbox[i].checked = false;
+	//선택상태변화
+	if ( addoption[select].category == 'rice' ) {
+			//console.log('트루라서실행됨');
+		if (ricecheck[select] == true){ // 만약에 이미 선택된게 있으면 기존에 선택된게 지워져야함
+			ricecheck[select] = false;
+		} else {
+			for (let i =0; i<ricecheck.length; i++){
+				checkbox[i].checked = false; // 배열 다 돌면서 체크상태를 초기화시킴
+				ricecheck[i] = false;  // 상태변수 ricecheck도 바꿈
+			}
+			checkbox[select].checked = true; // 선택한애만 체크상태를 트루로 바뀜
+			ricecheck[select] = true;
 		}
+		//console.log('라이스체크'+ricecheck);
 	} // if 1 end
 	
+	total(select);// 총합계 출력
+	// 출력
+	let addPrice = totalPrice-sum; // 추가금액 = 총금액 - 기본금액
 	
-	// 다시 선택했을때 선택 해제되게 만들기 ?
-
-	//출력
 	for (let i=0; i<addoption.length; i++){
 		if( select == i){
 			// console.log('이프문됨');
-			html += `(+${addoption[i].price.toLocaleString()})`;
+			html += `(+${addPrice.toLocaleString()})`;
 		} // if end
 	} // for end
 	plusPrice.innerHTML = html;
-	total(select);
 } //function end
 
 
@@ -114,15 +115,12 @@ function total( select ){
  		 if (checkbox[i].checked) {
    			checkList.push(i);
    			// 체크된 인덱스랑비교해서 가격을 토탈에 넣기
-   			totalPrice += addoption[i].price;
-   			
+   			totalPrice += addoption[i].price;			
  		 } //if end
 		} //for 1 end
-		//console.log(checkList);
-   
+		//console.log(checkList);  
     sumPrice.innerHTML = totalPrice.toLocaleString();
 
-  
 } // function end
 
 
