@@ -5,6 +5,7 @@
 /* 메인 전체구역 */
 #wrap{
 	background-color: #eeecec;
+	padding-bottom: 50px;
 }
 
 /* 메인 전체구역 */
@@ -104,6 +105,7 @@
 
 .user_tablebox{
 	width: 100%;
+	height: 400px;
 	position: relative;
 	overflow-y: scroll;
 }
@@ -113,6 +115,10 @@
 	width: 100%;
 	border: 1px solid #444444;
     border-collapse: collapse;
+}
+
+.tablehead{
+	background-color: #e8e8e8;
 }
 
 .tableLine{
@@ -154,7 +160,7 @@
 }
 
 .infobox{
-	padding: 30px 0 0 20px;
+	padding: 30px 20px 0 20px;
 	margin-bottom: 10px;
 }
 
@@ -197,9 +203,8 @@
 }
 
 .buttonbox{
-	margin-bottom: 50px;
 	text-align: right;
-	margin-right: 10px;
+	padding-bottom: 10px;
 }
 
 .modifybtn{
@@ -216,6 +221,44 @@
 	padding: 10px;
 }
 
+/* 모달 전체 구역 */
+.modalwrap{
+	position: fixed;	/* 화면 고정 */
+	width: 100%; height: 100%;	/* 화면 전체 구역 모두 씀 */
+	top: 0px;
+	background-color: rgba(0, 0, 0, 0.3);		/* rgba : 투명도 포함 */
+	/* 자식요소 -> 내용 박스 가운데로 */
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+
+/* 모달 내용 박스 구역 */
+.modal{
+	background-color: white;
+	width: 500px; height: 300px;
+	padding: 15px;
+	border-radius: 30px;
+}
+
+.modal h3{
+	padding-left: 5px;
+	margin-bottom: 20px;
+}
+
+.modalbtns{
+	margin-top: 50px;
+	text-align: right;
+}
+
+/* 모달 구역 버튼 세부조정 */
+.mbtn{
+	padding : 5px;
+}
+
+.infotable input{
+	border: none;
+}
 
 
 

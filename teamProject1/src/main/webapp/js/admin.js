@@ -21,7 +21,21 @@ let userList = [
 	{name : '김태양', age : '22', sex : '남', area : 3,
 		pnum : '010-1234-5678', favStore: 0},
 	{name : '김은성', age : '19', sex : '남', area : 0,
-		pnum : '010-1234-5678', favStore: 3},									
+		pnum : '010-1234-5678', favStore: 3},
+	{name : '고연진', age : '27', sex : '여', area : 2,
+		pnum : '010-1234-5678', favStore: 1},
+	{name : '정희락', age : '33', sex : '남', area : 3,
+		pnum : '010-1234-5678', favStore: 6},
+	{name : '김규리', age : '18', sex : '여', area : 1,
+		pnum : '010-1234-5678', favStore: 3},
+	{name : '허주승', age : '56', sex : '남', area : 0,
+		pnum : '010-1234-5678', favStore: 6},
+	{name : '이민우', age : '27', sex : '남', area : 0,
+		pnum : '010-1234-5678', favStore: 0},
+	{name : '이한결', age : '41', sex : '남', area : 5,
+		pnum : '010-1234-5678', favStore: 4},
+	{name : '서다연', age : '19', sex : '여', area : 0,
+		pnum : '010-1234-5678', favStore: 6},																
 ];
 // 주소명을 담는 배열
 let areaList = ['서울', '시흥', '안산', '부산', '인천','수원']
@@ -30,7 +44,7 @@ let storeList = ['건국대점', '안산한양대점', '잠실석촌호수점', 
 let aget = document.querySelector('.age');
 let areat = document.querySelector('.area');
 let sext = document.querySelector('.sex');
-let removenum = 0;		// 삭제할 유저 인덱스 변수
+let indexnum = 0;		// 인덱스 변수
 
 
 aget.addEventListener('click', titlePocus1);
@@ -256,7 +270,7 @@ infoPrint(0);		// 회원정보 상세 초기화면 출력
 function infoPrint(index){
 	console.log('infoPrint 함수 실행 ' + index);
 	
-	removenum = index;
+	indexnum = index;
 	let infotable = document.querySelector('.infotable');
 	let buttonbox = document.querySelector('.buttonbox');
 	let html = ``;
@@ -285,7 +299,7 @@ function infoPrint(index){
 	
 	html =  `
 			<div class="buttonbox">
-				<button class="modifybtn">수정</button>
+				<button onclick="openModal(${index})" class="modifybtn">수정</button>
 				<button onclick="remove_user()" class="removebtn">삭제</button>
 			</div>
 			`
@@ -295,7 +309,7 @@ function infoPrint(index){
 
 // 삭제 버튼을 눌렀을때 실행되는 함수
 function remove_user(){
-	userList.splice(removenum, 1);
+	userList.splice(indexnum, 1);
 	
 	let infotable = document.querySelector('.infotable');
 	let buttonbox = document.querySelector('.buttonbox');
@@ -307,6 +321,61 @@ function remove_user(){
 	// 회원리스트와 초기 그래프를 출력
 	userPrint();
 	grafPrint1();
+}
+
+// 모달 창 열기
+function openModal( index ){
+	document.querySelector('.modalwrap').style.display = 'flex';
+	let nameInput = document.querySelector('.nameInput');
+	let ageInput = document.querySelector('.ageInput');
+	let sexInput = document.querySelector('.sexInput');
+	let areaInput = document.querySelector('.areaInput');
+	let pnumInput = document.querySelector('.pnumInput');
+	let fstoreInput = document.querySelector('.fstoreInput');
+	
+	nameInput.value = userList[index].name;
+	ageInput.value = userList[index].age;
+	sexInput.value = userList[index].sex;
+	areaInput.value = userList[index].area;
+	pnumInput.value = userList[index].pnum;
+	fstoreInput.value = userList[index].favStore;
+	
+}
+
+// 모달 창 닫기
+function closeModal(){
+	document.querySelector('.modalwrap').style.display = 'none';
+}
+
+// 모달 창의 수정 버튼을 눌렀을때 실행되는 함수
+function modify(){
+	console.log('modify 함수 실행');
+	
+	let nameInput = document.querySelector('.nameInput');
+	let ageInput = document.querySelector('.ageInput');
+	let sexInput = document.querySelector('.sexInput');
+	let areaInput = document.querySelector('.areaInput');
+	let pnumInput = document.querySelector('.pnumInput');
+	let fstoreInput = document.querySelector('.fstoreInput');
+	
+	userList[indexnum].name = nameInput.value;
+	userList[indexnum].age = ageInput.value;
+	userList[indexnum].sex = sexInput.value;
+	userList[indexnum].area = areaInput.value;
+	userList[indexnum].pnum = pnumInput.value;
+	userList[indexnum].favStore = fstoreInput.value;
+	
+	console.log(indexnum);
+	console.log(userList);
+	
+	// 모달창 닫기
+	closeModal();
+	
+	// 모든 데이터를 다시 출력
+	infoPrint(indexnum);
+	userPrint();
+	grafPrint1();
+	
 }
 
 

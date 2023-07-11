@@ -23,7 +23,7 @@
 						<div class="user_tablebox">
 							<div class="tableLine"></div>
 							<table class="userList">	<!-- 회원리스트 테이블 -->
-								<tr>
+								<tr class="tablehead">
 									<th class="u_name">이름</th>
 									<th class="u_age">나이</th>
 									<th class="u_pnum">전화번호</th>
@@ -80,6 +80,55 @@
 						<button onclick="remove_user()" class="removebtn">삭제</button>
 					</div>
 				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="modalwrap">	<!-- 모달 전체 구역 -->
+		<div class="modal">	<!-- 모달 상자 -->
+			<h3>회원정보 수정</h3>
+			<table class="infotable">
+				<!-- 회원정보 상세 테이블 -->
+				<tr>
+					<td class="info_td1">이름</td>
+					<td class="info_td2">
+						<input class="nameInput" type="text">
+					</td>
+				</tr>
+				<tr>
+					<td class="info_td1">나이</td>
+					<td class="info_td2">
+						<input class="ageInput" type="text">
+					</td>
+				</tr>
+				<tr>
+					<td class="info_td1">성별</td>
+					<td class="info_td2">
+						<input class="sexInput" type="text">
+					</td>
+				</tr>
+				<tr>
+					<td class="info_td1">주소</td>
+					<td class="info_td2">
+						<input class="areaInput" type="text">
+					</td>
+				</tr>
+				<tr>
+					<td class="info_td1">전화번호</td>
+					<td class="info_td2">
+						<input class="pnumInput" type="text">
+					</td>
+				</tr>
+				<tr>
+					<td class="info_td1">선호매장</td>
+					<td class="info_td2">
+						<input class="fstoreInput" type="text">
+					</td>
+				</tr>
+			</table>
+			<div class="modalbtns">
+				<button class="modifybtn mbtn" onclick="modify()">수정</button>
+				<button class="removebtn mbtn" onclick="closeModal()">닫기</button>
 			</div>
 		</div>
 	</div>
