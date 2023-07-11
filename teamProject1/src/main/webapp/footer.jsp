@@ -49,6 +49,10 @@
 					<p>COPYRIGHT©㈜한솥. ALL RIGHTS RESERVED.</p>
 				</div> <!-- 업체명 end-->
 				
+				<div class="ft_sns">
+					<a href="#" class="insta"></a>
+					<a href="#" class="fabook"></a>
+				</div>
 			</div>
 
 
