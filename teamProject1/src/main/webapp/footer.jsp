@@ -10,10 +10,21 @@
 
 </head>
 <body>
-
-	<div id="footerbox">
-		<h3>푸터입니다</h3>
-	</div>
+	
+		<div id="footerbox">
+		
+			<div class="ft_menu">
+				<ul>
+					<li>인재채용</li>
+					<li>협력업체등록</li>
+					<li>공지사항</li>
+					<li>고객 센터</li>
+					<li>개인정보처리방침</li>
+					<li>이용약관</li>
+				</ul>
+			</div>
+			
+		</div>
 	
 </body>
 </html>
