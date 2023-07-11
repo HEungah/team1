@@ -44,25 +44,30 @@ function boardPrint(){console.log('boardPrint() 작동')
 				t_html+=
 						`<tr>
 						<td width="5%">${board.no}</td>
-						<td width="60%" onclick="onView(board.title)">${board.title}</td>
+						<td width="60%" onclick="onViewLoad(${board.no})">${board.title}</td>
 						<td width="15%">${board.selectInput}</td>
 						<td width="15%">${board.date}</td>
 						<td width=5%>${board.view}</td> 
 						</tr>`
-					}//추가 필요?? 제목 누르면 작동 함수, view 증가 함수
+					}
 				tList.innerHTML= t_html;
 	
 } 
 
-
-// 상세 페이지 출력 함수()---------------------------------
-function onView(){
+// 상세 페이지 이동
+function onViewLoad(no){
+	console.log('클릭 게시물 번호 : '+ no)
+	//클릭된 게시물 no 쿠키에 저장
+	localStorage.setItem('no',no)
 	
+	 // + 조회수 증가 함수 
+	 increaseView( no )
+	
+	location.href="view_go.jsp"
 }
 
 
-
 //조회수 증가 함수()-------------------------------------
-function viewUp(){
+function increaseView( no ){
 	
 }

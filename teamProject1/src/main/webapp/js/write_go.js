@@ -36,7 +36,7 @@ function onWrite(){ console.log('onWrite 함수 실행')
 		selectInput: selectInput,
 		no:no,
 		title:title,
-		contnent: content,
+		content: content,
 		date: `${new Date().getFullYear()}-${new Date().getMonth()+1 }-${new Date().getDate() }` ,
 		view: 0	
 	} ; console.log('추가될 객체'+ board)//??????????????여기 ,객체화 전역 변수로 올리기 가능?

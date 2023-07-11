@@ -73,8 +73,7 @@
 		<div class="add">	
 			<a href="write_go.jsp">
 				<button type="button" class="btn btn-secondary btn-sm"
-				 onclick="onView()">글등록</button>
-				 <!-- onView() 상세 페이지 이동 함수 -->
+				 onclick="onWrite()">글등록</button>
 			</a>
 		</div>
 
