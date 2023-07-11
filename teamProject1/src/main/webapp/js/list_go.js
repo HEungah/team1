@@ -4,6 +4,7 @@ console.log('js 실행')
 let content={no:"no" , title:"title", select:"select", date: "date", view:0}
 
 let qList=JSON.parse(localStorage.getItem('qList'))
+console.log(qList);
 
 if(qList==null){qList=[]}
 boardPrint();
@@ -41,11 +42,12 @@ function boardPrint(){console.log('boardPrint() 작동')
 	
 			for(let i=0; i<qList.length;i++){	
 					let board=qList[i]
+					console.log(board);
 				t_html+=
 						`<tr>
 						<td width="5%">${board.no}</td>
 						<td width="60%" onclick="onView(board.title)">${board.title}</td>
-						<td width="15%">${board.select}</td>
+						<td width="15%">${board.selectInput}</td>
 						<td width="15%">${board.date}</td>
 						<td width=5%>${board.view}</td> 
 						</tr>`

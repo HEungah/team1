@@ -62,7 +62,7 @@ function userPrint(){
 	
 	for(let i = 0; i < userList.length; i++){
 		html += `
-				<tr>
+				<tr onclick="infoPrint()">
 					<td class="u_name">${userList[i].name}</td>
 					<td class="u_age">${userList[i].age}</td>
 					<td class="u_pum">${userList[i].pnum}</td>
@@ -129,7 +129,7 @@ function grafPrint1(){
 			}
 		]
 	};
-
+	myChart.setOption(option, true);
 	// Display the chart using the configuration items and data just specified.
 	myChart.setOption(option);
 }
@@ -192,24 +192,33 @@ function grafPrint2(){
 			}
 		]
 	};
-
+	myChart.setOption(option, true);
 	// Display the chart using the configuration items and data just specified.
 	myChart.setOption(option);
 }
 
 // 성별 그래프를 출력하는 함수
 function grafPrint3(){
+	let gnum1 = 0;
+	let gnum2 = 0;
+	
+	for(let i = 0; i< userList.length; i++){
+		if(userList[i].sex == '남'){
+			gnum1++;
+		}else if(userList[i].sex == '여'){
+			gnum2++;
+		}
+	}
+	let g_sexList = [{value : gnum1, name : '남성'},
+				{value : gnum2, name : '여성'}]
 	
 	
-	
-	
-	
-	
+
 	var myChart = echarts.init(document.getElementById('graf_content'));
 	var option = {
 		title: {
-			text: 'Referer of a Website',
-			subtext: 'Fake Data',
+			text: '',
+			subtext: '',
 			left: 'center'
 		},
 		tooltip: {
@@ -221,16 +230,10 @@ function grafPrint3(){
 		},
 		series: [
 			{
-				name: 'Access From',
+				name: '회원수',
 				type: 'pie',
 				radius: '50%',
-				data: [
-					{ value: 1048, name: 'Search Engine' },
-					{ value: 735, name: 'Direct' },
-					{ value: 580, name: 'Email' },
-					{ value: 484, name: 'Union Ads' },
-					{ value: 300, name: 'Video Ads' }
-				],
+				data: g_sexList,
 				emphasis: {
 					itemStyle: {
 						shadowBlur: 10,
@@ -241,11 +244,17 @@ function grafPrint3(){
 			}
 		]
 	};
+	myChart.setOption(option, true);
 	
 	myChart.setOption(option);
 }
 
-
+// 회원리스트에서 회원을 클릭했을때 실행되는 함수
+function infoPrint(){
+	console.log('infoPrint 함수 실행');
+	
+	
+}
 
 
 
