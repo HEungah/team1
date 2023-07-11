@@ -85,23 +85,46 @@
 	display:inline-block;
 	width: 30%;
 	text-align: center;
+	padding: 10px 0;
 }
 
 .area{
 	display:inline-block;
 	width: 30%;
 	text-align: center;
+	padding: 10px 0;
 }
 
 .sex{
 	display:inline-block;
 	width: 30%;
 	text-align: center;
+	padding: 10px 0;
+}
+
+.user_tablebox{
+	width: 100%;
+	position: relative;
+	overflow-y: scroll;
 }
 
 .userList{
 	margin-top: 20px;
 	width: 100%;
+	border: 1px solid #444444;
+    border-collapse: collapse;
+}
+
+.tableLine{
+    width: 100%;
+    height: 2px;
+    background-color: #f2c000;
+    display: inline-block;
+    margin: 20px 0;
+}
+
+.userList th, td{
+	border: 1px solid #444444;
 }
 
 .u_name{
@@ -116,8 +139,82 @@
 	width: 60%;
 }
 
+.userList_c{
+	text-align: center;
+}
+
+#graf_content{
+	width: 100%;
+	height: 400px;
+	margin-top: 40px;
+}
+
+.border_b{
+	border-bottom: 2px solid #f2c000;
+}
+
+.infobox{
+	padding: 30px 0 0 20px;
+	margin-bottom: 10px;
+}
+
+.info_title{
+	font-size: 20px;
+}
+
+.info_title:before{
+	content: '';
+    width: 4px;
+    height: 20px;
+    background-color: #373737;
+    margin: 0 10px -2px 0;
+    display: inline-block;
+}
+
+.infoLine{
+	width: 100%;
+    height: 2px;
+    background-color: #f2c000;
+    display: inline-block;
+    margin: 20px 0;
+}
 
 
+.infotable{
+	width: 100%;
+	margin-bottom: 15px;
+}
+
+.info_td1{
+	width: 20%;
+	padding-left: 10px;
+	background-color: #e8e8e8;
+}
+
+.info_td2{
+	width: 80%;
+	padding-left: 10px;
+}
+
+.buttonbox{
+	margin-bottom: 50px;
+	text-align: right;
+	margin-right: 10px;
+}
+
+.modifybtn{
+	background-color: #ccffff;
+	border: none;
+	border-radius : 5px;
+	padding: 10px;
+}
+
+.removebtn{
+	background-color: #ff6666;
+	border: none;
+	border-radius : 5px;
+	padding: 10px;
+}
 
 
 
