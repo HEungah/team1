@@ -77,7 +77,7 @@
 					</div>
 					<div class="buttonbox">
 						<button class="modifybtn">수정</button>
-						<button class="removebtn">삭제</button>
+						<button onclick="remove_user()" class="removebtn">삭제</button>
 					</div>
 				</div>
 			</div>

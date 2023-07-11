@@ -30,6 +30,8 @@ let storeList = ['건국대점', '안산한양대점', '잠실석촌호수점', 
 let aget = document.querySelector('.age');
 let areat = document.querySelector('.area');
 let sext = document.querySelector('.sex');
+let removenum = 0;		// 삭제할 유저 인덱스 변수
+
 
 aget.addEventListener('click', titlePocus1);
 areat.addEventListener('click', titlePocus2);
@@ -62,7 +64,7 @@ function userPrint(){
 	
 	for(let i = 0; i < userList.length; i++){
 		html += `
-				<tr onclick="infoPrint()">
+				<tr onclick="infoPrint(${i})">
 					<td class="u_name">${userList[i].name}</td>
 					<td class="u_age">${userList[i].age}</td>
 					<td class="u_pum">${userList[i].pnum}</td>
@@ -249,11 +251,62 @@ function grafPrint3(){
 	myChart.setOption(option);
 }
 
+infoPrint(0);		// 회원정보 상세 초기화면 출력
 // 회원리스트에서 회원을 클릭했을때 실행되는 함수
-function infoPrint(){
-	console.log('infoPrint 함수 실행');
+function infoPrint(index){
+	console.log('infoPrint 함수 실행 ' + index);
 	
+	removenum = index;
+	let infotable = document.querySelector('.infotable');
+	let buttonbox = document.querySelector('.buttonbox');
+	let html = ``;
 	
+	html =  `
+			<tr>
+				<td class="info_td1">이름</td><td class="info_td2">${userList[index].name}</td>
+			</tr>
+			<tr>	
+				<td class="info_td1">나이</td><td class="info_td2">${userList[index].age}</td>
+			</tr>
+			<tr>	
+				<td class="info_td1">성별</td><td class="info_td2">${userList[index].sex}</td>
+			</tr>
+			<tr>	
+				<td class="info_td1">주소</td><td class="info_td2">${areaList[userList[index].area]}</td>
+			</tr>
+			<tr>	
+				<td class="info_td1">전화번호</td><td class="info_td2">${userList[index].pnum}</td>
+			</tr>
+			<tr>	
+				<td class="info_td1">선호매장</td><td class="info_td2">${storeList[userList[index].favStore]}</td>
+			</tr>
+			`
+	infotable.innerHTML = html;
+	
+	html =  `
+			<div class="buttonbox">
+				<button class="modifybtn">수정</button>
+				<button onclick="remove_user()" class="removebtn">삭제</button>
+			</div>
+			`
+	buttonbox.innerHTML = html;
+			
+}
+
+// 삭제 버튼을 눌렀을때 실행되는 함수
+function remove_user(){
+	userList.splice(removenum, 1);
+	
+	let infotable = document.querySelector('.infotable');
+	let buttonbox = document.querySelector('.buttonbox');
+	let html = ``;
+	
+	infotable.innerHTML = html;
+	buttonbox.innerHTML = html;
+	
+	// 회원리스트와 초기 그래프를 출력
+	userPrint();
+	grafPrint1();
 }
 
 
