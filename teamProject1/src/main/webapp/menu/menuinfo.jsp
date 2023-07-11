@@ -55,7 +55,7 @@
 			<div class="menu_info_area2">
 				 <h4 class="subtitle">알레르기</h4>
 				 <table class="table1">
-				 	<tr>
+				 	<tr class="table1tr">
 				 		<th>난류(계란)</th>
 				 		<th>우유</th>
 				 		<th>메밀</th>
@@ -75,31 +75,55 @@
 				 		<th>오징어</th>
 				 		<th>조개류</th>
 				 	</tr>
-				 	<tr>
-				 		<td>dd</td>
+				 	
+				 	<tr class="table1td">
+				 		<td><div class="true"></div></td>
+				 		<td><div class="true"></div></td>
+				 		<td><div class="tri"></div></td>
+				 		<td><div class="tri"></div></td>
+				 		<td><div class="true"></div></td>
+				 		<td><div class="true"></div></td>
+				 		<td><div class="tri"></div></td>
+				 		<td><div class="tri"></div></td>
+				 		<td><div class="tri"></div></td>
+				 		<td><div class="tri"></div></td>
+				 		<td><div class="tri"></div></td>
+				 		<td><div class="true"></div></td>
+				 		<td><div class="tri"></div></td>
+				 		<td><div class="tri"></div></td>
+				 		<td><div class="tri"></div></td>
+				 		<td><div class="true"></div></td>
+				 		<td><div class="tri"></div></td>
+				 		<td><div class="true"></div></td>
 				 	</tr>
 				 </table>
-				 <div>
-				 	<p><span>o</span>해당 알레르기 성분이 포함되어 있음</p>
-				 	<p><span>o</span>해당 알레르기 성분이 직접적으로 포함되어 있지 않지만, 해당 성분을 가공하는 시설에서 가공/제조 하였음</p>
-				 	<p><span>o</span>해당 알레르기 성분이 포함되어 있지 않음</p>
-				 </div>
+				 
+				 
+				 <div class="allergy_info"> 
+				 	<ul>
+				 		<li class="allergy1">해당 알레르기 성분이 포함되어 있음</li>
+				 		<li class="allergy2">해당 알레르기 성분이 직접적으로 포함되어 있지 않지만, 해당 성분을 가공하는 시설에서 가공/제조 하였음</li>
+				 		<li class="allergy3">해당 알레르기 성분이 포함되어 있지 않음</li>
+				 	</ul>
+				 	
+				 	
+				 </div> <!-- allergy_info end -->
 			</div> <!-- menu_info_area2 end -->
 			
 			<div class="menu_info_area3">
 				 <h4 class="subtitle">원산지</h4>
 				 <table class="table2">
-				 	<tr>
+				 	<tr class="table2tr">
 				 		<th>쌀(백미)</th>
 				 		<th>열무김치</th>
 				 	</tr>
-				 	<tr>
+				 	<tr class="table2tr2">
 				 		<td>국내산</td>
 				 		<td>국내산</td>
 				 	</tr>
 				 </table>
 			 </div> <!-- menu_info_area3 end -->
-			 <a class="list_btn" href="#">목록</a>
+			 <a href="/teamProject1/menu/mainmenu.jsp" class="list_btn" href="#">목록</a>
 			 
 		 
  			<div class="content_bottom">

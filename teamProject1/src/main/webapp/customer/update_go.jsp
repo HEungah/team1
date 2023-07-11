@@ -17,22 +17,24 @@
 		<!-- 썸머노트 css 적용 - 부트스트랩v5 -->
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/summernote-lite.min.css" rel="stylesheet">
 	
-<link href="../css/write_go.css">
-
+	<link href="../css/update_go.css">
 <title>Insert title here</title>
 </head>
-
-
 <body>
-	<div class="container">
+
+		<div class="container">
 		<select class="form-select" aria-label="Default select example"></select>
 	
 	<input type="text" placeholder="제목" class="form-control"><br>
 	<textarea id="summernote" class="form-control" rows="10" placeholder="내용"></textarea><br>
 	<div class="row"><!-- 수정,등록,삭제 가로배치 -->
-		<div class="col"><input onclick="onWrite()"class="col-2" type="button" value="등록"></div>
+		<div class="col"><input onclick="onUpdate()"class="col-2" type="button" value="목록"></div>
+		<div class="col"><input onclick="onUpdate()"class="col-2" type="button" value="수정"></div>
+		<div class="col"><input onclick="onUpdate()"class="col-2" type="button" value="삭제"></div>
 	</div><!-- 수정 등록 삭제 가로배치 -->
 	</div><!-- .container -->
+	
+	
 	
 	
 	
@@ -50,8 +52,7 @@
 	
 	<!-- 썸머노트 한글적용  -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/lang/summernote-ko-KR.min.js"></script>
-	
-	<!-- write_go.js 파일 사용 -->
-	<script type="text/javascript" src="../js/write_go.js"></script>
+
+<script type="text/javascript" src="../js/update_go.js"></script>
 </body>
 </html>
