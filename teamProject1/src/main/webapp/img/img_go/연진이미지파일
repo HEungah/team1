@@ -2,3 +2,89 @@
 
 view.jsp 
 화살표.png: 방향키 이미지
+
+
+
+
+<!-- 1번 끝 --------------------------------------------------------->
+
+
+	
+			<div  class="row justify-content-md-center"><!-- 그리드,커터 사이즈 조절 필요 -->
+				 <!-- select option- js작성 -->
+				<div class="col-2"><select class="form-select"></select></div>
+				<div class="col-5"><input style="" placeholder="검색어 입력" class="form-control"></div>
+				<div class="col-1">
+					<button class="search form-control" onclick="search()" type="button">검색</button>
+				</div>
+			</div>
+<!-- 2번 끝-------------------------------------------------------- -->			
+			<table
+				class="t_table table table table-striped table table-hover table-bordered text-center">
+				<!-- 내 class: t_table-->
+				<thead >
+						<tr>
+							<th width="5%">no</th>
+							<th width="60%">제목</th>
+							<th width="10%">분류</th>
+							<th width="15%">작성일</th>
+							<th width=15%>조회수</th> 
+						</tr>
+				</thead>
+				<tbody class="tcontent">
+					<!-- 글 목록 테이블 출력. boardPrint() js -->
+				</tbody>
+			</table>
+<!-- 3번 끝------------------------------------------------ -->		
+			
+		<div class="add">	
+			<a href="write_go.jsp">
+				<button type="button" class="btn btn-secondary btn-sm"
+				 onclick="onWrite()">글등록</button>
+			</a>
+		</div>
+
+<!-- 4번 끝-------------------------------------------------------- -->
+		<div id="box3">
+			<nav aria-label="Page navigation example">
+				<ul class="pagination justify-content-center">
+					<li class="page-item disabled"><a class="page-link">◀</a>
+					</li>
+					<li class="page-item"><a class="page-link" href="#">1</a></li>
+					<li class="page-item"><a class="page-link" href="#">2</a></li>
+					<li class="page-item"><a class="page-link" href="#">3</a></li>
+					<li class="page-item"><a class="page-link" href="#">▶</a></li>
+				</ul>
+			</nav>
+			
+		</div>
+		
+<!-- 5번 끝------------------------------------------------------- -->
+
+		<div id="content3">
+
+			
+				
+				<ul class="info1">
+					<li class="li_01">한솥도시락 고객상담실</li>
+					<li class="li_02">02-585-1114</li>
+					<li class="li_03">가까운 점포를 찾기 어려우시거나 문의 내용이 있을 경우</br>고객상담실로 문의 하세요.</li>
+				</ul>
+				
+				<ul class="info1">
+					<li class="li_01">한솥도시락 고객상담실</li>
+					<li class="li_02">02-585-1114</li>
+				</ul>
+				
+				<ul class="info1">
+					<li class="li_01">한솥도시락 고객상담실</li>
+					<li class="li_02">02-585-1114</li>
+					<li class="li_03">가까운 점포를 찾기 어려우시거나 문의 내용이 있을 경우</br>고객상담실로 문의 하세요.</li>
+				</ul>
+				
+
+			
+			
+		</div> <!-- 3번째 컨텐츠 end -->
+
+-->

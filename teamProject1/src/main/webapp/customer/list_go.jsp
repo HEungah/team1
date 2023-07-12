@@ -26,18 +26,21 @@
 		<!-- 부트스트랩에서 가져옴 -->
 
 		<!-- 1번 시작 -->
-		<div class="top"> <!--  고객센터/자주하는질문/고객의소리 -->
-	
-			<!-- flex 가로 양 끝으로 붙임 , 고객센터 -->
-				<div class="left"><h2>고객센터</h2></div>
-				<div class="right">
-					<ol>
-						<li >자주하는 질문</li>
-						<li>고객의 소리</li>
-					</ol>
+			<div id="top_name">
+				<div class="c_name1">
+					<h2>고객센터</h2>
 				</div>
-				
+				<div class="c_name2">
+					<ul class="tap_menu">
+						<li class="em_name1"><a href="#">자주하는 질문</a></li>
+						<li class="em_name2"><a href="#">고객의 소리</a></li>
+					</ul>
+				</div>
 			</div>
+
+
+
+
 
 <!-- 1번 끝 --------------------------------------------------------->
 

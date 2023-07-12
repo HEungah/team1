@@ -26,11 +26,11 @@
 		
 		<div class="bottom"><!-- 날짜, 목록버튼, 앞뒤버튼 -->
 			<div class="date_s"> <!-- 날짜, 셀렉터 상자 -->
-				<span class="v_selectInput">계정</span>
+<!-- 		<span class="v_selectInput">계정</span>
 				<span class="v_date">2017-11-20</span>
 				
 			</div>
-			
+ -->					
 			
 			<div class="arrow">
 				<ol>
