@@ -21,8 +21,8 @@
 </head>
 
 <body>
-
-	<div class="container">
+<div class="wrap">
+	<div class="container" id="bigbox">
 		<!-- 부트스트랩에서 가져옴 -->
 
 		<!-- 1번 시작 -->
@@ -46,7 +46,7 @@
 
 
 	
-			<div  class="row justify-content-md-center"><!-- 그리드,커터 사이즈 조절 필요 -->
+			<div  class="row justify-content-md-center searchbar" id="gridbox"><!-- 그리드,커터 사이즈 조절 필요 -->
 				 <!-- select option- js작성 -->
 				<div class="col-2"><select class="form-select"></select></div>
 				<div class="col-5"><input style="" placeholder="검색어 입력" class="form-control"></div>
@@ -54,6 +54,7 @@
 					<button class="search form-control" onclick="search()" type="button">검색</button>
 				</div>
 			</div>
+			<div class="line"></div>
 <!-- 2번 끝-------------------------------------------------------- -->			
 			<table
 				class="t_table table table table-striped table table-hover table-bordered text-center">
@@ -127,7 +128,7 @@
 	
 	</div> <!-- 전체 구역 끝 -->
 
-
+</div>
 	<!-- 부트스트랩에서 만든 JS 적용 -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 	<!-- 내가 사용할 script -->

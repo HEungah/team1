@@ -4,14 +4,25 @@
 
 li{ list-style-type: none; } /* 글머리 제거 */
 
+.wrap {
+	width:100%;
+	background-color: #eeecec;
+}
 
 .container{width: 1200px; margin: 0 auto;
-			background-color: #eeecec;
+			/* background-color: #eeecec; */
 }
 
 /*자주하는 질문 사이즈*/
-.q{height: 300px}
+.q{height: 300px;
+display: flex;
+align-items: center;}
 
+.q > span {
+	margin-left:10px;
+	font-size: 24px;
+	font-weight: bold;
+}
 .icon1{
 	background-image: url("../img/img_go/icon_back.png")
 	
@@ -36,6 +47,7 @@ li{ list-style-type: none; } /* 글머리 제거 */
 }
 .bottom{
 	display: flex; flex-direction: row; justify-content:space-between;
+	padding: 0 10px;
 }
 .date_s{
 	display: flex; flex-direction: row; justify-content: flex-start;
