@@ -33,10 +33,10 @@ function onView(){ console.log('onView 함수 실행')
 		let q= qList[i]
 		
 		if(q.no==no){
-			title.innerHTML=q.title;
-			content.innerHTML=q.content; 
-			selectInput.innerHTML=q.selectInput;
-			date.innerHTML=q.date;
+			title.value=q.title;
+			content.value=q.content; 
+			selectInput.valueL=q.selectInput;
+			date.value=q.date;
 			break;
 			
 		}
@@ -47,7 +47,7 @@ function onView(){ console.log('onView 함수 실행')
 
 
 // 수정함수-------------------------------
-function onUpdate(){
+function onUpdate(){ console.log('update 함수 실행')
 	
 	for(let i = 0 ; i<qList.length ; i++ ){
 		let q = qList[i];
@@ -55,10 +55,10 @@ function onUpdate(){
 			// 새롭게 입력받은 값 
 		let title= document.querySelector('.v_title').value
 		let content=document.querySelector('.summernote').value
-		let selectInput=document.querySelector('.v_selectInput').alue
+		let selectInput=document.querySelector('.v_selectInput').value
 		let date=document.querySelector('.v_date').value
 			// 수정/대입 
-			q.title = title 
+			q.title = title  ; console.log(q.title)
 			q.content = content;
 			q.selectInput=selectInput
 			q.date= date

@@ -24,6 +24,7 @@
 
 
 <body>
+<%@include file="../header.jsp" %>
 	<div class="container">
 		<select class="form-select" aria-label="Default select example"></select>
 	
@@ -53,5 +54,6 @@
 	
 	<!-- write_go.js 파일 사용 -->
 	<script type="text/javascript" src="../js/write_go.js"></script>
+	<%@include file="../footer.jsp" %>
 </body>
 </html>

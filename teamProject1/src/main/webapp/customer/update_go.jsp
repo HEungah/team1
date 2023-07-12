@@ -21,6 +21,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<%@include file="../header.jsp" %>
 
 		<div class="container">
 		<select class="form-select" aria-label="Default select example"></select>
@@ -53,5 +54,6 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/lang/summernote-ko-KR.min.js"></script>
 
 <script type="text/javascript" src="../js/update_go.js"></script>
+<%@include file="../footer.jsp" %>
 </body>
 </html>
