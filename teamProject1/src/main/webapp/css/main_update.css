@@ -1,0 +1,12 @@
+@charset "UTF-8"; 
+
+.warp{background: #EEECEC;}
+.container{
+	border: solid 6px #373737; 
+	background-color: white;
+    margin: 0px;
+}
+
+#box {
+	width: 98.5%;
+}

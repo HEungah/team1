@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<title>Insert title here</title> 
 	
-	<link href="/teamProject1/css/mainpage.css" rel="stylesheet">
+	<link href="/teamProject1/css/main_list.css" rel="stylesheet">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
 	
@@ -14,10 +14,11 @@
 
 </head>
 <body>
-
+	
+<div class="warp"> <!-- 고객센터 전체페이지 -->
 	<%@include file="../header.jsp" %>
 
-	<div class="warp"> <!-- 고객센터 전체페이지 -->
+	
 
 		<div id="content1"> <!-- 첫번째 컨텐츠 구역 -->
 			<div id="top_name">
@@ -54,18 +55,22 @@
 					
 					<div class="side_result">
 						<!-- <em>태그는 강조되는 텍스트를 표현할때 사용한다  -->
-						<span>총 <em class="em_numer">31</em>건</span> 
+						<span>총 <span class="em_numer">31</span>건</span> 
 					</div>
 				</div>
 				
 			</div> <!-- 검색구역 end -->
 
 		</div> <!-- 첫번째 컨텐츠 구역 end -->
-
-		<div id="content2"> <!-- 두번째 컨텐츠 -->
 		
+		<div class="list_btn">
+		<a href="main_write.jsp"><button type="button" class="btn btn-outline-info" onclick="onWrite()"> 글쓰기</button></a> 
+		</div>
+		
+		<div id="content2"> <!-- 두번째 컨텐츠 -->
+				
 			<table class="table table-striped">
-				<tfoot class="table-light">
+				<tfoot class="content2 table-light">
 					<tr height="60px">
 						<td class="td_01" width="5%">31</td> 
 						<td class="td_02" width="70%">모바일 시식권을 쿠폰으로 사용할 수 있나요?</td> 
@@ -121,7 +126,7 @@
 						<td class="td_03" width="12%">이용방법</td>
 						<td>2017-11-20</td>
 					</tr>
-					
+
 					<tr height="60px">
 						<td class="td_01" width="5%">23</td> 
 						<td class="td_02" width="70%">픽업 시간 알림이 따로 있나요?</td> 
@@ -139,7 +144,7 @@
 			</table>
 			
 			<div class="page_movement">	<!-- 페이지 넘어가는순서 -->
-			
+
 				<nav aria-label="Page navigation example">
 					<ul class="pagination justify-content-center">
 						<li class="page-item disabled"><a class="page-link">◀</a></li>
@@ -155,8 +160,8 @@
 		
 		<div id="content3"> <!-- 3번째 컨텐츠 -->
 
-			
-				
+
+
 				<ul class="info1">
 					<li class="li_01">한솥도시락 고객상담실</li>
 					<li class="li_02">02-585-1114</li>
@@ -164,13 +169,13 @@
 				</ul>
 				
 				<ul class="info1">
-					<li class="li_01">한솥도시락 고객상담실</li>
+					<li class="li_01">전국 창업설명회 문의</li>
 					<li class="li_02">02-585-1114</li>
 				</ul>
 				
 				<ul class="info1">
-					<li class="li_01">한솥도시락 고객상담실</li>
-					<li class="li_02">02-585-1114</li>
+					<li class="li_01">단체주문</li>
+					<li class="li_02">1644-3288</li>
 					<li class="li_03">가까운 점포를 찾기 어려우시거나 문의 내용이 있을 경우</br>고객상담실로 문의 하세요.</li>
 				</ul>
 				
@@ -185,8 +190,8 @@
 	<%@include file ="../footer.jsp" %>
 	
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-	
-	<script src="../js/mainpage.js" type="text/javascript"></script>
-	
+
+	<script src="../js/main_list.js"></script>
+
 </body>
 </html>
