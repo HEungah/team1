@@ -55,7 +55,7 @@ function join(){
 		console.log(userList);
 		alert('회원가입이 완료되었습니다.')
 		// 회원가입이 완료되었으면 로그인페이지로 이동
-		//location.href="/teamProject1/login/login.jsp"
+		location.href="/teamProject1/login/login.jsp"
 	}
 	
 }
