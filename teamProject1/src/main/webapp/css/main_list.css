@@ -3,7 +3,10 @@
 li , ul{list-style-type: none;}
 a{text-decoration: none;} 
 
-.warp{background: #EEECEC;}
+.warp{
+	background: #EEECEC;
+	margin-bottom: -49px;
+}
 
 #content1{
 	width: 1200px;
@@ -11,7 +14,7 @@ a{text-decoration: none;}
 	background-color: white;
 }
 #content2{
-	width: 1200px;
+	width: 1187px;
 	margin: 0 auto;
 	margin-top: 60px;
 	border-top: 6px solid #373737;
@@ -106,6 +109,17 @@ a{text-decoration: none;}
 }
 .em_name1 > a:hover{color: #F2C000 }
 .em_name2 > a:hover{color: #F2C000 }
+#content2_box{
+	border-top: solid 6px #373737;
+    width: 1200px;
+    background-color: white;
+    margin-left: 352px;
+    margin-top: 45px;
+}
+#btn1{
+	margin-left: 3px;
+    margin-bottom: -84px;
+}
 
 
 
