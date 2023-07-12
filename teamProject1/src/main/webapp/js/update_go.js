@@ -20,8 +20,8 @@ let List = JSON.parse( localStorage.getItem('qList') ) ;
 onView() 
 
 
-// 함수 복붙
-function onView(){ console.log('onView 함수 실행')
+// 함수 복붙??????????????????? onWrite 같음 ㅠ .. 
+function onView(){ console.log('onView 함수 실행')  
 	
 	// 어디에 받을건지
 	let title= document.querySelector('.v_title')
@@ -47,7 +47,7 @@ function onView(){ console.log('onView 함수 실행')
 
 
 // 수정함수-------------------------------
-function onUpdate(no){
+function onUpdate(){
 	
 	for(let i = 0 ; i<qList.length ; i++ ){
 		let q = qList[i];

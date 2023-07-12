@@ -61,8 +61,8 @@ function onViewLoad(no){
 	//클릭된 게시물 no 쿠키에 저장
 	localStorage.setItem('no',no)
 	
-	 // + 조회수 증가 함수 
-	// increaseView( no )	
+	  
+	 increaseView( no )	
 
 	
 	location.href="view_go.jsp"
@@ -71,5 +71,11 @@ function onViewLoad(no){
 
 //조회수 증가 함수()-------------------------------------
 function increaseView( no ){
+	for(let i=0; i<qList.length;i++){
+		if(qList[i].no==no){
+			qList[i].view++;
+			localStorage.setItem('qList',JSON.stringify(qList))
+		}
+	}
 	
 }
