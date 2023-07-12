@@ -8,6 +8,7 @@
 <link href="css/index.css" rel="stylesheet">
 </head>
 <body>
+	<%@include file="../header.jsp" %>
 	<div class="mainimgbox">
 		<img class="menuimg" src="img/img_kim/contentimg1.jpg">
 	</div>
@@ -99,6 +100,7 @@
 		<!-- content_bottom end -->
 	</div>
 	<!--indexwrap end  -->
+	<%@include file="../footer.jsp" %>
 
 	<script src="js/index.js" type="text/javascript"></script>
 </body>
