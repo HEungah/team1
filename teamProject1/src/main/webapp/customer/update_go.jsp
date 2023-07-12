@@ -24,13 +24,15 @@
 <%@include file="../header.jsp" %>
 
 		<div class="container">
-		<select class="form-select" aria-label="Default select example"></select>
+		<select class="form-select v_selectInput" aria-label="Default select example">
+		
+		</select>
 	
-	<input type="text" placeholder="제목" class="form-control"><br>
-	<textarea id="summernote" class="form-control" rows="10" placeholder="내용"></textarea><br>
+	<input type="text" placeholder="제목" class="form-control v_title"><br>
+	<textarea id="summernote" class="form-control v_content" rows="10" placeholder="내용"></textarea><br>
 	<div class="row">
-		<div class="col"><a href="list_go.jsp"><input class="col-2" type="button" value="목록"></a></div>
-		<div class="col"><input onclick="onUpdate()"class="col-2" type="button" value="수정"></div>
+		<div class="col"><a href="list_go.jsp"><input class="col-2 " type="button" value="목록"></a></div>
+		<div class="col"><input onclick="onUpdate()"class="col-2 " type="button" value="수정"></div>
 	</div>
 	</div><!-- .container -->
 	

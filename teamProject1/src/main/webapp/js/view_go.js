@@ -7,6 +7,8 @@ let no =JSON.parse( localStorage.getItem('no'));
 let qList= JSON.parse(localStorage.getItem('qList'));
 			if(qList==null){qList=[]};
 
+let indexN=JSON.parse(localStorage.getItem('indexN'))
+
 console.log(no)
 
 onView()//
@@ -69,6 +71,7 @@ function increaseView( no ){
 
 //뒤로가기 버튼 onclick
 function back(){ console.log('뒤로가기 성공')
+
 	location.href='list_go.jsp' 
 	
 }
@@ -76,14 +79,28 @@ function back(){ console.log('뒤로가기 성공')
 // 왼쪽 넘기기 onclick
 function left(){
 	console.log(no)
+	
+	if(0 == indexN){return;}
+	indexN--
+	
+	localStorage.setItem( 'indexN' , JSON.stringify( indexN))
+	
 	onViewLoad(Number(no)-1) 
 	
 	
 }
 
 // 오른쪽 넘기기 onclick
-function right()
-{onViewLoad(Number(no)+1)
+function right(){
+
+	if(qList.length-1==indexN){return;}
+	indexN++
+	
+	localStorage.setItem( 'indexN' , JSON.stringify( indexN))
+	 
+		
+	
+	onViewLoad(Number(no)+1)
 	
 }
 

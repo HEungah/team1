@@ -51,13 +51,20 @@ function boardPrint(){console.log('boardPrint() 작동')
 } 
 
 // 상세 페이지 이동
-function onViewLoad(no){
-	console.log('클릭 게시물 번호 : '+ no)
+function onViewLoad(index){
+	console.log('클릭 게시물 번호 : '+ index)
 	//클릭된 게시물 no 쿠키에 저장
-	localStorage.setItem('no',no)
+	localStorage.setItem('no',index)
+	let indexN=0;
+	console.log(qList[0].no)
 	
-	  
-	 increaseView( no )	
+	for(let i=0; i<qList.length;i++){
+		if(index==qList[i].no){
+			indexN = i
+		}
+	}
+	localStorage.setItem('indexN',JSON.stringify(indexN))
+	 increaseView( index )	
 
 	
 	location.href="view_go.jsp"
