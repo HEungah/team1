@@ -33,7 +33,7 @@
 			<div class="hdbottom_box">
 				<div class="hd_logo">
 					<h1>
-						<a href="#">
+						<a href="/teamProject1/index.jsp">
 							
 						</a>
 					</h1>
@@ -128,8 +128,8 @@
 								<li><a href="#">연혁&수상</a></li>
 								<li><a href="#">한솥 NEWS</a></li>
 								<li><a href="#">오시는 길</a></li>
-								<li><a href="/teamProject1/customer/list_go.jsp">고객센터</a></li>
-								<li><a href="#">인재채용</a></li>
+								<li><a href="/teamProject1/customer/list_go.jsp">고객센터1</a></li>
+								<li><a href="/teamProject1/mainpage/main_list.jsp">고객센터2</a></li>
 							</ul>
 						</li>
 					</ul>
