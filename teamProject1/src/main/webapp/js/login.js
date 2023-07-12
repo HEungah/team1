@@ -18,16 +18,16 @@ button.disabled = true;
 button.classList.add("dloginbtn");
 
 // 아이디창에 키보드 입력시 validate 함수 실행
-loginInput.addEventListener("keyup", validate);
+loginInput.addEventListener("keyup", btnOn);
 // 비밀번호창에 키보드 입력시 validate 함수 실행
-pwInput.addEventListener("keyup", validate);
+pwInput.addEventListener("keyup", btnOn);
 // 초기화면 로그인버튼 커서 비활성화
 button.style.cursor = "default";
 // 회원가입 버튼 커서 활성화
 saveId.style.cursor = "pointer";
 
 // 아이디입력창 또는 비밀번호 입력창에 키보드입력시 실행되는 함수
-function validate(){
+function btnOn(){
 	console.log('validate함수 실행');
 	
 	// 아이디입력창과 비밀번호입력창 모두 입력값이 없으면 로그인창 비활성화

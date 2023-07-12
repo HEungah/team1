@@ -38,9 +38,10 @@ let userList = [
 		pnum : '010-1234-5678', favStore: 6},																
 ];
 // 주소명을 담는 배열
+
 let areaList = ['서울', '시흥', '안산', '부산', '인천','수원']
-// 매장명을 담는 배열
-let storeList = ['건국대점', '안산한양대점', '잠실석촌호수점', '서초역점', '수원역점', '인하대역점', '없음']
+
+let storeList = ['건국대점', '안산한양대점', '잠실석촌호수점', '서초역점', '수원역점', '인하대역점', '없음'] 	// 매장명을 담는 배열
 let aget = document.querySelector('.age');
 let areat = document.querySelector('.area');
 let sext = document.querySelector('.sex');
