@@ -56,7 +56,6 @@
 					<button class="search form-control" onclick="search()" type="button">검색</button>
 				</div>
 			</div>
-			<div class="line"></div>
 <!-- 2번 끝-------------------------------------------------------- -->			
 			<table
 				class="t_table table table table-striped table table-hover table-bordered text-center">
