@@ -1,12 +1,13 @@
 console.log('js실행')
 
 //클릭 시 누른 글 no 가져옴
-let no = localStorage.getItem('no');
+let no =JSON.parse( localStorage.getItem('no'));
+
 //쿠키에 있는 글 리스트 가져옴
 let qList= JSON.parse(localStorage.getItem('qList'));
 			if(qList==null){qList=[]};
 
-
+console.log(no)
 
 onView()//
 
@@ -35,6 +36,37 @@ function onView(){ console.log('onView 함수 실행')
 	
 }
 
+//
+
+function onViewLoad( no ){ // 인수 : 클릭한 제목(게시물)의 번호 
+	console.log( ' 현재 클릭된 제목(게시물)의 번호 : ' + no);
+	// 클릭된 결과를 다른페이지로 옮기는방법
+		// JS는 페이지가 전환/새로고침 초기화 -> // 세션/쿠키
+	// 1. 클릭된 게시물번호 세션에 저장 
+	localStorage.setItem( 'no' , no )
+		// * 조회수 증가 함수 호출 
+		//increaseView( no )
+	// 2. 페이지 이동 
+	location.href="view_go.jsp"
+}
+
+
+
+// 3. 조회수 증가함수=수정 [ 실행조건 : 제목 클릭후 페이지 전환 전에 ]
+function increaseView( no ){
+	// 1. 클릭된 게시물번호의 게시물찾기
+	for( let i = 0 ; i<qList.length ; i++ ){
+		if( qList[i].no == no ){ // 찾았다..
+			// 조회수 1 증가 
+			boardList[i].view++;
+			// * 만약에 세션/쿠기를 사용중 이라면 ...... 업데이트
+			localStorage.setItem( 'qList' , JSON.stringify( qList) )
+			break;
+		}
+	}
+} // end 
+
+
 //뒤로가기 버튼 onclick
 function back(){ console.log('뒤로가기 성공')
 	location.href='list_go.jsp' 
@@ -42,12 +74,16 @@ function back(){ console.log('뒤로가기 성공')
 }
 
 // 왼쪽 넘기기 onclick
-function left(){onView(no-1) //--??? 인수에 뭘 넣어야할지 ,, 
+function left(){
+	console.log(no)
+	onViewLoad(Number(no)-1) 
+	
 	
 }
 
 // 오른쪽 넘기기 onclick
-function right(){
+function right()
+{onViewLoad(Number(no)+1)
 	
 }
 

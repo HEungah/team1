@@ -6,6 +6,7 @@ let content={no:"no" , title:"title", select:"select", date: "date", view:0}
 let qList=JSON.parse(localStorage.getItem('qList'))
 
 if(qList==null){qList=[]}
+
 boardPrint();
 
  
@@ -61,7 +62,8 @@ function onViewLoad(no){
 	localStorage.setItem('no',no)
 	
 	 // + 조회수 증가 함수 
-	 increaseView( no )
+	// increaseView( no )	
+
 	
 	location.href="view_go.jsp"
 }

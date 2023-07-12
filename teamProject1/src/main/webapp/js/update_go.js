@@ -9,10 +9,18 @@ $(document).ready(function() {
   });
 });
 
+let select=['전체', '이용방법', '계정', '결제', '점포', '쿠폰']
+//전체 글 목록
+let qList=[]
 
-onView() //----? 왜 필요한지 모를,,
+let no = localStorage.getItem( 'no' ); 
+let List = JSON.parse( localStorage.getItem('qList') ) ; 
 
-//수정 게시물 출력----??? onView.js에있는거 그대로 가져오는거임? 
+
+onView() 
+
+
+// 함수 복붙
 function onView(){ console.log('onView 함수 실행')
 	
 	// 어디에 받을건지
@@ -35,17 +43,20 @@ function onView(){ console.log('onView 함수 실행')
 	}
 	
 }
+
+
+
 // 수정함수-------------------------------
-function onUpdate(){
+function onUpdate(no){
 	
 	for(let i = 0 ; i<qList.length ; i++ ){
 		let q = qList[i];
 			if( q.no == no ){// 현재 보고 있는 게시물
 			// 새롭게 입력받은 값 
-		let title= document.querySelector('.v_title')
-		let content=document.querySelector('.v_content')
-		let selectInput=document.querySelector('.v_selectInput')
-		let date=document.querySelector('.v_date')
+		let title= document.querySelector('.v_title').value
+		let content=document.querySelector('.summernote').value
+		let selectInput=document.querySelector('.v_selectInput').alue
+		let date=document.querySelector('.v_date').value
 			// 수정/대입 
 			q.title = title 
 			q.content = content;

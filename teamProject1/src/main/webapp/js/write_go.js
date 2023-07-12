@@ -28,7 +28,7 @@ function onWrite(){ console.log('onWrite 함수 실행')
 	let qList=JSON.parse(localStorage.getItem('qList'));
 		if(qList==null){qList=[]}; console.log('쿠키에서 qList 가져옴')
 	
-	let no= (qList.length==0? 1: (qList[qList.length-1].no+1)); console.log('no 부여: '+no)//??????????여기 ,,
+	let no= (qList.length==0? 1: (qList[qList.length-1].no+1)); console.log('no 부여: '+no)
 	let date= new Date() ; console.log('작성일: '+date)
 	
 	// qList 인덱스를 객체화. view는 조회수
@@ -39,15 +39,16 @@ function onWrite(){ console.log('onWrite 함수 실행')
 		content: content,
 		date: `${new Date().getFullYear()}-${new Date().getMonth()+1 }-${new Date().getDate() }` ,
 		view: 0	
-	} ; console.log('추가될 객체'+ board)//??????????????여기 ,객체화 전역 변수로 올리기 가능?
+	} ; console.log('추가될 객체'+ board)//??????????????여기 ,객체화 전역 변수로 올리기 가능? nope. 받아온 값이 함수 안에서 시행되기 때문에 전역으로 나갈 수 없
 	//전역변수에 푸쉬
 	qList.push(board) ;  console.log('변경된 qList'+ qList)
 	
 	//쿠키에 저장
 	localStorage.setItem('qList', JSON.stringify(qList)) ; console.log('쿠키에 저장')
 	
+	console.log(qList)
 	// 고객센터 맨 앞 페이지 호출
-	alert('글쓰기 성공'); console.log('글쓰기성공')
+	//alert('글쓰기 성공'); console.log('글쓰기성공')
 	location.href = 'list_go.jsp';             
 	
 	
