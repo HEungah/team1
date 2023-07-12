@@ -19,7 +19,7 @@ li{ list-style-type: none; } /* 글머리 제거 */
 			background-color: white;	
 } */
 #gridbox{
-	margin-bottom: 20px;
+	margin-bottom: 50px;
 }
 #top_name{
 	display: flex; flex-direction: row; justify-content: space-around;
@@ -41,13 +41,14 @@ li{ list-style-type: none; } /* 글머리 제거 */
     box-sizing: border-box;
     font-weight: bold;
 }
-.c_name1{border-bottom:solid 2px #EEECEC; }
+.c_name1{}
 .c_name2{
 	
     right: 400px;
     top: 265px;
     width: auto;
     font-size: 20px;
+    padding-top: 55px;
 }
 
 .tap_menu{width: 100%;}
@@ -89,8 +90,8 @@ li{ list-style-type: none; } /* 글머리 제거 */
 #content3{
 	width: 1200px;
     display: flex;
+    justify-content: space-between;
     margin: 0 auto;
-	
     overflow: hidden;
     position: relative;
     box-sizing: border-box;
@@ -100,7 +101,6 @@ li{ list-style-type: none; } /* 글머리 제거 */
 .info1{
 	float: left;
     width: 31.5%;
-    margin-left: 2.5%;
     box-sizing: border-box;
     border-top: 6px solid #373737;
     height: 170px
@@ -122,4 +122,8 @@ li{ list-style-type: none; } /* 글머리 제거 */
     line-height: 150%;
     font-size: 15px;
     
+}
+
+.add{
+	    padding-left: 10px;
 }

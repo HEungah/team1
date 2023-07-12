@@ -126,8 +126,8 @@
 		</div> <!-- 3번째 컨텐츠 end -->
 
 
-		<%@include file="../footer.jsp" %>	
 	</div> <!-- 전체 구역 끝 -->
+	<%@include file="../footer.jsp" %>	
 
 </div>
 	<!-- 부트스트랩에서 만든 JS 적용 -->
