@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+.container{
+	border: solid 6px #373737;
+	background-color: white;
+}
+.row{margin-bottom: 15px;}
+.warp{background: #EEECEC;}
+.container > h4 , p{font-weight: bold;}

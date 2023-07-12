@@ -14,10 +14,11 @@
 
 </head>
 <body>
-
+	
+<div class="warp"> <!-- 고객센터 전체페이지 -->
 	<%@include file="../header.jsp" %>
 
-	<div class="warp"> <!-- 고객센터 전체페이지 -->
+	
 
 		<div id="content1"> <!-- 첫번째 컨텐츠 구역 -->
 			<div id="top_name">
@@ -54,7 +55,7 @@
 					
 					<div class="side_result">
 						<!-- <em>태그는 강조되는 텍스트를 표현할때 사용한다  -->
-						<span>총 <em class="em_numer">31</em>건</span> 
+						<span>총 <span class="em_numer">31</span>건</span> 
 					</div>
 				</div>
 				
@@ -168,13 +169,13 @@
 				</ul>
 				
 				<ul class="info1">
-					<li class="li_01">한솥도시락 고객상담실</li>
+					<li class="li_01">전국 창업설명회 문의</li>
 					<li class="li_02">02-585-1114</li>
 				</ul>
 				
 				<ul class="info1">
-					<li class="li_01">한솥도시락 고객상담실</li>
-					<li class="li_02">02-585-1114</li>
+					<li class="li_01">단체주문</li>
+					<li class="li_02">1644-3288</li>
 					<li class="li_03">가까운 점포를 찾기 어려우시거나 문의 내용이 있을 경우</br>고객상담실로 문의 하세요.</li>
 				</ul>
 				

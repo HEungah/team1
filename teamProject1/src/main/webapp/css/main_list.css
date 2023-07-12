@@ -96,7 +96,7 @@ a{text-decoration: none;}
 	margin-top: 10px;
     color: #909090;
     line-height: 150%;
-    font-size: 15px;
+    font-size: 13px;
     
 }
 .list_btn{
@@ -104,7 +104,8 @@ a{text-decoration: none;}
     margin: 0 auto;
     padding: 40px 0 0px;
 }
-
+.em_name1 > a:hover{color: #F2C000 }
+.em_name2 > a:hover{color: #F2C000 }
 
 
 

@@ -6,6 +6,8 @@
 	<meta charset="UTF-8">
 	<title>Insert title here</title>
 	
+	<link href="/teamProject1/css/main_write.css" rel="stylesheet">
+	
 	<!-- 뷰포트 : 반응형 동작 코드  -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- 부트스트랩에서 만든 CSS 적용 -->
@@ -15,29 +17,30 @@
 	
 </head>
 <body>
+	<div class="warp">
+		<%@include file="../header.jsp"%>
 
-	<%@include file="../header.jsp"%>
+		<div class="container">
+			<input class="form-control m-3 title" id="box" type="text" placeholder="제목" />
+			<textarea id="summernote" class="form-control m-3" rows="10"
+				placeholder="내용"></textarea>
+			<input class="form-control m-3" id="box" type="file" />
 
-	<div class="container">
-		<input class="form-control m-3 title" type="text" placeholder="제목" />
-		<textarea id="summernote" class="form-control m-3" rows="10"
-			placeholder="내용"></textarea>
-		<input class="form-control m-3" type="file" />
-
-		<div class="row justify-content-md-center gx-3">
-			<div class="col-1">
-				<input class="form-control  btn btn-dark" onclick="onWrite()"
-					type="button" value="쓰기" />
-			</div>
-			<div class="col-1">
-				<input class="form-control " type="button" value="수정하기" />
-			</div>
-			<div class="col-1">
-				<a href="main_list.jsp"><input class="form-control" type="button" value="목록보기" /></a>
+			<div class="row justify-content-md-center gx-3">
+				<div class="col-1">
+					<input class="form-control  btn btn-dark" onclick="onWrite()"
+						type="button" value="쓰기" />
+				</div>
+				<div class="col-1">
+					<input class="form-control " type="button" value="수정하기" />
+				</div>
+				<div class="col-1">
+					<a href="main_list.jsp"><input class="form-control"
+						 type="button" value="목록보기" /></a>
+				</div>
 			</div>
 		</div>
 	</div>
-
 
 	<%@include file="../footer.jsp"%>
 
