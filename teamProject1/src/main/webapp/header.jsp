@@ -128,7 +128,7 @@
 								<li><a href="#">연혁&수상</a></li>
 								<li><a href="#">한솥 NEWS</a></li>
 								<li><a href="#">오시는 길</a></li>
-								<li><a href="#">고객센터</a></li>
+								<li><a href="/teamProject1/customer/list_go.jsp">고객센터</a></li>
 								<li><a href="#">인재채용</a></li>
 							</ul>
 						</li>

@@ -21,8 +21,9 @@
 </head>
 
 <body>
-<%@include file="../header.jsp" %>
+
 <div class="wrap">
+	<%@include file="../header.jsp" %>
 	<div class="container" id="bigbox">
 		<!-- 부트스트랩에서 가져옴 -->
 
@@ -126,7 +127,7 @@
 		</div> <!-- 3번째 컨텐츠 end -->
 
 
-	
+		<%@include file="../footer.jsp" %>	
 	</div> <!-- 전체 구역 끝 -->
 
 </div>
@@ -135,6 +136,5 @@
 	<!-- 내가 사용할 script -->
 	<script type="text/javascript" src="../js/list_go.js"></script>
 
-<%@include file="../footer.jsp" %>	
 </body>
 </html>
