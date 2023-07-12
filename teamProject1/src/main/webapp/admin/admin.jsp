@@ -9,9 +9,9 @@
 	<link href="../css/admin.css" rel="stylesheet">
 </head>
 <body>
-	<%-- <%@include file="../header.jsp" %> --%>
-
 	<div id="wrap">	<!-- 관리자페이지 전체구역 -->
+	
+	<%@include file="../header.jsp" %>
 		<div class="wrapbox">	<!-- 관리자페이지 전체 박스 -->
 			<div class="admin_main">	<!-- 메인 전체구역 -->
 				<h3 class="admin_title">관리자페이지</h3>	<!-- 메인 타이틀 -->
@@ -82,6 +82,7 @@
 				</div>
 			</div>
 		</div>
+		<%@include file="../footer.jsp" %>
 	</div>
 	
 	<div class="modalwrap">	<!-- 모달 전체 구역 -->
@@ -131,6 +132,7 @@
 				<button class="removebtn mbtn" onclick="closeModal()">닫기</button>
 			</div>
 		</div>
+		
 	</div>
 	
 	
@@ -138,8 +140,6 @@
 https://cdn.jsdelivr.net/npm/echarts@5.4.2/dist/echarts.min.js
 "></script>
 
-
-	<%@include file="../footer.jsp" %>
 	
 	<script src="../js/admin.js"></script>
 	

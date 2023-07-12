@@ -9,9 +9,9 @@
 	<link href="../css/join.css" rel="stylesheet">
 </head>
 <body>
-	<%@include file="../header.jsp" %>
-
 	<div id="wrap">	<!-- 회원가입 전체구역 -->
+
+	<%@include file="../header.jsp" %>
 		<div class="joinwrap">	<!-- 회원가입 배경색 가운데정렬 -->
 			<div class="joinmain">	<!-- 회원가입 전체 box -->
 				<h2 class="jointitle">회원가입</h2>	<!-- 회원가입 위쪽 -->
@@ -107,6 +107,7 @@
 			</div>
 		</div>
 		
+	<%@include file="../footer.jsp" %>
 		
 	</div>
 
@@ -114,7 +115,6 @@
 
 
 
-	<%@include file="../footer.jsp" %>
 	
 	<script src="../js/join.js"></script>
 	

@@ -10,102 +10,134 @@
 
 </head>
 <body>
-	<div class="h_warp"> <!-- 헤더 전체-->	
-
-		<ul class="top_menu">
-
-			<li><a href="#"> 로그인 </a> <span class="line1">|</span></li>
-			<li><a href="#"> 회원가입 </a> <span class="line2">|</span></li>
-			<li><a class="i_logo"
-				href="https://www.instagram.com/hansot_official/"></a></li>
-			<li><a class="f_logo"
-				href="https://www.facebook.com/hansotofficial/?ref=ts&fref=ts"></a></li>
-
-		</ul>
-
-
-		<div class="main_menu">
-
-			<span class="m_logo"> <a href="#"><img
-					src="img/img_jung/main_logo.png" /></a>
-			</span>
-
-			<nav>
-			
-				<ul id=menu_box> <!-- 메인로고 오른쪽 메뉴 -->		
-
-					<li class="drop_menu"><a href="#">BRAND</a>
-						<ul class="sub_menu">
-							<li><a href="#">브랜드 스토리</a></li>
-							<li><a href="#">브랜드 철학</a></li>
-							<li><a href="#">브랜드 유산</a></li>
-						</ul>
+	
+	<div id="wrap_h">	<!-- 헤더 전체 -->
+		<div class="hdtop">
+			<div class="hdtop_box">
+				<ul>
+					<li><a href="/teamProject1/login/login.jsp">로그인</a></li>
+					<li class="jointext"><a href="/teamProject1/join/join.jsp">회원가입</a></li>
+					<li class="sns_insta">
+						<a href="https://www.instagram.com/hansot_official/" 
+						target="_blank" title="새 창 열림">
+						<span class="blind">instagram</span></a>
 					</li>
-
-					<li class="drop_menu"><a href="#">ESG</a>
-						<ul class="sub_menu">
-							<li><a href="#">ESG경영이란?</a></li>
-							<li><a href="#">환경보호<br />(Environment)</a></li>
-							<li><a href="#">사회공헌<br />(Social)</a></li>
-							<li><a href="#">윤리경영<br />(Governance)</a></li>
-							<li><a href="#">세계 40대 브<br />랜드 선정</a></li>
-						</ul>
+					<li class="sns_facebook">
+						<a href="https://www.facebook.com/hansotOfficial/?ref=ts&amp;fref=ts"
+						 target="_blank" class="fb_box" title="새 창 열림"><span class="blind">facebook</span></a>
 					</li>
-
-					<li class="drop_menu"><a href="#">MENU</a>
-						<ul class="sub_menu">
-							<li><a href="#">전체메뉴</a></li>
-							<li><a href="#">식재료 이야기</a></li>
-							<li><a href="#">페루찬차마요커피</a></li>
-							<li><a href="#">단체 주문</a></li>
-						</ul>
-					</li>
-
-					<li class="drop_menu"><a href="#">STORE</a>
-						<ul class="sub_menu">
-							<li><a href="#">주변점포찾기</a></li>
-						</ul></li>
-
-					<li class="drop_menu"><a href="#">EVENT</a>
-						<ul class="sub_menu">
-							<li><a href="#">이 달의 이벤트</a></li>
-							<li><a href="#">신규점 오픈이벤트</a></li>
-						</ul>
-					</li>
-
-					<li class="drop_menu"><a href="#">FRANCHISE</a>
-						<ul class="sub_menu">
-							<li><a href="#">Why 한솥 가맹점</a></li>
-							<li><a href="#">성공수기</a></li>
-							<li><a href="#">창업개설절차</a></li>
-							<li><a href="#">예상 창업 비용</a></li>
-							<li><a href="#">창업문의</a></li>
-							<li><a href="#">창업설명회 일정ㆍ신청</a></li>
-						</ul>
-					</li>
-
-					<li class="drop_menu"><a href="#">HANSOT</a>
-						<ul class="sub_menu">
-							<li><a href="#">한솥의 약속</a></li>
-							<li><a href="#">한솥의 비전</a></li>
-							<li><a href="#">연혁&수상</a></li>
-							<li><a href="#">한솥 NEWS</a></li>
-							<li><a href="#">오시는 길</a></li>
-							<li><a href="#">고객센터</a></li>
-							<li><a href="#">인재채용</a></li>
-						</ul>
-					</li>
-
-
 				</ul>
-				<!-- 메인로고 오른쪽 메뉴 end -->
-			</nav>
-
-
+			</div>
 		</div>
-
-
-	</div> <!-- 전체 end -->
+		<div class="hdbottom">
+			<div class="hdbottom_box">
+				<div class="hd_logo">
+					<h1>
+						<a href="#">
+							
+						</a>
+					</h1>
+				</div>
+				<div class="hd_content">
+					<ul class="hd_list">
+						<li class="dp1">
+							<p class="dp1_title">
+								<a href="#">
+									BRAND
+								</a>
+							</p>
+							<ul class="sub_menu">
+								<li><a href="#">브랜드 스토리</a></li>
+								<li><a href="#">브랜드 철학</a></li>
+								<li><a href="#">브랜드 유산</a></li>
+							</ul>
+						</li>
+						<li class="dp1">
+							<p class="dp1_title">
+								<a href="#">
+									ESG
+								</a>
+							</p>
+							<ul class="sub_menu">
+								<li><a href="#">ESG경영이란?</a></li>
+								<li><a href="#">환경보호(Environment)</a></li>
+								<li><a href="#">사회공헌(Social)</a></li>
+								<li><a href="#">윤리경영(Governance)</a></li>
+								<li><a href="#">세계 40대 브랜드 선정</a></li>
+							</ul>
+						</li>
+						<li class="dp1">
+							<p class="dp1_title">
+								<a href="#">
+									MENU
+								</a>
+							</p>
+							<ul class="sub_menu">
+								<li><a href="/teamProject1/menu/mainmenu.jsp">전체메뉴</a></li>
+								<li><a href="#">식재료 이야기</a></li>
+								<li><a href="#">페루찬차마요커피</a></li>
+								<li><a href="#">단체 주문</a></li>
+							</ul>
+						</li>
+						<li class="dp1">
+							<p class="dp1_title">
+								<a href="#">
+									STORE
+								</a>
+							</p>
+							<ul class="sub_menu">
+								<li><a href="#">주변점포찾기</a></li>
+							</ul>
+						</li>
+						<li class="dp1">
+							<p class="dp1_title">
+								<a href="#">
+									EVENT
+								</a>
+							</p>
+							<ul class="sub_menu">
+								<li><a href="#">이 달의 이벤트</a></li>
+								<li><a href="#">신규점 오픈이벤트</a></li>
+								<li><a href="#">브랜드 유산</a></li>
+							</ul>
+						</li>
+						<li class="dp1">
+							<p class="dp1_title">
+								<a href="#">
+									FRANCHISE
+								</a>
+							</p>
+							<ul class="sub_menu">
+								<li><a href="#">Why 한솥 가맹점</a></li>
+								<li><a href="#">성공수기</a></li>
+								<li><a href="#">창업개설절차</a></li>
+								<li><a href="#">예상 창업 비용</a></li>
+								<li><a href="#">창업문의</a></li>
+								<li><a href="#">창업설명회 일정·신청</a></li>
+							</ul>
+						</li>
+						<li class="dp1">
+							<p class="dp1_title">
+								<a href="#">
+									HANSOT
+								</a>
+							</p>
+							<ul class="sub_menu">
+								<li><a href="#">한솥의 약속</a></li>
+								<li><a href="#">한솥의 비전</a></li>
+								<li><a href="#">연혁&수상</a></li>
+								<li><a href="#">한솥 NEWS</a></li>
+								<li><a href="#">오시는 길</a></li>
+								<li><a href="#">고객센터</a></li>
+								<li><a href="#">인재채용</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	
 	
 	<script src="/teamProject1/js/header.js"></script>
 </body>

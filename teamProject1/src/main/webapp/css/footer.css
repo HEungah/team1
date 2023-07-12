@@ -13,6 +13,7 @@ a {
     background-color: #f2c000;
     height: 310px;
     box-sizing: border-box;
+    margin-top: 50px;
 }
 #footerbox{
 	width: 1170px;

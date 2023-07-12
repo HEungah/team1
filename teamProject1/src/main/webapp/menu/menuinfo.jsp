@@ -9,6 +9,7 @@
 </head>
 <body>
 	<div id="wrap">
+		<%@include file="../header.jsp" %>
 		<div class="layout">
 		
 			<div class="menubar_top">
@@ -174,6 +175,7 @@
 				</div> <!-- 더많은이야기 이미지 end-->
 			</div> <!-- content_bottom end -->
 		</div> <!-- layout end -->
+		<%@include file="../footer.jsp" %>
 	</div> <!-- wrap end -->
 
 

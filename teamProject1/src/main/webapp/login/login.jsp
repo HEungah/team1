@@ -9,9 +9,9 @@
 	<link href="/teamProject1/css/login.css" rel="stylesheet">
 </head>
 <body>
+	<div id="wrap">	<!-- 본문 전체 구역 -->
 	<%@include file="../header.jsp" %>
 
-	<div id="wrap">	<!-- 본문 전체 구역 -->
 		<div class="mainwrap">	<!-- 로그인 전체 구역 -->
 			<div class="content">
 				<div class="loginbox">	<!-- 로그인 구역 -->
@@ -53,9 +53,9 @@
 				</div>
 			</div>
 		</div>
-	</div>
 
 	<%@include file="../footer.jsp" %>
+	</div>
 	
 	<script src="../js/login.js"></script>
 </body>

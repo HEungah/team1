@@ -62,7 +62,7 @@ function login(){
 			}
 			alert('로그인성공')
 			// 로그인에 성공했으면 메인페이지로 이동
-			location.href="../mainpage/mainpage.jsp";
+			location.href="/teamProject1/index.jsp";
 			document.querySelector('.loginInput').value = ``;
 			document.querySelector('.pwInput').value = ``;
 			return;
