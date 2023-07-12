@@ -33,7 +33,7 @@
 				<input class="form-control " type="button" value="수정하기" />
 			</div>
 			<div class="col-1">
-				<input class="form-control" type="button" value="목록보기" />
+				<a href="main_list.jsp"><input class="form-control" type="button" value="목록보기" /></a>
 			</div>
 		</div>
 	</div>

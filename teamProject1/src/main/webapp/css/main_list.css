@@ -1,13 +1,14 @@
 @charset "UTF-8";
 *{margin: 0px;padding: 0px;}
-body{background: #EEECEC; } 
 li , ul{list-style-type: none;}
 a{text-decoration: none;} 
+
+.warp{background: #EEECEC;}
 
 #content1{
 	width: 1200px;
 	margin: 0 auto;
-	border: solid 1px black;
+	background-color: white;
 }
 #content2{
 	width: 1200px;
@@ -19,7 +20,6 @@ a{text-decoration: none;}
 	width: 1200px;
     display: flex;
     margin: 0 auto;
-	
     overflow: hidden;
     position: relative;
     box-sizing: border-box;

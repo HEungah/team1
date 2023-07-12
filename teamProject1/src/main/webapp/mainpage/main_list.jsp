@@ -63,7 +63,7 @@
 		</div> <!-- 첫번째 컨텐츠 구역 end -->
 		
 		<div class="list_btn">
-		<a href="main2.jsp"><button type="button" class="btn btn-outline-info" onclick="onWrite()"> 글쓰기</button></a> 
+		<a href="main_write.jsp"><button type="button" class="btn btn-outline-info" onclick="onWrite()"> 글쓰기</button></a> 
 		</div>
 		
 		<div id="content2"> <!-- 두번째 컨텐츠 -->

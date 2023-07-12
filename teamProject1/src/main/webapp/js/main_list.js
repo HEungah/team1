@@ -1,7 +1,7 @@
 console.log('js 실행') 
 
 //  1. 쿠키에 있는 배열 호출 [페이지[js]] 열리면]
-let boardList = JSON.parse(localStorage.getItem(' boardList') );
+let boardList = JSON.parse(localStorage.getItem('boardList') );
 	// 쿠키/세션에 저장된 객체/배열 호출시 JSON.parse( )
 	// 쿠키/세션에 저장된 객체/배열 저장시 JSON.stringify( ) 
 	
@@ -14,15 +14,15 @@ function boardPrint( ){
 	//1. 어디에
 	let content2 = document.querySelector('.content2')
 	//2. 무엇을
-	let html = ` `;
+	let html = ``;
 	// html 구성 : 쿠키에서 꺼내온 배열을 반복문 해서 HTML 누적 더하기
 	for(let i = 0 ; i<boardList.length ; i++){
-		let board = board = boardList[i]; // i번째 게시물 호출 
+		let board =  boardList[i]; // i번째 게시물 호출 
 	html += `<tr>
 						<td>${board.no}</td> 
-						<td onclick="onViewLoad( ${ board.no } >${board.title}</td> 
+						<td onclick="onViewLoad(${board.no})">${board.title}</td> 
 						<td>${board.writer}</td>
-						<td>${ board.date }</td>
+						<td>${board.date}</td>
 			</tr>`
 	}
 	//3. 대입
@@ -37,7 +37,7 @@ function onViewLoad(no){ // 인수 : 클릭한 제목(게시물)의 번호
 	// 1. 클릭된 게시물번호 세션에 저장
 	sessionStorage.setItem('no' , no) 
 	// 2. 페이지로 이동 
-	location.href="main_view.jsp"
+	location.href="main_view.jsp" ;
 }
 
 function onViewLoad(no){// 인수 : 클릭한 제목(게시물)의 번호 
@@ -46,8 +46,18 @@ function onViewLoad(no){// 인수 : 클릭한 제목(게시물)의 번호
 	// 1. 클릭된 게시물번호 세션에 저장 
 	sessionStorage.setItem( 'no' , no )
 	// 2. 페이지 이동 
-	location.href="view.jsp"
+	location.href="main_view.jsp" 
+	
+		// 세션(서버PC) / 쿠키(사용자PC) : JS외 저장 가능하다. -> JS 새로고침/페이지전환 해도 유지
+	sessionStorage.setItem( '세션' , 1 );
+	localStorage.setItem('쿠키' , 2 );
+	
+	console.log( 1 )								// 숫자 1 
+	console.log( sessionStorage.getItem('세션') )	// 숫자 1 저장했지만 문자 1 로 출력됨
+	console.log( localStorage.getItem('쿠키') )		// 숫자 2 저장했지만 문자 2 로 출력됨 
+	
 }
+
 
 
 
