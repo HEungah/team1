@@ -36,10 +36,10 @@ function onWrite(){ console.log('onWrite 함수 실행')
 		selectInput: selectInput,
 		no:no,
 		title:title,
-		contnent: content,
+		content: content,
 		date: `${new Date().getFullYear()}-${new Date().getMonth()+1 }-${new Date().getDate() }` ,
 		view: 0	
-	} ; console.log('추가될 객체'+ board)//??????????????여기 ,객체화 전역 변수로 올리기 가능?
+	} ; console.log('추가될 객체'+ board)//??????????????여기 ,객체화 전역 변수로 올리기 가능? nope. 받아온 값이 함수 안에서 시행되기 때문에 전역으로 나갈 수 없
 	//전역변수에 푸쉬
 	console.log(board.title);
 	qList.push(board) ;  console.log('변경된 qList'+ qList)
@@ -47,7 +47,9 @@ function onWrite(){ console.log('onWrite 함수 실행')
 	//쿠키에 저장
 	localStorage.setItem('qList', JSON.stringify(qList)) ; console.log('쿠키에 저장')
 	
+	console.log(qList)
 	// 고객센터 맨 앞 페이지 호출
+	
 	alert('글쓰기 성공'); console.log('글쓰기성공')
 	location.href = "/teamProject1/customer/list_go.jsp";
 	

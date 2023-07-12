@@ -7,6 +7,7 @@ let qList=JSON.parse(localStorage.getItem('qList'))
 console.log(qList);
 
 if(qList==null){qList=[]}
+
 boardPrint();
 
  
@@ -19,19 +20,14 @@ boardPrint();
 let mselect= document.querySelector('.form-select');
 let s_html='';
 	
-		for(let i=0; i<select.length; i++){
+		for(let i=0; i<selectInput.length; i++){
 		s_html+= 
-			`<option>${select[i]}</option>`;
+			`<option>${selectInput[i]}</option>`;
 				}		
 mselect.innerHTML=s_html;
 console.log(mselect +'옵션 제대로 작동')
 
 
-
-// 검색 버튼 눌렀을 때 작동 onclick 함수------------------------
-function search(){
-	
-}
 
 
 // 테이블 출력 함수()-----------------------------------
@@ -46,25 +42,44 @@ function boardPrint(){console.log('boardPrint() 작동')
 				t_html+=
 						`<tr>
 						<td width="5%">${board.no}</td>
-						<td width="60%" onclick="onView(board.title)">${board.title}</td>
+						<td width="60%" onclick="onViewLoad(${board.no})">${board.title}</td>
 						<td width="15%">${board.selectInput}</td>
 						<td width="15%">${board.date}</td>
 						<td width=5%>${board.view}</td> 
 						</tr>`
-					}//추가 필요?? 제목 누르면 작동 함수, view 증가 함수
+					}
 				tList.innerHTML= t_html;
 	
 } 
 
-
-// 상세 페이지 출력 함수()---------------------------------
-function onView(){
+// 상세 페이지 이동
+function onViewLoad(index){
+	console.log('클릭 게시물 번호 : '+ index)
+	//클릭된 게시물 no 쿠키에 저장
+	localStorage.setItem('no',index)
+	let indexN=0;
+	console.log(qList[0].no)
 	
+	for(let i=0; i<qList.length;i++){
+		if(index==qList[i].no){
+			indexN = i
+		}
+	}
+	localStorage.setItem('indexN',JSON.stringify(indexN))
+	 increaseView( index )	
+
+	
+	location.href="view_go.jsp"
 }
 
 
-
 //조회수 증가 함수()-------------------------------------
-function viewUp(){
+function increaseView( no ){
+	for(let i=0; i<qList.length;i++){
+		if(qList[i].no==no){
+			qList[i].view++;
+			localStorage.setItem('qList',JSON.stringify(qList))
+		}
+	}
 	
 }

@@ -21,29 +21,33 @@
 </head>
 
 <body>
-
-	<div class="container">
+<%@include file="../header.jsp" %>
+<div class="wrap">
+	<div class="container" id="bigbox">
 		<!-- 부트스트랩에서 가져옴 -->
 
 		<!-- 1번 시작 -->
-		<div class="top"> <!--  고객센터/자주하는질문/고객의소리 -->
-	
-			<!-- flex 가로 양 끝으로 붙임 , 고객센터 -->
-				<div class="left"><h2>고객센터</h2></div>
-				<div class="right">
-					<ol>
-						<li >자주하는 질문</li>
-						<li>고객의 소리</li>
-					</ol>
+			<div id="top_name">
+				<div class="c_name1">
+					<h2>고객센터</h2>
 				</div>
-				
+				<div class="c_name2">
+					<ul class="tap_menu">
+						<li class="em_name1"><a href="#">자주하는 질문</a></li>
+						<li class="em_name2"><a href="#">고객의 소리</a></li>
+					</ul>
+				</div>
 			</div>
+
+
+
+
 
 <!-- 1번 끝 --------------------------------------------------------->
 
 
 	
-			<div  class="row justify-content-md-center"><!-- 그리드,커터 사이즈 조절 필요 -->
+			<div  class="row justify-content-md-center searchbar" id="gridbox"><!-- 그리드,커터 사이즈 조절 필요 -->
 				 <!-- select option- js작성 -->
 				<div class="col-2"><select class="form-select"></select></div>
 				<div class="col-5"><input style="" placeholder="검색어 입력" class="form-control"></div>
@@ -51,6 +55,7 @@
 					<button class="search form-control" onclick="search()" type="button">검색</button>
 				</div>
 			</div>
+			<div class="line"></div>
 <!-- 2번 끝-------------------------------------------------------- -->			
 			<table
 				class="t_table table table table-striped table table-hover table-bordered text-center">
@@ -73,13 +78,12 @@
 		<div class="add">	
 			<a href="write_go.jsp">
 				<button type="button" class="btn btn-secondary btn-sm"
-				 onclick="onView()">글등록</button>
-				 <!-- onView() 상세 페이지 이동 함수 -->
+				 onclick="onWrite()">글등록</button>
 			</a>
 		</div>
 
 <!-- 4번 끝-------------------------------------------------------- -->
-		<div class="box3">
+		<div id="box3">
 			<nav aria-label="Page navigation example">
 				<ul class="pagination justify-content-center">
 					<li class="page-item disabled"><a class="page-link">◀</a>
@@ -92,25 +96,45 @@
 			</nav>
 			
 		</div>
+		
 <!-- 5번 끝------------------------------------------------------- -->
 
+		<div id="content3">
 
-		<div class="box4">
-			<!-- 4. 전화번호 / flex, 가로, 가운데 -->
-			<div>고객상담</div>
-			<div>창업설명회</div>
-			<div>단체주문</div>
+			
+				
+				<ul class="info1">
+					<li class="li_01">한솥도시락 고객상담실</li>
+					<li class="li_02">02-585-1114</li>
+					<li class="li_03">가까운 점포를 찾기 어려우시거나 문의 내용이 있을 경우</br>고객상담실로 문의 하세요.</li>
+				</ul>
+				
+				<ul class="info1">
+					<li class="li_01">한솥도시락 고객상담실</li>
+					<li class="li_02">02-585-1114</li>
+				</ul>
+				
+				<ul class="info1">
+					<li class="li_01">한솥도시락 고객상담실</li>
+					<li class="li_02">02-585-1114</li>
+					<li class="li_03">가까운 점포를 찾기 어려우시거나 문의 내용이 있을 경우</br>고객상담실로 문의 하세요.</li>
+				</ul>
+				
 
-		</div>
-		<!-- 4박스 끝 -->
-<!--  6번 끝---------------------------------------------------- -->	
+			
+			
+		</div> <!-- 3번째 컨텐츠 end -->
+
+
 	
 	</div> <!-- 전체 구역 끝 -->
 
-
+</div>
 	<!-- 부트스트랩에서 만든 JS 적용 -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 	<!-- 내가 사용할 script -->
 	<script type="text/javascript" src="../js/list_go.js"></script>
+
+<%@include file="../footer.jsp" %>	
 </body>
 </html>
